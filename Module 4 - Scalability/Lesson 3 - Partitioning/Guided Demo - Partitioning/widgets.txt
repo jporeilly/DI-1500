@@ -1,0 +1,11 @@
+CITY,Widgets
+"New York",325
+"New York",4356
+"New York",4354
+London,46453
+London,234
+Paris,563
+Paris,234
+Paris,462
+Paris,23465
+Madrid,3452

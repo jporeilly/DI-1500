@@ -1,0 +1,336 @@
+============================================================================= 
+Simba JDBC Driver with SQL Connector for Google BigQuery Release Notes 
+============================================================================= 
+
+The release notes provide details of enhancements, features, and known issues 
+in Simba JDBC Driver for Google BigQuery 1.1.7, as well as the version 
+history. 
+
+
+1.1.7 ========================================================================
+
+Released 2018-08-15
+
+Enhancements & New Features 
+
+ * [GBQJ-224] Proxy server support
+ 
+   The driver can now be configured to connect through a proxy server. For 
+   more information see the Installation and Configuration Guide.
+   
+ * [GBQJ-245] Support for Google Drive access
+ 
+   The driver can now be configured to request access to Google Drive,
+   to support federated tables that combine BigQuery data with data from
+   Google Drive. For more information see the Installation and Configuration
+   Guide.   
+
+ 
+Resolved Issues
+The following issues have been resolved in Simba JDBC Driver for Google 
+BigQuery 1.1.7. 
+
+ * [GBQJ-240] The driver fails to execute MERGE statements.
+
+ * [GBQJ-247] The driver fails to execute DROP VIEW statements.
+ 
+ * [GBQJ-236] The driver displays the message "Unexpected error when sorting
+   metadata" which does not accurately identify the issue.
+   
+   This has been resolved. The driver now displays the underlying query
+   error message.
+  
+
+Known Issues
+The following are known issues that you may encounter due to limitations in
+the data source, the driver, or an application.
+
+ * Query prefixes are not supported.
+
+   The driver does not support query prefixes. To specify whether your query
+   statements are to be processed using standard SQL or legacy BigQuery SQL, 
+   you must configure the QueryDialect connection property. 
+
+   By default, QueryDialect is set to "SQL" so that the driver uses standard
+   SQL syntax. To use BigQuery SQL instead, set the property to "BIG_QUERY".
+
+ * Support for ODBC Escape Sequences is limited.
+
+   The only supported ODBC Escape Sequences are Scalar Functions of the form 
+   {fn func(args)} if func is supported by the Google BigQuery data source 
+   engine. 
+
+ * When casting data, you must specify the data type according to Google 
+   BigQuery standards.
+
+   When casting data to a specific data type, you must use the corresponding 
+   data type name shown in the "Casting" section of the Query Reference:
+   https://cloud.google.com/bigquery/sql-reference/functions-and-operators#casting. 
+
+   For example, to cast the "salary" column to the INTEGER type, you must 
+   specify INT64 instead of INTEGER: 
+
+      SELECT position, CAST(salary AS INT64) from Employee
+
+
+Version History ==============================================================
+
+1.1.6 ------------------------------------------------------------------------
+
+Released 2018-04-27
+
+Enhancements & New Features 
+
+ * [GBQJ-226] Updated Google BigQuery API client library
+ 
+   The driver now uses google-api-client version 1.23.0. Previously, the 
+   driver used version 1.22.0 of the library.
+
+ * [GBQJ-217] Data Definition Language (DDL) support
+ 
+   You can now execute DDL statements when using the driver. The statements
+   must be written in the syntax that BigQuery supports. For more information,
+   see "Using Data Definition Language Statements" in Google BigQuery's 
+   Standard SQL Query Reference: https://cloud.google.com/bigquery/docs/data-definition-language
+ 
+ * [GBQJ-225] Customer-managed encryption key (CMEK) support
+ 
+   You can now configure the driver to use a CMEK when executing queries. 
+   To do this, set the new KMSKeyName property to the CMEK associated 
+   with the table that you are querying. For more information, see the 
+   Installation and Configuration Guide.
+   
+   Important: Do not specify a CMEK unless you are certain that it is the
+   correct value to use. Executing an INSERT statement with an incorrect CMEK 
+   can corrupt the target table.
+
+ * [GBQJ-207] Default dataset configuration
+
+   You can now specify a default dataset for your connection. To do this, set 
+   the new DefaultDataset connection property to the name of the dataset. For 
+   more information, see the Installation and Configuration Guide. 
+   
+ * [GBQJ-223] NUMERIC data support
+ 
+   The driver now supports the NUMERIC data type from BigQuery. For more
+   information, see the "Data Types" section in the Installation and 
+   Configuration Guide.
+   
+ * [GBQJ-209] Change in HTTP header user-agent string settings 
+ 
+   The driver now sets the user-agent string of an HTTP header in a manner
+   that flows directly through Google partner data tracking systems.
+
+ 
+Resolved Issues
+The following issues have been resolved in Simba JDBC Driver for Google 
+BigQuery 1.1.6. 
+
+ * [GBQJ-221] The driver reports the wrong escape character for wildcards 
+   in catalog searches.
+ 
+   This issue has been resolved. Before, the driver reported double-
+   backslashes (\\) as the characters for escaping the underscore (_) and
+   percent sign (%) characters during catalog searches. The driver now reports 
+   the correct escape character, which is a single backslash (\).
+
+ * [GBQJ-221] The driver cannot escape underscores (_) and percent signs (%).
+ 
+   This issue has been resolved. The driver is now able to escape these
+   characters, which are used as wildcards in catalog searches.
+ 
+ * [GBQJ-211] The driver returns an incorrect list of supported table types.
+ 
+   This issue has been resolved. Before, the driver returned TABLE, VIEW, and
+   SYSTEM TABLE as supported table types. The driver now correctly returns 
+   TABLE, VIEW, and EXTERNAL.
+   
+ * [GBQJ-234] When SQLTables is called, the driver returns all the views that
+   are available in your BigQuery project, regardless of the SQL dialect that
+   has been specified for the connection.
+   
+   This issue has been resolved. The driver now only returns views that can
+   be queried using the SQL dialect that has been specified for the
+   connection. 
+   
+ * [GBQJ-222] When the getColumns catalog function is called, the driver
+   reports some incorrect column metadata.
+   
+   This issue has been resolved. The returned metadata has been corrected
+   in the following ways:
+   
+   - COLUMN_SIZE: For STRING columns, the driver now returns the specified
+     StringColumnLength value instead of always returning the default
+     StringColumnLength value. For DATE, TIME, and TIMESTAMP columns that
+     have been converted into STRING columns, the driver now returns the size 
+     of the original column instead of the default StringColumnLength value.
+	 
+   - BUFFER_LENGTH: The driver now returns the size of the data in bytes
+     instead of always returning NULL.
+	 
+   - NUM_PREC_RADIX: For columns that are not of type NUMERIC, the driver now 
+     returns NULL instead of 0.
+	 
+   - DECIMAL_DIGITS: For TIME columns, the driver now reports 6 (the precision
+     that BigQuery uses for TIME values) instead of NULL. For exact numeric
+     columns, the driver now reports the scale instead of NULL. For all other
+     column types, the driver now reports NULL instead of terminating 
+     unexpectedly.
+	 
+   - SQL_DATETIME_SUB: For all column, the driver now returns the value stated 
+     in the ODBC specification instead of NULL.
+	 
+   - CHAR_OCTET_LENGTH: For STRING columns, the driver now returns a length 
+     that is based on the specified StringColumnLength value instead of the 
+     default StringColumnLength value. For all other columns, the driver now 
+     returns NULL instead of 0.
+	 
+
+1.1.5 ------------------------------------------------------------------------
+
+Released 2018-02-16
+ 
+Resolved Issues
+The following issue was resolved in Simba JDBC Driver for Google BigQuery 
+1.1.5. 
+
+ * When attempting to use parameterized queries users may receive a "metadata
+   error" system message. This has been resolved.
+   
+   The driver now binds parameters under the following conditions:
+   - Strings longer than 256 characters bind to Google BigQuery String.
+   - Byte arrays longer than 256 bytes bind to Google BigQuery Byte.
+
+
+1.1.4 ------------------------------------------------------------------------
+
+Released 2017-11-03
+ 
+Resolved Issues
+The following issue was resolved in Simba JDBC Driver for Google BigQuery 
+1.1.4. 
+
+ * When attempting to retrieve the update count after executing a DML query,
+   the driver throws a null pointer exception.
+
+
+1.1.3 ------------------------------------------------------------------------
+
+Released 2017-10-20
+
+Enhancements & New Features 
+
+ * Extend Support for Scalar Functions  
+ 
+   The driver now supports all standard scalar functions. Previously only LCASE,
+   OCTET_LENGTH, SUBSTRING, UCASE, TRUNCATE, NOW were supported.
+
+   
+Resolved Issues
+The following issue was resolved in Simba JDBC Driver for Google BigQuery 
+1.1.3. 
+
+ * Metadata reports an incorrect list of supported scalar functions.
+
+
+1.1.2 ------------------------------------------------------------------------
+
+Released 2017-09-29
+
+Enhancements & New Features 
+
+ * Disable Query Cache
+
+   You can now prevent the driver from using cached query results. To do 
+   this, set the useQueryCache connection setting to false.
+
+ * Job Status Polling Improvement
+
+   The driver has been optimized to make fewer calls to BigQuery when 
+   checking the status of an executed query.
+
+ * Support for package renaming
+
+   The driver now supports changing the package name, to account for cases 
+   where multiple drivers from multiple versions of Simba Engine are 
+   installed.
+
+
+Resolved Issues
+The following issue was resolved in Simba JDBC Driver for Google BigQuery 
+1.1.2. 
+
+ * In some cases, "[Simba][JDSI](20560) Unexpected error while sorting 
+   metadata." is displayed when returning column name and datatype.
+   
+
+1.1.1 ------------------------------------------------------------------------
+
+Released 2017-09-15
+
+Enhancements & New Features 
+
+ * All API calls retry with exponential backoff
+ 
+   When an API call fails, the driver now automatically retries the call 
+   with an exponential backoff algorithm. In previous versions, the driver did
+   not automatically retry failed calls.
+
+ * OAuth authentication using Application Default Credentials
+   
+   You can now authenticate your connection to Google BigQuery using 
+   Application Default Credentials. For information about Application Default
+   Credentials, see https://developers.google.com/identity/protocols/application-default-credentials.
+   For information about configuring the driver to use this authentication
+   method, see the Installation and Configuration Guide.
+
+ * Improvements in large result set support
+
+   When executing queries using the Legacy SQL dialect, the driver now 
+   provides a default dataset and table for storing result sets that exceed 
+   128MB. These temporary datasets and tables store data for 24 hours before 
+   being deleted. Since the driver now provides these defaults, the 
+   LargeResultDataset and LargeResultTable properties are now optional. 
+ 
+
+Resolved Issues
+The following issues were resolved in Simba JDBC Driver for Google BigQuery 
+1.1.1. 
+
+ * In some cases, when converting a Unix timestamp to the SQL_TIMESTAMP type, 
+   an IllegalArgumentException occurs. 
+   
+ * In some cases, when converting a Unix timestamp to the SQL_TIMESTAMP type, 
+   the driver returns data that is rounded incorrectly.
+   
+ * Driver sets the default timezone of the JVM to UTC.
+
+   This issue has been resolved. The driver no longer sets the default JVM
+   timezone to UTC. The driver now returns the java.sql.Timestamp columns in 
+   ResultSets in the JVM's actual default timezone, which is the user's local
+   timezone. 
+
+   To support the process of transitioning your applications from the previous 
+   driver behavior to the new behavior, use the TimestampFallback connection
+   property. For more information, see the Installation and Configuration 
+   Guide.
+
+
+1.1.0 ------------------------------------------------------------------------
+
+Released 2017-08-09
+
+Enhancements & New Features 
+
+ * Support for Pre-Generated Access Tokens
+ 
+   The driver now supports OAuth authorization using pre-generated access
+   tokens, or access and refresh token workflows.
+ 
+ * Job Execution and Polling for Status will retry with exponential Back-Off
+ 
+   Job execution and polling for status will now retry with exponential back-
+   off in case of errors. This significantly improves reliability. 
+
+
+============================================================================== 
