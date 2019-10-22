@@ -481,13 +481,13 @@ C:\Projects\twitter\word_cloud</note>
   </notepads>
   <order>
     <hop>
-      <from>Clean Tweets input</from>
+      <from>tfi-clean_tweets_input</from>
       <to>R Script Executor</to>
       <enabled>Y</enabled>
     </hop>
   </order>
   <step>
-    <name>Clean Tweets input</name>
+    <name>tfi-clean_tweets_input</name>
     <type>TextFileInput</type>
     <description/>
     <distribute>Y</distribute>
@@ -706,7 +706,7 @@ dev.off()
       <frame_name0>pdi_data</frame_name0>
     </frame_names>
     <incoming_step_names>
-      <step_name0>Clean Tweets input</step_name0>
+      <step_name0>tfi-clean_tweets_input</step_name0>
     </incoming_step_names>
     <output_fields>
       <out_field>
@@ -736,6 +736,10 @@ dev.off()
   <attributes>
     <group>
       <name>explorerState</name>
+      <attribute>
+        <key>tfi-clean_tweets_input</key>
+        <value/>
+      </attribute>
     </group>
   </attributes>
 </transformation>

@@ -539,8 +539,8 @@ delayTime
     <notepad>
       <note>MQTT Producer
 Connection: localhost: 1883
-Client ID: ${ClientID}
-Topic: ${Topic}
+Client ID: 
+Topic: IoTDevices
 QoS: 0
 Message field: message</note>
       <xloc>512</xloc>
@@ -596,6 +596,31 @@ Message field: message</note>
     </hop>
   </order>
   <step>
+    <name>Replace Me..</name>
+    <type>Dummy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>656</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
     <name>delay</name>
     <type>Delay</type>
     <description/>
@@ -608,6 +633,7 @@ Message field: message</note>
     </partitioning>
     <timeout>${delayTime}</timeout>
     <scaletime>milliseconds</scaletime>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -650,6 +676,7 @@ Message field: message</note>
       <value_precision>-1</value_precision>
       <replace_field/>
     </formula>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -693,6 +720,7 @@ Message field: message</note>
     <interval_in_ms>5000</interval_in_ms>
     <row_time_field>now</row_time_field>
     <last_time_field>FiveSecondsAgo</last_time_field>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -757,6 +785,7 @@ Message field: message</note>
       <value_precision>-1</value_precision>
       <replace_field/>
     </formula>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -867,6 +896,7 @@ Message field: message</note>
         <is_unicode>no</is_unicode>
       </field>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -897,6 +927,7 @@ Message field: message</note>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -910,30 +941,6 @@ Message field: message</note>
       <draw>Y</draw>
     </GUI>
   </step>
-  <step>
-    <name>Replace Me..</name>
-    <type>Dummy</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>656</xloc>
-      <yloc>288</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
   <step_error_handling>
   </step_error_handling>
   <slave-step-copy-partition-distribution>
@@ -942,10 +949,6 @@ Message field: message</note>
   <attributes>
     <group>
       <name>explorerState</name>
-      <attribute>
-        <key>Replace Me..</key>
-        <value/>
-      </attribute>
     </group>
   </attributes>
 </transformation>

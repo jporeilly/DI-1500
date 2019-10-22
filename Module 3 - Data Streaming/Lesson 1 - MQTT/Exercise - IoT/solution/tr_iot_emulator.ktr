@@ -10,16 +10,6 @@
     <directory>/</directory>
     <parameters>
       <parameter>
-        <name>broker</name>
-        <default_value>tcp://localhost:1883</default_value>
-        <description>broker protocol/server/port</description>
-      </parameter>
-      <parameter>
-        <name>clientID</name>
-        <default_value>e6679942-e784-11e5-9730-9a79f06e9478</default_value>
-        <description>client identifier </description>
-      </parameter>
-      <parameter>
         <name>delayTime</name>
         <default_value>500</default_value>
         <description>delay time in milliseconds
@@ -586,10 +576,13 @@ delayTime
           <value xsi:type="xs:string">localhost:1883</value>
         </property>
         <property group="" name="CLIENT_ID">
-          <value xsi:type="xs:string">${clientID}</value>
+          <value xsi:type="xs:string"/>
         </property>
         <property group="" name="TOPIC">
-          <value xsi:type="xs:string">${topic}</value>
+          <value xsi:type="xs:string">IoTDevices</value>
+        </property>
+        <property group="" name="FIELD_TOPIC">
+          <value xsi:type="xs:string"/>
         </property>
         <property group="" name="TOPIC_IN_FIELD">
           <value xsi:type="xs:boolean">false</value>
@@ -667,6 +660,7 @@ delayTime
         </property>
       </group>
     </step-props>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -693,6 +687,7 @@ delayTime
     </partitioning>
     <timeout>${delayTime}</timeout>
     <scaletime>milliseconds</scaletime>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -735,6 +730,7 @@ delayTime
       <value_precision>-1</value_precision>
       <replace_field/>
     </formula>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -778,6 +774,7 @@ delayTime
     <interval_in_ms>5000</interval_in_ms>
     <row_time_field>now</row_time_field>
     <last_time_field>FiveSecondsAgo</last_time_field>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -842,6 +839,7 @@ delayTime
       <value_precision>-1</value_precision>
       <replace_field/>
     </formula>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -952,6 +950,7 @@ delayTime
         <is_unicode>no</is_unicode>
       </field>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -982,6 +981,7 @@ delayTime
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>

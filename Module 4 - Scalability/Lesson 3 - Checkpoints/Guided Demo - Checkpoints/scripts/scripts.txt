@@ -1,0 +1,21 @@
+ /* scripts to create pentaho_chcekpoints table in hibernate */
+   create table pentaho_checkpoints.customers (checkpoint_fname varchar(10), checkpoint_lname varchar(10));
+   insert into pentaho_checkpoints.customers values ('Peter','Pan');
+
+ /* update pentaho_checkpoints.customers table */
+   update pentaho_checkpoints.customers set checkpoint_fname = 'Peter';
+   update pentaho_checkpoints.customers set checkpoint_lname = 'Pan';
+   update pentaho_checkpoints.customers set checkpoint_fname = 'notPeter';
+   update pentaho_checkpoints.customers set checkpoint_lname = 'notPan';
+        
+   select * from pentaho_checkpoints.customers;
+   delete from pentaho_dilogs.checkpoint_logs
+   where id_job_run='3';
+
+
+   select * from channel_log where root_channel_id = channel_id
+   select * from job_log order by logdate desc
+
+
+ /* to clear checkpoint_log after maxRetries/timePeriodMinutes has been violated */
+   truncate table pentaho_dilogs.checkpoint_logs

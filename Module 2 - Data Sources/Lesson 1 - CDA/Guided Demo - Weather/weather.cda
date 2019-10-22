@@ -14,7 +14,7 @@
       <Parameters>
          <Parameter default="London" name="CITY" type="String"/>
       </Parameters>
-      <Query>conditions_normalized</Query>
+      <Query>rnml-weather_dataset</Query>
       <Output indexes="0,1"/>
    </DataAccess>
    

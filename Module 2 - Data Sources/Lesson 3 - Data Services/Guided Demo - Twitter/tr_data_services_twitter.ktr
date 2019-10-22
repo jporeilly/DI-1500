@@ -7,7 +7,7 @@
     <trans_version/>
     <trans_type>Normal</trans_type>
     <trans_status>0</trans_status>
-    <directory>/home/admin</directory>
+    <directory>/</directory>
     <parameters>
     </parameters>
     <log>
@@ -430,7 +430,7 @@
     <created_user>-</created_user>
     <created_date>2017/03/22 14:59:19.035</created_date>
     <modified_user>admin</modified_user>
-    <modified_date>2018/01/26 16:23:58.246</modified_date>
+    <modified_date>2019/03/13 08:57:38.748</modified_date>
     <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
@@ -481,7 +481,7 @@
   <order>
   </order>
   <step>
-    <name>Read Twitter Data</name>
+    <name>csvi-twitter_data</name>
     <type>CsvInput</type>
     <description/>
     <distribute>Y</distribute>
@@ -491,7 +491,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <filename>C:\Pentaho Training\DI 1100\Module 2 - Data Sources\Lesson 3 - Data Services\Guided Demo\Mar_22_11_57_39 AM_2017_CET_Pentaho_TwitterData.csv</filename>
+    <filename>C:\Pentaho-Training\DI-1500\Module 2 - Data Sources\Lesson 3 - Data Services\Guided Demo - Twitter\data\Pentaho_TwitterData.csv</filename>
     <filename_field/>
     <rownum_field/>
     <include_filename>N</include_filename>
@@ -503,21 +503,22 @@
     <add_filename_result>N</add_filename_result>
     <parallel>N</parallel>
     <newline_possible>N</newline_possible>
+    <format/>
     <encoding>UTF-8</encoding>
     <fields>
       <field>
-        <name/>
-        <type>String</type>
-        <format/>
+        <name>text</name>
+        <type>Integer</type>
+        <format>#</format>
         <currency>£</currency>
         <decimal>.</decimal>
         <group>,</group>
-        <length>62</length>
-        <precision>-1</precision>
+        <length>15</length>
+        <precision>0</precision>
         <trim_type>none</trim_type>
       </field>
       <field>
-        <name>text</name>
+        <name>favorited</name>
         <type>String</type>
         <format/>
         <currency>£</currency>
@@ -528,36 +529,25 @@
         <trim_type>none</trim_type>
       </field>
       <field>
-        <name>favorited</name>
-        <type>String</type>
-        <format/>
-        <currency>£</currency>
-        <decimal>.</decimal>
-        <group>,</group>
-        <length>5</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
         <name>favoriteCount</name>
-        <type>String</type>
+        <type>Boolean</type>
         <format/>
         <currency>£</currency>
         <decimal>.</decimal>
         <group>,</group>
-        <length>2</length>
+        <length>-1</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
       <field>
         <name>replyToSN</name>
-        <type>String</type>
-        <format/>
+        <type>Integer</type>
+        <format>#</format>
         <currency>£</currency>
         <decimal>.</decimal>
         <group>,</group>
-        <length>19</length>
-        <precision>-1</precision>
+        <length>15</length>
+        <precision>0</precision>
         <trim_type>none</trim_type>
       </field>
       <field>
@@ -567,29 +557,29 @@
         <currency>£</currency>
         <decimal>.</decimal>
         <group>,</group>
-        <length>19</length>
+        <length>14</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
       <field>
         <name>truncated</name>
-        <type>String</type>
-        <format/>
+        <type>Date</type>
+        <format>yyyy-MM-dd HH:mm:ss</format>
         <currency>£</currency>
         <decimal>.</decimal>
         <group>,</group>
-        <length>5</length>
+        <length>-1</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
       <field>
         <name>replyToSID</name>
-        <type>String</type>
+        <type>Boolean</type>
         <format/>
         <currency>£</currency>
         <decimal>.</decimal>
         <group>,</group>
-        <length>18</length>
+        <length>-1</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -606,13 +596,13 @@
       </field>
       <field>
         <name>replyToUID</name>
-        <type>String</type>
-        <format/>
+        <type>Integer</type>
+        <format>#</format>
         <currency>£</currency>
         <decimal>.</decimal>
         <group>,</group>
-        <length>66</length>
-        <precision>-1</precision>
+        <length>15</length>
+        <precision>0</precision>
         <trim_type>none</trim_type>
       </field>
       <field>
@@ -622,7 +612,7 @@
         <currency>£</currency>
         <decimal>.</decimal>
         <group>,</group>
-        <length>100</length>
+        <length>8</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -633,7 +623,7 @@
         <currency>£</currency>
         <decimal>.</decimal>
         <group>,</group>
-        <length>15</length>
+        <length>100</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -644,12 +634,23 @@
         <currency>£</currency>
         <decimal>.</decimal>
         <group>,</group>
-        <length>5</length>
+        <length>15</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
       <field>
         <name>isRetweet</name>
+        <type>Integer</type>
+        <format>#</format>
+        <currency>£</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>15</length>
+        <precision>0</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>retweeted</name>
         <type>Boolean</type>
         <format/>
         <currency>£</currency>
@@ -660,24 +661,13 @@
         <trim_type>none</trim_type>
       </field>
       <field>
-        <name>retweeted</name>
-        <type>String</type>
-        <format/>
-        <currency>£</currency>
-        <decimal>.</decimal>
-        <group>,</group>
-        <length>5</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
         <name>longitude</name>
-        <type>String</type>
+        <type>Boolean</type>
         <format/>
         <currency>£</currency>
         <decimal>.</decimal>
         <group>,</group>
-        <length>2</length>
+        <length>-1</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -693,6 +683,7 @@
         <trim_type>none</trim_type>
       </field>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -724,10 +715,6 @@
     </group>
     <group>
       <name>{"_":"Embedded MetaStore Elements","namespace":"pentaho","type":"Kettle Data Service"}</name>
-      <attribute>
-        <key>Twitter</key>
-        <value>{"children":[{"children":[],"id":"step_name","value":"Read Twitter Data"},{"children":[],"id":"row_limit","value":null},{"children":[{"children":[{"children":[],"id":"step_name","value":"Read Twitter Data"},{"children":[],"id":"name","value":"35cc22e2-4c25-4f6f-95b3-8d8bf12e932a"},{"children":[{"children":[{"children":[],"id":"template_name","value":"default"},{"children":[],"id":"time_to_live","value":null}],"id":"_POJO_","value":"org.pentaho.di.trans.dataservice.optimization.cache.ServiceCache"}],"id":"type","value":null},{"children":[],"id":"enabled","value":"Y"}],"id":"0","value":null},{"children":[{"children":[],"id":"step_name","value":"Read Twitter Data"},{"children":[],"id":"name","value":"cd485a9d-3ea3-48ea-91da-2288a2ae2642"},{"children":[{"children":[{"children":[],"id":"definitions_list","value":null}],"id":"_POJO_","value":"org.pentaho.di.trans.dataservice.optimization.pushdown.ParameterPushdown"}],"id":"type","value":null},{"children":[],"id":"enabled","value":"Y"}],"id":"1","value":null}],"id":"push_down_opt_meta","value":"org.pentaho.di.trans.dataservice.optimization.PushDownOptimizationMeta"},{"children":[],"id":"is_user_defined","value":"Y"}],"id":"Twitter","value":null,"name":"Twitter","owner":null,"ownerPermissionsList":[]}</value>
-      </attribute>
     </group>
   </attributes>
 </transformation>

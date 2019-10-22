@@ -1,0 +1,8 @@
+CITY;Widgets
+London  ;46453
+London  ;234
+Madrid  ;3452
+New York;4356
+New York;4679
+Paris   ;1025
+Paris   ;23699
