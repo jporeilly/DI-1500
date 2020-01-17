@@ -481,7 +481,7 @@ Result "John" or "Fred" will logged as "TRUE"</note>
   </notepads>
   <order>
     <hop>
-      <from>Metadata</from>
+      <from>dg-metadata</from>
       <to>ETL Metadata Injection</to>
       <enabled>Y</enabled>
     </hop>
@@ -510,27 +510,28 @@ Result "John" or "Fred" will logged as "TRUE"</note>
     <stream_target_step/>
     <mappings>
       <mapping>
-        <target_step_name>Filter rows</target_step_name>
-        <target_attribute_key>SEND_TRUE_STEP</target_attribute_key>
+        <target_step_name>fr-mdi</target_step_name>
+        <target_attribute_key>CONDITION</target_attribute_key>
         <target_detail>N</target_detail>
-        <source_step>Metadata</source_step>
-        <source_field>true_targetStep</source_field>
+        <source_step>dg-metadata</source_step>
+        <source_field>condition</source_field>
       </mapping>
       <mapping>
-        <target_step_name>Filter rows</target_step_name>
+        <target_step_name>fr-mdi</target_step_name>
         <target_attribute_key>SEND_FALSE_STEP</target_attribute_key>
         <target_detail>N</target_detail>
-        <source_step>Metadata</source_step>
+        <source_step>dg-metadata</source_step>
         <source_field>false_targetStep</source_field>
       </mapping>
       <mapping>
-        <target_step_name>Filter rows</target_step_name>
-        <target_attribute_key>CONDITION</target_attribute_key>
+        <target_step_name>fr-mdi</target_step_name>
+        <target_attribute_key>SEND_TRUE_STEP</target_attribute_key>
         <target_detail>N</target_detail>
-        <source_step>Metadata</source_step>
-        <source_field>condition</source_field>
+        <source_step>dg-metadata</source_step>
+        <source_field>true_targetStep</source_field>
       </mapping>
     </mappings>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -545,7 +546,7 @@ Result "John" or "Fred" will logged as "TRUE"</note>
     </GUI>
   </step>
   <step>
-    <name>Metadata</name>
+    <name>dg-metadata</name>
     <type>DataGrid</type>
     <description/>
     <distribute>Y</distribute>
@@ -602,6 +603,7 @@ Result "John" or "Fred" will logged as "TRUE"</note>
         <item/>
       </line>
     </data>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -623,6 +625,10 @@ Result "John" or "Fred" will logged as "TRUE"</note>
   <attributes>
     <group>
       <name>explorerState</name>
+      <attribute>
+        <key>dg-metadata</key>
+        <value/>
+      </attribute>
     </group>
   </attributes>
 </transformation>

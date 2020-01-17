@@ -555,11 +555,11 @@ design time.</note>
   <order>
     <hop>
       <from>ETL Metadata Injection</from>
-      <to>Text file output</to>
+      <to>tfo-rename</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Metadata</from>
+      <from>dg-metadata</from>
       <to>ETL Metadata Injection</to>
       <enabled>Y</enabled>
     </hop>
@@ -580,7 +580,7 @@ design time.</note>
     <trans_name/>
     <filename>${Internal.Entry.Current.Directory}/tr_pull_template.ktr</filename>
     <directory_path/>
-    <source_step>Result</source_step>
+    <source_step>dmmy-pull</source_step>
     <source_output_fields>
       <source_output_field>
         <source_output_field_name>mdi_integer</source_output_field_name>
@@ -601,20 +601,21 @@ design time.</note>
     <stream_target_step/>
     <mappings>
       <mapping>
-        <target_step_name>Select values</target_step_name>
-        <target_attribute_key>META_RENAME</target_attribute_key>
-        <target_detail>Y</target_detail>
-        <source_step>Metadata</source_step>
-        <source_field>mdi_fieldname</source_field>
-      </mapping>
-      <mapping>
-        <target_step_name>Select values</target_step_name>
+        <target_step_name>sv-mdi_rename</target_step_name>
         <target_attribute_key>META_NAME</target_attribute_key>
         <target_detail>Y</target_detail>
-        <source_step>Metadata</source_step>
+        <source_step>dg-metadata</source_step>
         <source_field>fieldname</source_field>
       </mapping>
+      <mapping>
+        <target_step_name>sv-mdi_rename</target_step_name>
+        <target_attribute_key>META_RENAME</target_attribute_key>
+        <target_detail>Y</target_detail>
+        <source_step>dg-metadata</source_step>
+        <source_field>mdi_fieldname</source_field>
+      </mapping>
     </mappings>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -629,7 +630,7 @@ design time.</note>
     </GUI>
   </step>
   <step>
-    <name>Metadata</name>
+    <name>dg-metadata</name>
     <type>DataGrid</type>
     <description/>
     <distribute>Y</distribute>
@@ -673,6 +674,7 @@ design time.</note>
         <item>mdi_string</item>
       </line>
     </data>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -687,7 +689,7 @@ design time.</note>
     </GUI>
   </step>
   <step>
-    <name>Text file output</name>
+    <name>tfo-rename</name>
     <type>TextFileOutput</type>
     <description/>
     <distribute>Y</distribute>
@@ -729,6 +731,7 @@ design time.</note>
     </file>
     <fields>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -747,4 +750,9 @@ design time.</note>
   <slave-step-copy-partition-distribution>
   </slave-step-copy-partition-distribution>
   <slave_transformation>N</slave_transformation>
+  <attributes>
+    <group>
+      <name>explorerState</name>
+    </group>
+  </attributes>
 </transformation>

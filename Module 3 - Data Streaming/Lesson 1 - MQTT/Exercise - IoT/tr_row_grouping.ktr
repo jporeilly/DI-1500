@@ -502,13 +502,13 @@ Here you can aggregate / transform / validate / filter / ...</note>
   </notepads>
   <order>
     <hop>
-      <from>get_from_result</from>
+      <from>grfr-message</from>
       <to>"transform"</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
       <from>"transform"</from>
-      <to>copy_to_result</to>
+      <to>crtr-message_output</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -523,6 +523,7 @@ Here you can aggregate / transform / validate / filter / ...</note>
       <method>none</method>
       <schema_name/>
     </partitioning>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -537,7 +538,7 @@ Here you can aggregate / transform / validate / filter / ...</note>
     </GUI>
   </step>
   <step>
-    <name>copy_to_result</name>
+    <name>crtr-message_output</name>
     <type>RowsToResult</type>
     <description/>
     <distribute>Y</distribute>
@@ -547,6 +548,7 @@ Here you can aggregate / transform / validate / filter / ...</note>
       <method>none</method>
       <schema_name/>
     </partitioning>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -561,10 +563,10 @@ Here you can aggregate / transform / validate / filter / ...</note>
     </GUI>
   </step>
   <step>
-    <name>get_from_result</name>
+    <name>grfr-message</name>
     <type>RowsFromResult</type>
     <description/>
-    <distribute>N</distribute>
+    <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
     <partitioning>
@@ -579,6 +581,7 @@ Here you can aggregate / transform / validate / filter / ...</note>
         <precision>-1</precision>
       </field>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -597,4 +600,17 @@ Here you can aggregate / transform / validate / filter / ...</note>
   <slave-step-copy-partition-distribution>
   </slave-step-copy-partition-distribution>
   <slave_transformation>N</slave_transformation>
+  <attributes>
+    <group>
+      <name>explorerState</name>
+      <attribute>
+        <key>grfr-message</key>
+        <value/>
+      </attribute>
+      <attribute>
+        <key>crtr-message_output</key>
+        <value/>
+      </attribute>
+    </group>
+  </attributes>
 </transformation>

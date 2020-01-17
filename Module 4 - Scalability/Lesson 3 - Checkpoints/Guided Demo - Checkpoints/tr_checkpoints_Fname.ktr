@@ -510,17 +510,17 @@
   </connection>
   <order>
     <hop>
-      <from>Table input</from>
-      <to>Filter Fname</to>
+      <from>ti-customers_fname</from>
+      <to>fr-fname</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Filter Fname</from>
+      <from>fr-fname</from>
       <to>Success</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Filter Fname</from>
+      <from>fr-fname</from>
       <to>Fail</to>
       <enabled>Y</enabled>
     </hop>
@@ -539,7 +539,8 @@
     <row_threshold>0</row_threshold>
     <message/>
     <always_log_rows>Y</always_log_rows>
-    <abort_with_error>Y</abort_with_error>
+    <abort_option>ABORT_WITH_ERROR</abort_option>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -554,7 +555,7 @@
     </GUI>
   </step>
   <step>
-    <name>Filter Fname</name>
+    <name>fr-fname</name>
     <type>FilterRows</type>
     <description/>
     <distribute>Y</distribute>
@@ -583,6 +584,7 @@
         </value>
       </condition>
     </compare>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -607,6 +609,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -621,7 +624,7 @@
     </GUI>
   </step>
   <step>
-    <name>Table input</name>
+    <name>ti-customers_fname</name>
     <type>TableInput</type>
     <description/>
     <distribute>Y</distribute>
@@ -641,6 +644,7 @@ FROM pentaho_checkpoints.customers
     <execute_each_row>N</execute_each_row>
     <variables_active>N</variables_active>
     <lazy_conversion_active>N</lazy_conversion_active>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -662,6 +666,14 @@ FROM pentaho_checkpoints.customers
   <attributes>
     <group>
       <name>explorerState</name>
+      <attribute>
+        <key>ti-customers_fname</key>
+        <value/>
+      </attribute>
+      <attribute>
+        <key>fr-fname</key>
+        <value/>
+      </attribute>
     </group>
   </attributes>
 </transformation>

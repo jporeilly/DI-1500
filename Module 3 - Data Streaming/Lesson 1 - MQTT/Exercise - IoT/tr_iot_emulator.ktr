@@ -565,32 +565,32 @@ Message field: message</note>
   </notepads>
   <order>
     <hop>
-      <from>formula</from>
-      <to>replace</to>
+      <from>frmla-gps_coordinates</from>
+      <to>ris-populate_message</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>replace</from>
-      <to>select</to>
+      <from>ris-populate_message</from>
+      <to>sv-message</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>randomize</from>
-      <to>formula</to>
+      <from>udje-randomize</from>
+      <to>frmla-gps_coordinates</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>select</from>
-      <to>delay</to>
+      <from>sv-message</from>
+      <to>delr-20_secs</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>generate</from>
-      <to>randomize</to>
+      <from>gr-iot_data</from>
+      <to>udje-randomize</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>delay</from>
+      <from>delr-20_secs</from>
       <to>Replace Me..</to>
       <enabled>Y</enabled>
     </hop>
@@ -621,10 +621,10 @@ Message field: message</note>
     </GUI>
   </step>
   <step>
-    <name>delay</name>
+    <name>delr-20_secs</name>
     <type>Delay</type>
     <description/>
-    <distribute>N</distribute>
+    <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
     <partitioning>
@@ -648,7 +648,7 @@ Message field: message</note>
     </GUI>
   </step>
   <step>
-    <name>formula</name>
+    <name>frmla-gps_coordinates</name>
     <type>Formula</type>
     <description/>
     <distribute>Y</distribute>
@@ -691,10 +691,10 @@ Message field: message</note>
     </GUI>
   </step>
   <step>
-    <name>generate</name>
+    <name>gr-iot_data</name>
     <type>RowGenerator</type>
     <description/>
-    <distribute>N</distribute>
+    <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
     <partitioning>
@@ -735,7 +735,7 @@ Message field: message</note>
     </GUI>
   </step>
   <step>
-    <name>randomize</name>
+    <name>udje-randomize</name>
     <type>Janino</type>
     <description/>
     <distribute>Y</distribute>
@@ -800,7 +800,7 @@ Message field: message</note>
     </GUI>
   </step>
   <step>
-    <name>replace</name>
+    <name>ris-populate_message</name>
     <type>ReplaceString</type>
     <description/>
     <distribute>Y</distribute>
@@ -911,7 +911,7 @@ Message field: message</note>
     </GUI>
   </step>
   <step>
-    <name>select</name>
+    <name>sv-message</name>
     <type>SelectValues</type>
     <description/>
     <distribute>Y</distribute>
@@ -924,6 +924,7 @@ Message field: message</note>
     <fields>
       <field>
         <name>message</name>
+        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -949,6 +950,30 @@ Message field: message</note>
   <attributes>
     <group>
       <name>explorerState</name>
+      <attribute>
+        <key>frmla-gps_coordinates</key>
+        <value/>
+      </attribute>
+      <attribute>
+        <key>ris-populate_message</key>
+        <value/>
+      </attribute>
+      <attribute>
+        <key>udje-randomize</key>
+        <value/>
+      </attribute>
+      <attribute>
+        <key>delr-20_secs</key>
+        <value/>
+      </attribute>
+      <attribute>
+        <key>sv-message</key>
+        <value/>
+      </attribute>
+      <attribute>
+        <key>gr-iot_data</key>
+        <value/>
+      </attribute>
     </group>
   </attributes>
 </transformation>

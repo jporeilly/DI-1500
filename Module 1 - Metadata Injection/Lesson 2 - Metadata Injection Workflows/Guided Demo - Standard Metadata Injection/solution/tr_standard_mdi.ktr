@@ -527,7 +527,7 @@
   </notepads>
   <order>
     <hop>
-      <from>Metadata</from>
+      <from>dg-metadata</from>
       <to>ETL Metadata Injection</to>
       <enabled>Y</enabled>
     </hop>
@@ -556,20 +556,21 @@
     <stream_target_step/>
     <mappings>
       <mapping>
-        <target_step_name>Select values</target_step_name>
-        <target_attribute_key>META_RENAME</target_attribute_key>
-        <target_detail>Y</target_detail>
-        <source_step>Metadata</source_step>
-        <source_field>mdi_fieldname</source_field>
-      </mapping>
-      <mapping>
-        <target_step_name>Select values</target_step_name>
+        <target_step_name>sv-mdi_rename</target_step_name>
         <target_attribute_key>META_NAME</target_attribute_key>
         <target_detail>Y</target_detail>
-        <source_step>Metadata</source_step>
+        <source_step>dg-metadata</source_step>
         <source_field>fieldname</source_field>
       </mapping>
+      <mapping>
+        <target_step_name>sv-mdi_rename</target_step_name>
+        <target_attribute_key>META_RENAME</target_attribute_key>
+        <target_detail>Y</target_detail>
+        <source_step>dg-metadata</source_step>
+        <source_field>mdi_fieldname</source_field>
+      </mapping>
     </mappings>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -584,7 +585,7 @@
     </GUI>
   </step>
   <step>
-    <name>Metadata</name>
+    <name>dg-metadata</name>
     <type>DataGrid</type>
     <description/>
     <distribute>Y</distribute>
@@ -628,6 +629,7 @@
         <item>mdi_string</item>
       </line>
     </data>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -646,4 +648,13 @@
   <slave-step-copy-partition-distribution>
   </slave-step-copy-partition-distribution>
   <slave_transformation>N</slave_transformation>
+  <attributes>
+    <group>
+      <name>explorerState</name>
+      <attribute>
+        <key>dg-metadata</key>
+        <value/>
+      </attribute>
+    </group>
+  </attributes>
 </transformation>

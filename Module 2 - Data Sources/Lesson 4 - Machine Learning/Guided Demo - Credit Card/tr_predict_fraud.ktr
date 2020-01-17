@@ -701,7 +701,7 @@ Score probability of fraud</note>
     <name>ac-count</name>
     <type>Constant</type>
     <description/>
-    <distribute>N</distribute>
+    <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
     <partitioning>
@@ -1439,7 +1439,7 @@ FROM strataml_customer_billing
     <name>rscrpt-predict</name>
     <type>RScriptExcecutor</type>
     <description/>
-    <distribute>N</distribute>
+    <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
     <partitioning>
@@ -1737,7 +1737,7 @@ submission
     <name>sv-convert_booleans_to_numbers</name>
     <type>SelectValues</type>
     <description/>
-    <distribute>N</distribute>
+    <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
     <partitioning>

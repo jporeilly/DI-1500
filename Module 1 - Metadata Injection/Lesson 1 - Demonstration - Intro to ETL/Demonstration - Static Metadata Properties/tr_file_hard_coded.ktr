@@ -459,7 +459,7 @@
     <notepad>
       <note>Double click on the steps to display the metadata properties.</note>
       <xloc>304</xloc>
-      <yloc>368</yloc>
+      <yloc>352</yloc>
       <width>328</width>
       <heigth>26</heigth>
       <fontname>Segoe UI</fontname>
@@ -501,18 +501,18 @@
   </notepads>
   <order>
     <hop>
-      <from>CSV file input - data 1</from>
-      <to>Text file output - data 1</to>
+      <from>csvi-data_1</from>
+      <to>tfo-data_1</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>CSV file input - data 2</from>
-      <to>Text file output - data 2</to>
+      <from>csvi-data_2</from>
+      <to>tfo-data_2</to>
       <enabled>Y</enabled>
     </hop>
   </order>
   <step>
-    <name>CSV file input - data 1</name>
+    <name>csvi-data_1</name>
     <type>CsvInput</type>
     <description/>
     <distribute>Y</distribute>
@@ -522,7 +522,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <filename>${Internal.Entry.Current.Directory}/files/sales_data1.txt</filename>
+    <filename>${Internal.Entry.Current.Directory}/data/sales_data1.txt</filename>
     <filename_field/>
     <rownum_field/>
     <include_filename>N</include_filename>
@@ -534,6 +534,7 @@
     <add_filename_result>N</add_filename_result>
     <parallel>N</parallel>
     <newline_possible>N</newline_possible>
+    <format/>
     <encoding/>
     <fields>
       <field>
@@ -801,6 +802,7 @@
         <trim_type>none</trim_type>
       </field>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -815,7 +817,7 @@
     </GUI>
   </step>
   <step>
-    <name>CSV file input - data 2</name>
+    <name>csvi-data_2</name>
     <type>CsvInput</type>
     <description/>
     <distribute>Y</distribute>
@@ -825,7 +827,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <filename>${Internal.Entry.Current.Directory}/files/sales_data2.txt</filename>
+    <filename>${Internal.Entry.Current.Directory}\data\sales_data2.txt</filename>
     <filename_field/>
     <rownum_field/>
     <include_filename>N</include_filename>
@@ -837,6 +839,7 @@
     <add_filename_result>N</add_filename_result>
     <parallel>N</parallel>
     <newline_possible>N</newline_possible>
+    <format/>
     <encoding/>
     <fields>
       <field>
@@ -939,6 +942,7 @@
         <trim_type>none</trim_type>
       </field>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -953,7 +957,7 @@
     </GUI>
   </step>
   <step>
-    <name>Text file output - data 1</name>
+    <name>tfo-data_1</name>
     <type>TextFileOutput</type>
     <description/>
     <distribute>Y</distribute>
@@ -1283,6 +1287,7 @@
         <precision>-1</precision>
       </field>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1297,7 +1302,7 @@
     </GUI>
   </step>
   <step>
-    <name>Text file output - data 2</name>
+    <name>tfo-data_2</name>
     <type>TextFileOutput</type>
     <description/>
     <distribute>Y</distribute>
@@ -1342,7 +1347,7 @@
         <name>ORDERNUMBER</name>
         <type>Integer</type>
         <format>#</format>
-        <currency>$</currency>
+        <currency>£</currency>
         <decimal>.</decimal>
         <group>,</group>
         <nullif/>
@@ -1354,7 +1359,7 @@
         <name>QUANTITYORDERED</name>
         <type>Integer</type>
         <format>#</format>
-        <currency>$</currency>
+        <currency>£</currency>
         <decimal>.</decimal>
         <group>,</group>
         <nullif/>
@@ -1366,7 +1371,7 @@
         <name>PRICEEACH</name>
         <type>Number</type>
         <format>#.#</format>
-        <currency>$</currency>
+        <currency>£</currency>
         <decimal>.</decimal>
         <group>,</group>
         <nullif/>
@@ -1378,7 +1383,7 @@
         <name>ORDERLINENUMBER</name>
         <type>Integer</type>
         <format>#</format>
-        <currency>$</currency>
+        <currency>£</currency>
         <decimal>.</decimal>
         <group>,</group>
         <nullif/>
@@ -1390,7 +1395,7 @@
         <name>SALES</name>
         <type>Number</type>
         <format>#.#</format>
-        <currency>$</currency>
+        <currency>£</currency>
         <decimal>.</decimal>
         <group>,</group>
         <nullif/>
@@ -1400,14 +1405,14 @@
       </field>
       <field>
         <name>ORDERDATE</name>
-        <type>String</type>
-        <format/>
+        <type>Date</type>
+        <format>yyyy/MM/dd</format>
         <currency/>
         <decimal/>
         <group/>
         <nullif/>
         <trim_type>none</trim_type>
-        <length>15</length>
+        <length>-1</length>
         <precision>-1</precision>
       </field>
       <field>
@@ -1426,7 +1431,7 @@
         <name>QTR_ID</name>
         <type>Integer</type>
         <format>#</format>
-        <currency>$</currency>
+        <currency>£</currency>
         <decimal>.</decimal>
         <group>,</group>
         <nullif/>
@@ -1438,195 +1443,16 @@
         <name>MONTH_ID</name>
         <type>Integer</type>
         <format>#</format>
-        <currency>$</currency>
+        <currency>£</currency>
         <decimal>.</decimal>
         <group>,</group>
         <nullif/>
         <trim_type>none</trim_type>
         <length>15</length>
         <precision>0</precision>
-      </field>
-      <field>
-        <name>YEAR_ID</name>
-        <type>Integer</type>
-        <format>#</format>
-        <currency>$</currency>
-        <decimal>.</decimal>
-        <group>,</group>
-        <nullif/>
-        <trim_type>none</trim_type>
-        <length>15</length>
-        <precision>0</precision>
-      </field>
-      <field>
-        <name>PRODUCTLINE</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
-        <trim_type>none</trim_type>
-        <length>16</length>
-        <precision>-1</precision>
-      </field>
-      <field>
-        <name>MSRP</name>
-        <type>Integer</type>
-        <format>#</format>
-        <currency>$</currency>
-        <decimal>.</decimal>
-        <group>,</group>
-        <nullif/>
-        <trim_type>none</trim_type>
-        <length>15</length>
-        <precision>0</precision>
-      </field>
-      <field>
-        <name>PRODUCTCODE</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
-        <trim_type>none</trim_type>
-        <length>9</length>
-        <precision>-1</precision>
-      </field>
-      <field>
-        <name>CUSTOMERNAME</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
-        <trim_type>none</trim_type>
-        <length>34</length>
-        <precision>-1</precision>
-      </field>
-      <field>
-        <name>PHONE</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
-        <trim_type>none</trim_type>
-        <length>17</length>
-        <precision>-1</precision>
-      </field>
-      <field>
-        <name>ADDRESSLINE1</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
-        <trim_type>none</trim_type>
-        <length>42</length>
-        <precision>-1</precision>
-      </field>
-      <field>
-        <name>ADDRESSLINE2</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
-        <trim_type>none</trim_type>
-        <length>11</length>
-        <precision>-1</precision>
-      </field>
-      <field>
-        <name>CITY</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
-        <trim_type>none</trim_type>
-        <length>14</length>
-        <precision>-1</precision>
-      </field>
-      <field>
-        <name>STATE</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
-        <trim_type>none</trim_type>
-        <length>13</length>
-        <precision>-1</precision>
-      </field>
-      <field>
-        <name>POSTALCODE</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
-        <trim_type>none</trim_type>
-        <length>9</length>
-        <precision>-1</precision>
-      </field>
-      <field>
-        <name>COUNTRY</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
-        <trim_type>none</trim_type>
-        <length>13</length>
-        <precision>-1</precision>
-      </field>
-      <field>
-        <name>TERRITORY</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
-        <trim_type>none</trim_type>
-        <length>5</length>
-        <precision>-1</precision>
-      </field>
-      <field>
-        <name>CONTACTLASTNAME</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
-        <trim_type>none</trim_type>
-        <length>11</length>
-        <precision>-1</precision>
-      </field>
-      <field>
-        <name>CONTACTFIRSTNAME</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
-        <trim_type>none</trim_type>
-        <length>10</length>
-        <precision>-1</precision>
       </field>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1648,6 +1474,22 @@
   <attributes>
     <group>
       <name>explorerState</name>
+      <attribute>
+        <key>csvi-data_2</key>
+        <value/>
+      </attribute>
+      <attribute>
+        <key>csvi-data_1</key>
+        <value/>
+      </attribute>
+      <attribute>
+        <key>tfo-data_1</key>
+        <value/>
+      </attribute>
+      <attribute>
+        <key>tfo-data_2</key>
+        <value/>
+      </attribute>
     </group>
   </attributes>
 </transformation>

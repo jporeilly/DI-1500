@@ -545,23 +545,23 @@ Which Slave node recieves which record is determined by the Master node.</note>
   </notepads>
   <order>
     <hop>
-      <from>CSV file input</from>
-      <to>Memory Group by</to>
+      <from>csvi-widgets</from>
+      <to>mgb-city</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Memory Group by</from>
-      <to>Sorted merge</to>
+      <from>mgb-city</from>
+      <to>sm-city</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Sorted merge</from>
-      <to>Text file output</to>
+      <from>sm-city</from>
+      <to>tfo-grouped_widgets</to>
       <enabled>Y</enabled>
     </hop>
   </order>
   <step>
-    <name>CSV file input</name>
+    <name>csvi-widgets</name>
     <type>CsvInput</type>
     <description/>
     <distribute>Y</distribute>
@@ -624,10 +624,10 @@ Which Slave node recieves which record is determined by the Master node.</note>
     </GUI>
   </step>
   <step>
-    <name>Memory Group by</name>
+    <name>mgb-city</name>
     <type>MemoryGroupBy</type>
     <description/>
-    <distribute>N</distribute>
+    <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
     <partitioning>
@@ -663,7 +663,7 @@ Which Slave node recieves which record is determined by the Master node.</note>
     </GUI>
   </step>
   <step>
-    <name>Sorted merge</name>
+    <name>sm-city</name>
     <type>SortedMerge</type>
     <description/>
     <distribute>Y</distribute>
@@ -694,7 +694,7 @@ Which Slave node recieves which record is determined by the Master node.</note>
     </GUI>
   </step>
   <step>
-    <name>Text file output</name>
+    <name>tfo-grouped_widgets</name>
     <type>TextFileOutput</type>
     <description/>
     <distribute>Y</distribute>
@@ -782,6 +782,22 @@ Which Slave node recieves which record is determined by the Master node.</note>
   <attributes>
     <group>
       <name>explorerState</name>
+      <attribute>
+        <key>sm-city</key>
+        <value/>
+      </attribute>
+      <attribute>
+        <key>tfo-grouped_widgets</key>
+        <value/>
+      </attribute>
+      <attribute>
+        <key>mgb-city</key>
+        <value/>
+      </attribute>
+      <attribute>
+        <key>csvi-widgets</key>
+        <value/>
+      </attribute>
     </group>
   </attributes>
 </transformation>

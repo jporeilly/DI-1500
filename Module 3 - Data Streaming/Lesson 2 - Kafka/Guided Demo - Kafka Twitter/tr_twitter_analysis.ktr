@@ -480,33 +480,33 @@
   </notepads>
   <order>
     <hop>
-      <from>Get records from stream</from>
-      <to>Json - Tweets</to>
+      <from>grfs-message</from>
+      <to>ji-tweets</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Json - Tweets</from>
-      <to>Filter rows</to>
+      <from>ji-tweets</from>
+      <to>fr-valid_key</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Filter rows</from>
-      <to>Unique rows (HashSet)</to>
+      <from>fr-valid_key</from>
+      <to>ur-remove_dup_tweets</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Unique rows (HashSet)</from>
-      <to>Clean Tweets</to>
+      <from>ur-remove_dup_tweets</from>
+      <to>tfo-clean_tweets</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Filter rows</from>
+      <from>fr-valid_key</from>
       <to>Dummy (do nothing)</to>
       <enabled>Y</enabled>
     </hop>
   </order>
   <step>
-    <name>Clean Tweets</name>
+    <name>tfo-clean_tweets</name>
     <type>TextFileOutput</type>
     <description/>
     <distribute>Y</distribute>
@@ -600,7 +600,7 @@
     </GUI>
   </step>
   <step>
-    <name>Filter rows</name>
+    <name>fr-valid_key</name>
     <type>FilterRows</type>
     <description/>
     <distribute>Y</distribute>
@@ -610,7 +610,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <send_true_to>Unique rows (HashSet)</send_true_to>
+    <send_true_to>ur-remove_dup_tweets</send_true_to>
     <send_false_to>Dummy (do nothing)</send_false_to>
     <compare>
       <condition>
@@ -665,7 +665,7 @@
     </GUI>
   </step>
   <step>
-    <name>Get records from stream</name>
+    <name>grfs-message</name>
     <type>RecordsFromStream</type>
     <description/>
     <distribute>Y</distribute>
@@ -698,10 +698,10 @@
     </GUI>
   </step>
   <step>
-    <name>Json - Tweets</name>
+    <name>ji-tweets</name>
     <type>JsonInput</type>
     <description/>
-    <distribute>N</distribute>
+    <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
     <partitioning>
@@ -807,10 +807,10 @@
     </GUI>
   </step>
   <step>
-    <name>Unique rows (HashSet)</name>
+    <name>ur-remove_dup_tweets</name>
     <type>UniqueRowsByHashSet</type>
     <description/>
-    <distribute>N</distribute>
+    <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
     <partitioning>
@@ -847,6 +847,26 @@
   <attributes>
     <group>
       <name>explorerState</name>
+      <attribute>
+        <key>ji-tweets</key>
+        <value/>
+      </attribute>
+      <attribute>
+        <key>ur-remove_dup_tweets</key>
+        <value/>
+      </attribute>
+      <attribute>
+        <key>fr-valid_key</key>
+        <value/>
+      </attribute>
+      <attribute>
+        <key>grfs-message</key>
+        <value/>
+      </attribute>
+      <attribute>
+        <key>tfo-clean_tweets</key>
+        <value/>
+      </attribute>
     </group>
   </attributes>
 </transformation>

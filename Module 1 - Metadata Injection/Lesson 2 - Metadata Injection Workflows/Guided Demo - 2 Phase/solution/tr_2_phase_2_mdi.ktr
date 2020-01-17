@@ -557,18 +557,18 @@ injected transformation.</note>
   </notepads>
   <order>
     <hop>
-      <from>Generate Rows</from>
-      <to>Add sequence</to>
+      <from>gr-5_records</from>
+      <to>aseq-sequence</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Add sequence</from>
-      <to>Transformation Executor</to>
+      <from>aseq-sequence</from>
+      <to>te-5_records</to>
       <enabled>Y</enabled>
     </hop>
   </order>
   <step>
-    <name>Add sequence</name>
+    <name>aseq-sequence</name>
     <type>Sequence</type>
     <description/>
     <distribute>Y</distribute>
@@ -588,6 +588,7 @@ injected transformation.</note>
     <start_at>1</start_at>
     <increment_by>1</increment_by>
     <max_value>999999999</max_value>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -602,7 +603,7 @@ injected transformation.</note>
     </GUI>
   </step>
   <step>
-    <name>Generate Rows</name>
+    <name>gr-5_records</name>
     <type>RowGenerator</type>
     <description/>
     <distribute>Y</distribute>
@@ -619,6 +620,7 @@ injected transformation.</note>
     <interval_in_ms>5000</interval_in_ms>
     <row_time_field>now</row_time_field>
     <last_time_field>FiveSecondsAgo</last_time_field>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -633,7 +635,7 @@ injected transformation.</note>
     </GUI>
   </step>
   <step>
-    <name>Transformation Executor</name>
+    <name>te-5_records</name>
     <type>TransExecutor</type>
     <description/>
     <distribute>Y</distribute>
@@ -678,6 +680,7 @@ injected transformation.</note>
     <result_files_target_step/>
     <result_files_file_name_field>FileName</result_files_file_name_field>
     <executors_output_step/>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -696,4 +699,21 @@ injected transformation.</note>
   <slave-step-copy-partition-distribution>
   </slave-step-copy-partition-distribution>
   <slave_transformation>N</slave_transformation>
+  <attributes>
+    <group>
+      <name>explorerState</name>
+      <attribute>
+        <key>aseq-sequence</key>
+        <value/>
+      </attribute>
+      <attribute>
+        <key>te-5_records</key>
+        <value/>
+      </attribute>
+      <attribute>
+        <key>gr-5_records</key>
+        <value/>
+      </attribute>
+    </group>
+  </attributes>
 </transformation>

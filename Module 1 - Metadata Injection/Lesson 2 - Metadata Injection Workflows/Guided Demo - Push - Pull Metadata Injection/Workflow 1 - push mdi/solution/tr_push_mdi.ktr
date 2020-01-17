@@ -483,8 +483,8 @@
       <note>Push data into the template.</note>
       <xloc>240</xloc>
       <yloc>368</yloc>
-      <width>159</width>
-      <heigth>26</heigth>
+      <width>142</width>
+      <heigth>24</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -504,8 +504,8 @@
       <note>Metadata to inject.</note>
       <xloc>368</xloc>
       <yloc>304</yloc>
-      <width>109</width>
-      <heigth>26</heigth>
+      <width>98</width>
+      <heigth>24</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -571,12 +571,12 @@
   </notepads>
   <order>
     <hop>
-      <from>Metadata</from>
+      <from>dg-metadata</from>
       <to>ETL Metadata Injection</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Test data - Input</from>
+      <from>dg-test_data</from>
       <to>ETL Metadata Injection</to>
       <enabled>Y</enabled>
     </hop>
@@ -601,24 +601,25 @@
     <source_output_fields>    </source_output_fields>
     <target_file/>
     <no_execution>N</no_execution>
-    <stream_source_step>Test data - Input</stream_source_step>
-    <stream_target_step>Input stream</stream_target_step>
+    <stream_source_step>dg-test_data</stream_source_step>
+    <stream_target_step>dmmy-input</stream_target_step>
     <mappings>
       <mapping>
-        <target_step_name>Select values</target_step_name>
-        <target_attribute_key>META_RENAME</target_attribute_key>
-        <target_detail>Y</target_detail>
-        <source_step>Metadata</source_step>
-        <source_field>mdi_fieldname</source_field>
-      </mapping>
-      <mapping>
-        <target_step_name>Select values</target_step_name>
+        <target_step_name>sv-mdi_rename</target_step_name>
         <target_attribute_key>META_NAME</target_attribute_key>
         <target_detail>Y</target_detail>
-        <source_step>Metadata</source_step>
+        <source_step>dg-metadata</source_step>
         <source_field>fieldname</source_field>
       </mapping>
+      <mapping>
+        <target_step_name>sv-mdi_rename</target_step_name>
+        <target_attribute_key>META_RENAME</target_attribute_key>
+        <target_detail>Y</target_detail>
+        <source_step>dg-metadata</source_step>
+        <source_field>mdi_fieldname</source_field>
+      </mapping>
     </mappings>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -633,7 +634,7 @@
     </GUI>
   </step>
   <step>
-    <name>Metadata</name>
+    <name>dg-metadata</name>
     <type>DataGrid</type>
     <description/>
     <distribute>Y</distribute>
@@ -677,6 +678,7 @@
         <item>mdi_string</item>
       </line>
     </data>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -691,7 +693,7 @@
     </GUI>
   </step>
   <step>
-    <name>Test data - Input</name>
+    <name>dg-test_data</name>
     <type>DataGrid</type>
     <description/>
     <distribute>Y</distribute>
@@ -739,6 +741,7 @@
         <item>c</item>
       </line>
     </data>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -757,4 +760,9 @@
   <slave-step-copy-partition-distribution>
   </slave-step-copy-partition-distribution>
   <slave_transformation>N</slave_transformation>
+  <attributes>
+    <group>
+      <name>explorerState</name>
+    </group>
+  </attributes>
 </transformation>

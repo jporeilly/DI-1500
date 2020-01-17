@@ -48,7 +48,7 @@
           <id>LINES_WRITTEN</id>
           <enabled>Y</enabled>
           <name>LINES_WRITTEN</name>
-          <subject>CSV file input</subject>
+          <subject>csvi-customers</subject>
         </field>
         <field>
           <id>LINES_UPDATED</id>
@@ -60,7 +60,7 @@
           <id>LINES_INPUT</id>
           <enabled>Y</enabled>
           <name>LINES_INPUT</name>
-          <subject>CSV file input</subject>
+          <subject>csvi-customers</subject>
         </field>
         <field>
           <id>LINES_OUTPUT</id>
@@ -574,18 +574,18 @@ Can be configurable using ${variables}</note>
   </connection>
   <order>
     <hop>
-      <from>CSV file input</from>
-      <to>Select values</to>
+      <from>csvi-customers</from>
+      <to>sv-mdi</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Select values</from>
-      <to>Table output</to>
+      <from>sv-mdi</from>
+      <to>to-customers</to>
       <enabled>Y</enabled>
     </hop>
   </order>
   <step>
-    <name>CSV file input</name>
+    <name>csvi-customers</name>
     <type>CsvInput</type>
     <description/>
     <distribute>Y</distribute>
@@ -607,9 +607,11 @@ Can be configurable using ${variables}</note>
     <add_filename_result>N</add_filename_result>
     <parallel>N</parallel>
     <newline_possible>Y</newline_possible>
+    <format/>
     <encoding>UTF-8</encoding>
     <fields>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -624,7 +626,7 @@ Can be configurable using ${variables}</note>
     </GUI>
   </step>
   <step>
-    <name>Select values</name>
+    <name>sv-mdi</name>
     <type>SelectValues</type>
     <description/>
     <distribute>Y</distribute>
@@ -637,6 +639,7 @@ Can be configurable using ${variables}</note>
     <fields>
       <select_unspecified>N</select_unspecified>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -651,7 +654,7 @@ Can be configurable using ${variables}</note>
     </GUI>
   </step>
   <step>
-    <name>Table output</name>
+    <name>to-customers</name>
     <type>TableOutput</type>
     <description/>
     <distribute>Y</distribute>
@@ -716,6 +719,7 @@ Can be configurable using ${variables}</note>
         <stream_name/>
       </field>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -734,4 +738,21 @@ Can be configurable using ${variables}</note>
   <slave-step-copy-partition-distribution>
   </slave-step-copy-partition-distribution>
   <slave_transformation>N</slave_transformation>
+  <attributes>
+    <group>
+      <name>explorerState</name>
+      <attribute>
+        <key>csvi-customers</key>
+        <value/>
+      </attribute>
+      <attribute>
+        <key>to-customers</key>
+        <value/>
+      </attribute>
+      <attribute>
+        <key>sv-mdi</key>
+        <value/>
+      </attribute>
+    </group>
+  </attributes>
 </transformation>

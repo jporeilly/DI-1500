@@ -526,18 +526,18 @@ coming from the parent transformation</note>
   </notepads>
   <order>
     <hop>
-      <from>Input stream</from>
-      <to>Select values</to>
+      <from>dmmy-input</from>
+      <to>sv-mdi_rename</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Select values</from>
-      <to>Text file output</to>
+      <from>sv-mdi_rename</from>
+      <to>tfo-rename</to>
       <enabled>Y</enabled>
     </hop>
   </order>
   <step>
-    <name>Input stream</name>
+    <name>dmmy-input</name>
     <type>Dummy</type>
     <description/>
     <distribute>Y</distribute>
@@ -547,6 +547,7 @@ coming from the parent transformation</note>
       <method>none</method>
       <schema_name/>
     </partitioning>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -561,7 +562,7 @@ coming from the parent transformation</note>
     </GUI>
   </step>
   <step>
-    <name>Select values</name>
+    <name>sv-mdi_rename</name>
     <type>SelectValues</type>
     <description/>
     <distribute>Y</distribute>
@@ -574,6 +575,7 @@ coming from the parent transformation</note>
     <fields>
       <select_unspecified>N</select_unspecified>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -588,7 +590,7 @@ coming from the parent transformation</note>
     </GUI>
   </step>
   <step>
-    <name>Text file output</name>
+    <name>tfo-rename</name>
     <type>TextFileOutput</type>
     <description/>
     <distribute>Y</distribute>
@@ -630,6 +632,7 @@ coming from the parent transformation</note>
     </file>
     <fields>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -648,4 +651,21 @@ coming from the parent transformation</note>
   <slave-step-copy-partition-distribution>
   </slave-step-copy-partition-distribution>
   <slave_transformation>N</slave_transformation>
+  <attributes>
+    <group>
+      <name>explorerState</name>
+      <attribute>
+        <key>dmmy-input</key>
+        <value/>
+      </attribute>
+      <attribute>
+        <key>sv-mdi_rename</key>
+        <value/>
+      </attribute>
+      <attribute>
+        <key>tfo-rename</key>
+        <value/>
+      </attribute>
+    </group>
+  </attributes>
 </transformation>

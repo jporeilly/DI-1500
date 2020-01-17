@@ -523,18 +523,18 @@
   </notepads>
   <order>
     <hop>
-      <from>Test data - Input</from>
-      <to>Select values</to>
+      <from>dg-test_data</from>
+      <to>sv-mdi_rename</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Select values</from>
-      <to>Text file output</to>
+      <from>sv-mdi_rename</from>
+      <to>tfo-rename</to>
       <enabled>Y</enabled>
     </hop>
   </order>
   <step>
-    <name>Select values</name>
+    <name>sv-mdi_rename</name>
     <type>SelectValues</type>
     <description/>
     <distribute>Y</distribute>
@@ -547,6 +547,7 @@
     <fields>
       <select_unspecified>N</select_unspecified>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -561,7 +562,7 @@
     </GUI>
   </step>
   <step>
-    <name>Test data - Input</name>
+    <name>dg-test_data</name>
     <type>DataGrid</type>
     <description/>
     <distribute>Y</distribute>
@@ -609,6 +610,7 @@
         <item>c</item>
       </line>
     </data>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -623,7 +625,7 @@
     </GUI>
   </step>
   <step>
-    <name>Text file output</name>
+    <name>tfo-rename</name>
     <type>TextFileOutput</type>
     <description/>
     <distribute>Y</distribute>
@@ -665,6 +667,7 @@
     </file>
     <fields>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -683,4 +686,21 @@
   <slave-step-copy-partition-distribution>
   </slave-step-copy-partition-distribution>
   <slave_transformation>N</slave_transformation>
+  <attributes>
+    <group>
+      <name>explorerState</name>
+      <attribute>
+        <key>sv-mdi_rename</key>
+        <value/>
+      </attribute>
+      <attribute>
+        <key>dg-test_data</key>
+        <value/>
+      </attribute>
+      <attribute>
+        <key>tfo-rename</key>
+        <value/>
+      </attribute>
+    </group>
+  </attributes>
 </transformation>
