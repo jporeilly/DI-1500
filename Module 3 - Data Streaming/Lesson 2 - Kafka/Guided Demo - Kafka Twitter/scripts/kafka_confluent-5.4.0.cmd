@@ -3,7 +3,7 @@ cls
 :start
 echo.
 echo. This script starts the required services using the
-echo. Confluent v5.0.0 2.11 platform
+echo. Confluent v5.4.0 2.12 platform
 echo.
 echo. Zookeeper needs to started before Kafka in order
 echo. to register the Broker(s)
@@ -26,39 +26,39 @@ set /p x= Select an Option:
 IF '%x%' == '%x%' GOTO Item_%x%
 
 :Item_1
-CD \Confluent-5.0.0\bin\windows\
-start  zookeeper-server-start.bat  C:\Confluent-5.0.0\etc\kafka\zookeeper.properties
+CD \Confluent-5.4.0\bin\windows\
+start  zookeeper-server-start.bat  C:\Confluent-5.4.0\etc\kafka\zookeeper.properties
 GOTO Start
 
 :Item_2
-CD \Confluent-5.0.0\bin\windows\
-start kafka-server-start.bat  C:\Confluent-5.0.0\etc\kafka\server.properties
+CD \Confluent-5.4.0\bin\windows\
+start kafka-server-start.bat  C:\Confluent-5.4.0\etc\kafka\server.properties
 GOTO Start
 
 :Item_3
-CD \Confluent-5.0.0\bin\windows\
+CD \Confluent-5.4.0\bin\windows\
 start kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
 GOTO Start
 
 :Item_4
-CD \Confluent-5.0.0\bin\windows\
+CD \Confluent-5.4.0\bin\windows\
 start kafka-topics.bat --list --zookeeper localhost:2181 
 GOTO Start
 
 :Item_5
-CD \Confluent-5.0.0\bin\windows\
+CD \Confluent-5.4.0\bin\windows\
 start kafka-console-consumer.bat --topic test  --from-beginning  --bootstrap-server localhost:9092 --consumer-property group.id=test-group 
 GOTO Start
 
 :Item_6
-CD \Confluent-5.0.0\bin\windows\
+CD \Confluent-5.4.0\bin\windows\
 start kafka-console-producer.bat --broker-list localhost:9092 --topic test
 GOTO Start
 
 
 
 :Item_7
-CD \Confluent-5.0.0\bin\windows\
+CD \Confluent-5.4.0\bin\windows\
 start kafka-server-stop.bat
 GOTO Start
 
