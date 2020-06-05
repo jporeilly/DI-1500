@@ -1,9 +1,7 @@
 # Import the required libraries 
 # Tweepy is open-sourced, and enables Python to communicate with Twitter platform
-from tweepy.streaming import StreamListener
-from tweepy import OAuthHandler
-from tweepy import Stream
-from kafka import SimpleProducer, KafkaClient
+from tweepy import StreamListener, OAuthHandler, Stream
+from kafka import KafkaProducer
 
 # You need to create a Twitter app with a DEV account
 # Paste in the required keys to be authenticated
@@ -22,9 +20,8 @@ class StdOutListener(StreamListener):
     def on_error(self, status):
         print (status)
 
-# Authenticate the stream and stream to Kafka broker on 127.0.0.1
-kafka = KafkaClient('127.0.0.1:9092')
-producer = SimpleProducer(kafka)
+# Authenticate the stream and stream to Kafka broker on 10.0.0.1
+producer = KafkaProducer(bootstrap_servers='10.0.0.1')
 l = StdOutListener()
 auth = OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
