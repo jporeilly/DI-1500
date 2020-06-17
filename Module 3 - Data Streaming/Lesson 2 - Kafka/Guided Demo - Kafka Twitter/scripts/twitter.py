@@ -21,7 +21,8 @@ class StdOutListener(StreamListener):
         print (status)
 
 # Authenticate the stream and stream to Kafka broker on 10.0.0.1
-producer = KafkaProducer(bootstrap_servers='10.0.0.1')
+# You will have to change the IP
+producer = KafkaProducer(bootstrap_servers='localhost')
 l = StdOutListener()
 auth = OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
