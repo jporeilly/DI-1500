@@ -32,7 +32,7 @@ GOTO Start
 
 :Item_2
 CD \Kafka_2.5.0\bin\windows\
-start kafka-server-start.bat  C:\Confluent-5.2.2\config\server.properties
+start kafka-server-start.bat  C:\Kafka_2.5.0\config\server.properties
 GOTO Start
 
 :Item_3
