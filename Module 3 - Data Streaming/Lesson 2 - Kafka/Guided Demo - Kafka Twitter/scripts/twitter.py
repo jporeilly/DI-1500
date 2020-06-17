@@ -14,7 +14,7 @@ consumer_secret =  'zsETWLaRTCaoWtygiPJfoPLddyOgM9rDHFf9En2bUP1xvsmD61'
 # define  class to Produce the Twitter stream, with the Topic twitterstream
 class StdOutListener(StreamListener):
     def on_data(self, data):
-        producer.send_messages('twitterstream', data.encode('utf-8'))
+        producer.send('twitterstream', data.encode('utf-8'))
         print (data)
         return True
     def on_error(self, status):
