@@ -439,16 +439,16 @@
   <order>
     <hop>
       <from>Get records from stream</from>
-      <to>JSON Input</to>
+      <to>jsoni-read_message</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Value Mapper</from>
-      <to>Select values</to>
+      <from>vm-sensor_type</from>
+      <to>sv-remove_fields</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Select values</from>
+      <from>sv-remove_fields</from>
       <to>Switch / Case</to>
       <enabled>Y</enabled>
     </hop>
@@ -493,8 +493,8 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>JSON Input</from>
-      <to>Value Mapper</to>
+      <from>jsoni-read_message</from>
+      <to>vm-sensor_type</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -673,7 +673,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>368</xloc>
+      <xloc>384</xloc>
       <yloc>176</yloc>
       <draw>Y</draw>
     </GUI>
@@ -820,7 +820,7 @@
     </GUI>
   </step>
   <step>
-    <name>JSON Input</name>
+    <name>jsoni-read_message</name>
     <type>JsonInput</type>
     <description/>
     <distribute>Y</distribute>
@@ -962,7 +962,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>544</xloc>
+      <xloc>528</xloc>
       <yloc>176</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1391,7 +1391,7 @@
     </GUI>
   </step>
   <step>
-    <name>Select values</name>
+    <name>sv-remove_fields</name>
     <type>SelectValues</type>
     <description/>
     <distribute>Y</distribute>
@@ -1419,8 +1419,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>800</xloc>
-      <yloc>175</yloc>
+      <xloc>768</xloc>
+      <yloc>176</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1781,7 +1781,7 @@
     </GUI>
   </step>
   <step>
-    <name>Value Mapper</name>
+    <name>vm-sensor_type</name>
     <type>ValueMapper</type>
     <description/>
     <distribute>Y</distribute>
@@ -1833,8 +1833,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>675</xloc>
-      <yloc>175</yloc>
+      <xloc>640</xloc>
+      <yloc>176</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2001,6 +2001,18 @@
     </group>
     <group>
       <name>explorerState</name>
+      <attribute>
+        <key>vm-sensor_type</key>
+        <value/>
+      </attribute>
+      <attribute>
+        <key>sv-remove_fields</key>
+        <value/>
+      </attribute>
+      <attribute>
+        <key>jsoni-read_message</key>
+        <value/>
+      </attribute>
     </group>
     <group>
       <name>{"_":"Embedded MetaStore Elements","namespace":"NamedClusters","type":"NamedCluster"}</name>

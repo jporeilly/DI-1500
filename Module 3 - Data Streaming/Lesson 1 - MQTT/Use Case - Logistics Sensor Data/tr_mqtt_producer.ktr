@@ -578,17 +578,17 @@ output, simulating IoT</note>
     </hop>
     <hop>
       <from>sv-define_metadata</from>
-      <to>Convert to JSON</to>
+      <to>mjsv-convert_JSON</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Convert to JSON</from>
+      <from>mjsv-convert_JSON</from>
       <to>MQTT producer</to>
       <enabled>Y</enabled>
     </hop>
   </order>
   <step>
-    <name>Convert to JSON</name>
+    <name>mjsv-convert_JSON</name>
     <type>ScriptValueMod</type>
     <description/>
     <distribute>Y</distribute>
@@ -638,7 +638,7 @@ var message=JSON.stringify(messageObg);</jsScript_script>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>928</xloc>
+      <xloc>896</xloc>
       <yloc>240</yloc>
       <draw>Y</draw>
     </GUI>
@@ -753,7 +753,7 @@ var message=JSON.stringify(messageObg);</jsScript_script>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1040</xloc>
+      <xloc>1008</xloc>
       <yloc>240</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1753,7 +1753,7 @@ var major_alert = (sensor_value > 95 ? 1 : 0);
       </output>
     </remotesteps>
     <GUI>
-      <xloc>784</xloc>
+      <xloc>768</xloc>
       <yloc>240</yloc>
       <draw>Y</draw>
     </GUI>
