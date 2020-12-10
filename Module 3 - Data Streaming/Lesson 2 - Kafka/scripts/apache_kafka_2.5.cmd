@@ -3,7 +3,7 @@ cls
 :start
 echo.
 echo. This script starts the required services using the
-echo. Apoache Kafka 2.5.0 2.13 platform
+echo. Apache Kafka v2.5.0 Scala v2.13 platform
 echo.
 echo. Zookeeper needs to started before Kafka in order
 echo. to register the Broker(s)
@@ -26,39 +26,39 @@ set /p x= Select an Option:
 IF '%x%' == '%x%' GOTO Item_%x%
 
 :Item_1
-CD \Kafka_2.5.0\bin\windows\
-start  zookeeper-server-start.bat  C:\Kafka_2.5.0\config\zookeeper.properties
+CD \kafka_2.5.0\bin\windows\
+start  zookeeper-server-start.bat  C:\kafka_2.5.0\config\zookeeper.properties
 GOTO Start
 
 :Item_2
-CD \Kafka_2.5.0\bin\windows\
-start kafka-server-start.bat  C:\Kafka_2.5.0\config\server.properties
+CD \kafka_2.5.0\bin\windows\
+start kafka-server-start.bat  C:\kafka_2.5.0\config\server.properties
 GOTO Start
 
 :Item_3
-CD \Kafka_2.5.0\bin\windows\
+CD \kafka_2.5.0\bin\windows\
 start kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
 GOTO Start
 
 :Item_4
-CD \Kafka_2.5.0\bin\windows\
+CD \kafka_2.5.0\bin\windows\
 start kafka-topics.bat --list --zookeeper localhost:2181 
 GOTO Start
 
 :Item_5
-CD \Kafka_2.5.0\bin\windows\
+CD \kafka_2.5.0\bin\windows\
 start kafka-console-consumer.bat --topic test  --from-beginning  --bootstrap-server localhost:9092 --consumer-property group.id=test-group 
 GOTO Start
 
 :Item_6
-CD \Kafka_2.5.0\bin\windows\
+CD \kafka_2.5.0\bin\windows\
 start kafka-console-producer.bat --broker-list localhost:9092 --topic test
 GOTO Start
 
 
 
 :Item_7
-CD \Kafka_2.5.0\bin\windows\
+CD \kafka_2.5.0\bin\windows\
 start kafka-server-stop.bat
 GOTO Start
 

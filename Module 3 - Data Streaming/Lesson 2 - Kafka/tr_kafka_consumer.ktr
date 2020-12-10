@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>tr_twitter_kafka_consumer</name>
+    <name>tr_kafka_consumer</name>
     <description/>
     <extended_description/>
     <trans_version/>
@@ -428,22 +428,23 @@
     <clusterschemas>
     </clusterschemas>
     <created_user>-</created_user>
-    <created_date>2018/01/18 15:47:03.880</created_date>
+    <created_date>2017/10/12 15:26:32.019</created_date>
     <modified_user>-</modified_user>
-    <modified_date>2018/01/18 15:47:03.880</modified_date>
+    <modified_date>2017/10/12 15:26:32.019</modified_date>
     <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
     <notepad>
-      <note>Use Case: Analysis Twitter</note>
-      <xloc>256</xloc>
-      <yloc>96</yloc>
-      <width>171</width>
-      <heigth>28</heigth>
+      <note>Kafka Consumer step will call another transformation, 
+that consumes the records from the 'Get records from stream' step</note>
+      <xloc>336</xloc>
+      <yloc>176</yloc>
+      <width>540</width>
+      <heigth>58</heigth>
       <fontname>Segoe UI</fontname>
-      <fontsize>10</fontsize>
-      <fontbold>Y</fontbold>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
       <fontitalic>N</fontitalic>
       <fontcolorred>0</fontcolorred>
       <fontcolorgreen>0</fontcolorgreen>
@@ -451,17 +452,17 @@
       <backgroundcolorred>255</backgroundcolorred>
       <backgroundcolorgreen>255</backgroundcolorgreen>
       <backgroundcolorblue>255</backgroundcolorblue>
-      <bordercolorred>255</bordercolorred>
-      <bordercolorgreen>255</bordercolorgreen>
-      <bordercolorblue>255</bordercolorblue>
+      <bordercolorred>0</bordercolorred>
+      <bordercolorgreen>128</bordercolorgreen>
+      <bordercolorblue>0</bordercolorblue>
       <drawshadow>Y</drawshadow>
     </notepad>
   </notepads>
   <order>
   </order>
   <step>
-    <name>Kafka Consumer</name>
-    <type>KafkaConsumerInput</type>
+    <name>Replace Me</name>
+    <type>Dummy</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -470,29 +471,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <clusterName/>
-    <topic>twitterstream</topic>
-    <consumerGroup>twitter-group</consumerGroup>
-    <transformationPath>${Internal.Entry.Current.Directory}/tr_twitter_analysis.ktr</transformationPath>
-    <SUB_STEP/>
-    <batchSize>10</batchSize>
-    <batchDuration>1000</batchDuration>
-    <connectionType>DIRECT</connectionType>
-    <directBootstrapServers>localhost:9092</directBootstrapServers>
-    <OutputField kafkaName="key" type="String">Key</OutputField>
-    <OutputField kafkaName="message" type="String">Message</OutputField>
-    <OutputField kafkaName="topic" type="String">Topic</OutputField>
-    <OutputField kafkaName="partition" type="Integer">Partition</OutputField>
-    <OutputField kafkaName="offset" type="Integer">Offset</OutputField>
-    <OutputField kafkaName="timestamp" type="Integer">Timestamp</OutputField>
-    <advancedConfig>
-      <option property="auto.offset.reset" value="latest"/>
-      <option property="ssl.key.password" value=""/>
-      <option property="ssl.keystore.location" value=""/>
-      <option property="ssl.keystore.password" value=""/>
-      <option property="ssl.truststore.location" value=""/>
-      <option property="ssl.truststore.password" value=""/>
-    </advancedConfig>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -501,8 +480,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>272</xloc>
-      <yloc>160</yloc>
+      <xloc>576</xloc>
+      <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -511,4 +490,19 @@
   <slave-step-copy-partition-distribution>
   </slave-step-copy-partition-distribution>
   <slave_transformation>N</slave_transformation>
+  <attributes>
+    <group>
+      <name>METASTORE.NamedClusters</name>
+      <attribute>
+        <key>NamedCluster</key>
+        <value>{"namespace":"NamedClusters","id":"NamedCluster","name":"NamedCluster","description":"A NamedCluster","metaStoreName":null}</value>
+      </attribute>
+    </group>
+    <group>
+      <name>explorerState</name>
+    </group>
+    <group>
+      <name>{"_":"Embedded MetaStore Elements","namespace":"NamedClusters","type":"NamedCluster"}</name>
+    </group>
+  </attributes>
 </transformation>

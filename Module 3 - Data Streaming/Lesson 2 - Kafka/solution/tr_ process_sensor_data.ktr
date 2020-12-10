@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>tr_twitter_wordcloud_analysis</name>
+    <name>tr_process_sensor_data</name>
     <description/>
     <extended_description/>
     <trans_version/>
@@ -428,67 +428,39 @@
     <clusterschemas>
     </clusterschemas>
     <created_user>-</created_user>
-    <created_date>2018/01/29 17:07:00.118</created_date>
+    <created_date>2017/10/12 15:27:50.701</created_date>
     <modified_user>-</modified_user>
-    <modified_date>2018/01/29 17:07:00.118</modified_date>
+    <modified_date>2017/10/12 15:27:50.701</modified_date>
     <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
-    <notepad>
-      <note>Use Case: Twitter Word Cloud Analysis</note>
-      <xloc>208</xloc>
-      <yloc>64</yloc>
-      <width>248</width>
-      <heigth>28</heigth>
-      <fontname>Segoe UI</fontname>
-      <fontsize>10</fontsize>
-      <fontbold>Y</fontbold>
-      <fontitalic>N</fontitalic>
-      <fontcolorred>0</fontcolorred>
-      <fontcolorgreen>0</fontcolorgreen>
-      <fontcolorblue>0</fontcolorblue>
-      <backgroundcolorred>255</backgroundcolorred>
-      <backgroundcolorgreen>255</backgroundcolorgreen>
-      <backgroundcolorblue>255</backgroundcolorblue>
-      <bordercolorred>255</bordercolorred>
-      <bordercolorgreen>255</bordercolorgreen>
-      <bordercolorblue>255</bordercolorblue>
-      <drawshadow>Y</drawshadow>
-    </notepad>
-    <notepad>
-      <note>The ouput of the word cloud is located at:
-C:\Projects\twitter\word_cloud</note>
-      <xloc>384</xloc>
-      <yloc>192</yloc>
-      <width>231</width>
-      <heigth>42</heigth>
-      <fontname>Segoe UI</fontname>
-      <fontsize>9</fontsize>
-      <fontbold>N</fontbold>
-      <fontitalic>N</fontitalic>
-      <fontcolorred>0</fontcolorred>
-      <fontcolorgreen>0</fontcolorgreen>
-      <fontcolorblue>0</fontcolorblue>
-      <backgroundcolorred>255</backgroundcolorred>
-      <backgroundcolorgreen>255</backgroundcolorgreen>
-      <backgroundcolorblue>255</backgroundcolorblue>
-      <bordercolorred>192</bordercolorred>
-      <bordercolorgreen>192</bordercolorgreen>
-      <bordercolorblue>192</bordercolorblue>
-      <drawshadow>Y</drawshadow>
-    </notepad>
   </notepads>
   <order>
     <hop>
-      <from>tfi-clean_tweets_input</from>
-      <to>R Script Executor</to>
+      <from>grfs-message_topic</from>
+      <to>sf-split_message_field</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>sf-split_message_field</from>
+      <to>tfo-sensor_data</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>fr-alerts</from>
+      <to>Dummy (do nothing)</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>sf-split_message_field</from>
+      <to>fr-alerts</to>
       <enabled>Y</enabled>
     </hop>
   </order>
   <step>
-    <name>tfi-clean_tweets_input</name>
-    <type>TextFileInput</type>
+    <name>Dummy (do nothing)</name>
+    <type>Dummy</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -497,86 +469,110 @@ C:\Projects\twitter\word_cloud</note>
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <accept_filenames>N</accept_filenames>
-    <passing_through_fields>N</passing_through_fields>
-    <accept_field/>
-    <accept_stepname/>
-    <separator>;</separator>
-    <enclosure>"</enclosure>
-    <enclosure_breaks>N</enclosure_breaks>
-    <escapechar/>
-    <header>N</header>
-    <nr_headerlines>1</nr_headerlines>
-    <footer>N</footer>
-    <nr_footerlines>1</nr_footerlines>
-    <line_wrapped>N</line_wrapped>
-    <nr_wraps>1</nr_wraps>
-    <layout_paged>N</layout_paged>
-    <nr_lines_per_page>80</nr_lines_per_page>
-    <nr_lines_doc_header>0</nr_lines_doc_header>
-    <noempty>Y</noempty>
-    <include>N</include>
-    <include_field/>
-    <rownum>N</rownum>
-    <rownumByFile>N</rownumByFile>
-    <rownum_field/>
-    <format>mixed</format>
-    <encoding>UTF-8</encoding>
-    <length>Characters</length>
-    <add_to_result_filenames>Y</add_to_result_filenames>
-    <file>
-      <name>C:\Pentaho-Training\DI-1500\Module 3 - Data Streaming\Lesson 2 - Kafka\Guided Demo - Kafka Twitter\</name>
-      <filemask>.*.txt</filemask>
-      <exclude_filemask/>
-      <file_required>N</file_required>
-      <include_subfolders>N</include_subfolders>
-      <type>CSV</type>
-      <compression>None</compression>
-    </file>
-    <filters>
-    </filters>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>480</xloc>
+      <yloc>416</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>fr-alerts</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <send_true_to/>
+    <send_false_to>Dummy (do nothing)</send_false_to>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <conditions>
+          <condition>
+            <negated>N</negated>
+            <leftvalue>major_alert</leftvalue>
+            <function>=</function>
+            <rightvalue/>
+            <value>
+              <name>constant</name>
+              <type>Integer</type>
+              <text>1</text>
+              <length>-1</length>
+              <precision>0</precision>
+              <isnull>N</isnull>
+              <mask>####0;-####0</mask>
+            </value>
+          </condition>
+          <condition>
+            <negated>N</negated>
+            <operator>OR</operator>
+            <leftvalue>minor_alert</leftvalue>
+            <function>=</function>
+            <rightvalue/>
+            <value>
+              <name>constant</name>
+              <type>Integer</type>
+              <text>1</text>
+              <length>-1</length>
+              <precision>0</precision>
+              <isnull>N</isnull>
+              <mask>####0;-####0</mask>
+            </value>
+          </condition>
+        </conditions>
+      </condition>
+    </compare>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>480</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>grfs-message_topic</name>
+    <type>RecordsFromStream</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
     <fields>
       <field>
-        <name>text</name>
+        <name>topic</name>
         <type>String</type>
-        <format/>
-        <currency>£</currency>
-        <decimal>.</decimal>
-        <group>,</group>
-        <nullif>-</nullif>
-        <ifnull/>
-        <position>-1</position>
-        <length>154</length>
+        <length>-1</length>
         <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>message</name>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
       </field>
     </fields>
-    <limit>0</limit>
-    <error_ignored>N</error_ignored>
-    <skip_bad_files>N</skip_bad_files>
-    <file_error_field/>
-    <file_error_message_field/>
-    <error_line_skipped>N</error_line_skipped>
-    <error_count_field/>
-    <error_fields_field/>
-    <error_text_field/>
-    <bad_line_files_destination_directory/>
-    <bad_line_files_extension>warning</bad_line_files_extension>
-    <error_line_files_destination_directory/>
-    <error_line_files_extension>error</error_line_files_extension>
-    <line_number_files_destination_directory/>
-    <line_number_files_extension>line</line_number_files_extension>
-    <date_format_lenient>Y</date_format_lenient>
-    <date_format_locale>en_US</date_format_locale>
-    <shortFileFieldName/>
-    <pathFieldName/>
-    <hiddenFieldName/>
-    <lastModificationTimeFieldName/>
-    <uriNameFieldName/>
-    <rootUriNameFieldName/>
-    <extensionFieldName/>
-    <sizeFieldName/>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -587,133 +583,116 @@ C:\Projects\twitter\word_cloud</note>
     </remotesteps>
     <GUI>
       <xloc>240</xloc>
-      <yloc>128</yloc>
+      <yloc>144</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>R Script Executor</name>
-    <type>RScriptExcecutor</type>
+    <name>sf-split_message_field</name>
+    <type>FieldSplitter</type>
     <description/>
-    <distribute>Y</distribute>
+    <distribute>N</distribute>
     <custom_distribution/>
     <copies>1</copies>
     <partitioning>
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <rows_to_process>All</rows_to_process>
-    <rows_to_process_size/>
-    <reservoir_sampling>N</reservoir_sampling>
-    <reservoir_sampling_size/>
-    <random_seed/>
-    <output_is_raw_text>Y</output_is_raw_text>
-    <strings_as_factors>N</strings_as_factors>
-    <include_input_as_output>N</include_input_as_output>
-    <script># You will need to download and install the following packages
-# install.packages("tm")  # for text mining
-# install.packages("SnowballC") # for text stemming
-# install.packages("wordcloud") # word-cloud generator 
-# install.packages("RColorBrewer") # color palettes
-
-
-# Load libaries
-library("tm")
-library("SnowballC")
-library("wordcloud")
-library("RColorBrewer")
-
-# 
-dt &lt;- as.data.frame(pdi_data)
-
-text &lt;- dt
-
-
-# Load the data as a corpus
-docs &lt;- Corpus(VectorSource(text))
-
-#docs
-#inspect(docs) clean up
-
-toSpace &lt;- content_transformer(function (x , pattern ) gsub(pattern, " ", x))
-docs &lt;- tm_map(docs, toSpace, "/")
-docs &lt;- tm_map(docs, toSpace, "@")
-docs &lt;- tm_map(docs, toSpace, "\\|")
-
-
-toSpace &lt;- content_transformer(function (x , pattern ) gsub(pattern, " ", x))
-docs &lt;- tm_map(docs, toSpace, "/")
-docs &lt;- tm_map(docs, toSpace, "@")
-docs &lt;- tm_map(docs, toSpace, "\\|")
-
-
-# Convert the text to lower case
-docs &lt;- tm_map(docs, content_transformer(tolower))
-
-# Remove numbers
-docs &lt;- tm_map(docs, removeNumbers)
-
-# Remove english common stopwords
-docs &lt;- tm_map(docs, removeWords, stopwords("english"))
-
-# Remove your own stop word
-# specify your stopwords as a character vector,
-docs &lt;- tm_map(docs, removeWords, c("https", "http", "amp", "t.co", "ico", "iot", "IOT", "Internet of Things", "internet of things", "gtgt", "via", "iiot", "axzpmrq", "fuezcda", "ootzkxyrr", "cwnzpxuc", "qcvzsgb", "jsicwvpegp", "infographic", "gtgtgt")) 
-
-# Remove punctuations
-docs &lt;- tm_map(docs, removePunctuation)
-
-# Eliminate extra white spaces
-docs &lt;- tm_map(docs, stripWhitespace)
-
-# Text stemming (limit number of characters)
-#docs &lt;- tm_map(docs, stemDocument)
-
-
-
-dtm &lt;- TermDocumentMatrix(docs)
-m &lt;- as.matrix(dtm)
-v &lt;- sort(rowSums(m),decreasing=TRUE)
-d &lt;- data.frame(word = names(v),freq=v)
-head(d, 20)
-
-
-
-set.seed(1234)
-png("C:\\Projects\\twitter\\word_cloud\\wordcloud.png", width=600,height=800)
-wcloud &lt;- wordcloud(words = d$word, freq = d$freq, min.freq = 1,
-          max.words=150, random.order=FALSE, rot.per=0.35, 
-          colors=brewer.pal(8, "Dark2"))
-dev.off()
-
-
-findFreqTerms(dtm, lowfreq = 4)
-
-findAssocs(dtm, terms = "internet of things", corlimit = 0.3)
-
-
-png("C:\\Projects\\twitter\\word_cloud\\freq.png", width=600,height=800)
-barplot(d[1:20,]$freq, las = 2, names.arg = d[1:20,]$word,
-        col ="lightblue", main ="Most frequent words",
-        ylab = "Word frequencies")
-dev.off()
-
-</script>
-    <r_log_level>Detailed</r_log_level>
-    <load_r_script_at_runtime>N</load_r_script_at_runtime>
-    <r_script_to_load/>
-    <frame_names>
-      <frame_name0>pdi_data</frame_name0>
-    </frame_names>
-    <incoming_step_names>
-      <step_name0>tfi-clean_tweets_input</step_name0>
-    </incoming_step_names>
-    <output_fields>
-      <out_field>
-        <field_name>R-console</field_name>
+    <splitfield>message</splitfield>
+    <delimiter>,</delimiter>
+    <enclosure/>
+    <fields>
+      <field>
+        <name>vehicle_id</name>
+        <id/>
+        <idrem>N</idrem>
         <type>String</type>
-      </out_field>
-    </output_fields>
+        <format/>
+        <group/>
+        <decimal/>
+        <currency/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull/>
+        <trimtype>none</trimtype>
+      </field>
+      <field>
+        <name>sensor_id</name>
+        <id/>
+        <idrem>N</idrem>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <currency/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull/>
+        <trimtype>none</trimtype>
+      </field>
+      <field>
+        <name>sensor_type</name>
+        <id/>
+        <idrem>N</idrem>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <currency/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull/>
+        <trimtype>none</trimtype>
+      </field>
+      <field>
+        <name>sensor_value</name>
+        <id/>
+        <idrem>N</idrem>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <currency/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull/>
+        <trimtype>none</trimtype>
+      </field>
+      <field>
+        <name>minor_alert</name>
+        <id/>
+        <idrem>N</idrem>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <currency/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull/>
+        <trimtype>none</trimtype>
+      </field>
+      <field>
+        <name>major_alert</name>
+        <id/>
+        <idrem>N</idrem>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <currency/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull/>
+        <trimtype>none</trimtype>
+      </field>
+    </fields>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -723,8 +702,149 @@ dev.off()
       </output>
     </remotesteps>
     <GUI>
-      <xloc>384</xloc>
-      <yloc>128</yloc>
+      <xloc>480</xloc>
+      <yloc>144</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>tfo-sensor_data</name>
+    <type>TextFileOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <separator>;</separator>
+    <enclosure/>
+    <enclosure_forced>N</enclosure_forced>
+    <enclosure_fix_disabled>N</enclosure_fix_disabled>
+    <header>Y</header>
+    <footer>N</footer>
+    <format>DOS</format>
+    <compression>None</compression>
+    <encoding>UTF-8</encoding>
+    <endedLine/>
+    <fileNameInField>N</fileNameInField>
+    <fileNameField/>
+    <create_parent_folder>Y</create_parent_folder>
+    <file>
+      <name>${Internal.Entry.Current.Directory}/output/IoT</name>
+      <servlet_output>N</servlet_output>
+      <do_not_open_new_file_init>N</do_not_open_new_file_init>
+      <extention>txt</extention>
+      <append>Y</append>
+      <split>N</split>
+      <haspartno>N</haspartno>
+      <add_date>Y</add_date>
+      <add_time>N</add_time>
+      <SpecifyFormat>N</SpecifyFormat>
+      <date_time_format/>
+      <add_to_result_filenames>N</add_to_result_filenames>
+      <pad>N</pad>
+      <fast_dump>N</fast_dump>
+      <splitevery/>
+    </file>
+    <fields>
+      <field>
+        <name>topic</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>vehicle_id</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>sensor_id</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>sensor_type</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>sensor_value</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>minor_alert</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>major_alert</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>704</xloc>
+      <yloc>144</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -735,11 +855,31 @@ dev.off()
   <slave_transformation>N</slave_transformation>
   <attributes>
     <group>
-      <name>explorerState</name>
+      <name>METASTORE.NamedClusters</name>
       <attribute>
-        <key>tfi-clean_tweets_input</key>
-        <value/>
+        <key>NamedCluster</key>
+        <value>{"namespace":"NamedClusters","id":"NamedCluster","name":"NamedCluster","description":"A NamedCluster","metaStoreName":null}</value>
       </attribute>
+    </group>
+    <group>
+      <name>METASTORE.pentaho</name>
+      <attribute>
+        <key>Kettle Data Service</key>
+        <value>{"namespace":"pentaho","id":"Kettle Data Service","name":"Kettle Data Service","description":"The elements describing data services based upon transformation output","metaStoreName":null}</value>
+      </attribute>
+    </group>
+    <group>
+      <name>explorerState</name>
+    </group>
+    <group>
+      <name>{"_":"Embedded MetaStore Elements","namespace":"NamedClusters","type":"NamedCluster"}</name>
+      <attribute>
+        <key>CDH</key>
+        <value>{"children":[{"children":[],"id":"hdfsPassword","value":"ZGVtb3VzZXI="},{"children":[],"id":"oozieUrl","value":"http://localhost:11000/oozie"},{"children":[],"id":"mapr","value":"N"},{"children":[],"id":"useGateway","value":"N"},{"children":[],"id":"lastModifiedDate","value":"1543527020150"},{"children":[],"id":"jobTrackerHost","value":"pentahobdvm.localdomain"},{"children":[],"id":"zooKeeperHost","value":"pentahobdvm.localdomain"},{"children":[],"id":"shimIdentifier","value":null},{"children":[],"id":"gatewayUrl","value":null},{"children":[],"id":"jobTrackerPort","value":"8032"},{"children":[],"id":"zooKeeperPort","value":"2181"},{"children":[],"id":"name","value":"CDH"},{"children":[],"id":"hdfsPort","value":"8020"},{"children":[],"id":"hdfsUsername","value":"demouser"},{"children":[],"id":"gatewayPassword","value":null},{"children":[],"id":"kafkaBootstrapServers","value":"pentahobdvm.localdomain:9092"},{"children":[],"id":"storageScheme","value":"hdfs"},{"children":[],"id":"hdfsHost","value":"pentahobdvm.localdomain"},{"children":[],"id":"gatewayUsername","value":null}],"id":"CDH","value":null,"name":"CDH","owner":null,"ownerPermissionsList":[]}</value>
+      </attribute>
+    </group>
+    <group>
+      <name>{"_":"Embedded MetaStore Elements","namespace":"pentaho","type":"Kettle Data Service"}</name>
     </group>
   </attributes>
 </transformation>
