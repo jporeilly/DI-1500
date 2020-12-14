@@ -437,10 +437,10 @@
   <notepads>
     <notepad>
       <note>MQTT Consumer step will call another transformation, 
-sub-transformation, that will utilize the 'Get records from stream' Step.</note>
-      <xloc>48</xloc>
-      <yloc>80</yloc>
-      <width>381</width>
+sub-transformation, that will utilize the 'Get records from stream' Step</note>
+      <xloc>80</xloc>
+      <yloc>48</yloc>
+      <width>379</width>
       <heigth>42</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
@@ -455,27 +455,6 @@ sub-transformation, that will utilize the 'Get records from stream' Step.</note>
       <bordercolorred>0</bordercolorred>
       <bordercolorgreen>128</bordercolorgreen>
       <bordercolorblue>0</bordercolorblue>
-      <drawshadow>Y</drawshadow>
-    </notepad>
-    <notepad>
-      <note>MQTT</note>
-      <xloc>64</xloc>
-      <yloc>32</yloc>
-      <width>47</width>
-      <heigth>28</heigth>
-      <fontname>Segoe UI</fontname>
-      <fontsize>10</fontsize>
-      <fontbold>Y</fontbold>
-      <fontitalic>N</fontitalic>
-      <fontcolorred>0</fontcolorred>
-      <fontcolorgreen>0</fontcolorgreen>
-      <fontcolorblue>0</fontcolorblue>
-      <backgroundcolorred>255</backgroundcolorred>
-      <backgroundcolorgreen>255</backgroundcolorgreen>
-      <backgroundcolorblue>255</backgroundcolorblue>
-      <bordercolorred>255</bordercolorred>
-      <bordercolorgreen>255</bordercolorgreen>
-      <bordercolorblue>255</bordercolorblue>
       <drawshadow>Y</drawshadow>
     </notepad>
   </notepads>
@@ -501,10 +480,10 @@ sub-transformation, that will utilize the 'Get records from stream' Step.</note>
           <value xsi:type="xs:string">SensorData</value>
         </property>
         <property group="" name="MSG_OUTPUT_NAME">
-          <value xsi:type="xs:string">Message</value>
+          <value xsi:type="xs:string">message</value>
         </property>
         <property group="" name="TOPIC_OUTPUT_NAME">
-          <value xsi:type="xs:string">Topic</value>
+          <value xsi:type="xs:string">topic</value>
         </property>
         <property group="" name="QOS">
           <value xsi:type="xs:string">0</value>
@@ -543,7 +522,7 @@ sub-transformation, that will utilize the 'Get records from stream' Step.</note>
           <value xsi:type="xs:string">String</value>
         </property>
         <property group="" name="TRANSFORMATION_PATH">
-          <value xsi:type="xs:string">${Internal.Entry.Current.Directory}/tr_ process_sensor_data.ktr</value>
+          <value xsi:type="xs:string">${Internal.Entry.Current.Directory}/tr_process_alert_data.ktr</value>
         </property>
         <property group="" name="NUM_MESSAGES">
           <value xsi:type="xs:string">50</value>
@@ -603,8 +582,8 @@ sub-transformation, that will utilize the 'Get records from stream' Step.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>192</xloc>
-      <yloc>176</yloc>
+      <xloc>240</xloc>
+      <yloc>128</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -622,28 +601,10 @@ sub-transformation, that will utilize the 'Get records from stream' Step.</note>
       </attribute>
     </group>
     <group>
-      <name>METASTORE.pentaho</name>
-      <attribute>
-        <key>Snowflake Staging VFS Connection</key>
-        <value>{"namespace":"pentaho","id":"Snowflake Staging VFS Connection","name":"Snowflake Staging VFS Connection","description":"Defines the connection details for a Snowflake staging area VFS connection","metaStoreName":null}</value>
-      </attribute>
-    </group>
-    <group>
       <name>explorerState</name>
     </group>
     <group>
       <name>{"_":"Embedded MetaStore Elements","namespace":"NamedClusters","type":"NamedCluster"}</name>
-    </group>
-    <group>
-      <name>{"_":"Embedded MetaStore Elements","namespace":"pentaho","type":"Snowflake Staging VFS Connection"}</name>
-      <attribute>
-        <key>AWS_SnowflakeStagingArea</key>
-        <value>{"children":[{"children":[],"id":"schema","value":"PUBLIC"},{"children":[],"id":"database","value":"PENTAHO_DB"},{"children":[],"id":"password","value":"Encrypted 2be98afc86aa7f2e4bb18bd63c99dbdde"},{"children":[],"id":"port","value":"443"},{"children":[],"id":"host","value":"xxxxxx.us-east-1.snowflakecomputing.com"},{"children":[],"id":"name","value":"AWS_SnowflakeStagingArea"},{"children":[],"id":"description","value":null},{"children":[],"id":"username","value":"user"}],"id":"AWS_SnowflakeStagingArea","value":null,"name":"AWS_SnowflakeStagingArea","owner":null,"ownerPermissionsList":[]}</value>
-      </attribute>
-      <attribute>
-        <key>Azure_SnowflakeStagingArea</key>
-        <value>{"children":[{"children":[],"id":"schema","value":"PUBLIC"},{"children":[],"id":"database","value":"PENTAHO_DB"},{"children":[],"id":"password","value":"Encrypted 2be98afc86aa7f2e4bb18bd63c99dbdde"},{"children":[],"id":"port","value":"443"},{"children":[],"id":"host","value":"xxxxxx.east-us-2.azure.snowflakecomputing.com"},{"children":[],"id":"name","value":"Azure_SnowflakeStagingArea"},{"children":[],"id":"description","value":null},{"children":[],"id":"username","value":"user"}],"id":"Azure_SnowflakeStagingArea","value":null,"name":"Azure_SnowflakeStagingArea","owner":null,"ownerPermissionsList":[]}</value>
-      </attribute>
     </group>
   </attributes>
 </transformation>

@@ -437,10 +437,10 @@
   <notepads>
     <notepad>
       <note>Transformation simulates IoT Sensor data which is published to the Topic: SensorData via MQTT Producer step.</note>
-      <xloc>208</xloc>
-      <yloc>560</yloc>
-      <width>522</width>
-      <heigth>24</heigth>
+      <xloc>192</xloc>
+      <yloc>528</yloc>
+      <width>588</width>
+      <heigth>26</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -458,11 +458,11 @@
     </notepad>
     <notepad>
       <note>Step will never stop generating
-output, simulating IoT.</note>
-      <xloc>64</xloc>
-      <yloc>160</yloc>
-      <width>153</width>
-      <heigth>38</heigth>
+output, simulating IoT</note>
+      <xloc>80</xloc>
+      <yloc>144</yloc>
+      <width>173</width>
+      <heigth>42</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -480,10 +480,10 @@ output, simulating IoT.</note>
     </notepad>
     <notepad>
       <note>Records being batched in 5 sec intervals.</note>
-      <xloc>64</xloc>
-      <yloc>368</yloc>
-      <width>198</width>
-      <heigth>24</heigth>
+      <xloc>80</xloc>
+      <yloc>320</yloc>
+      <width>223</width>
+      <heigth>26</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -497,27 +497,6 @@ output, simulating IoT.</note>
       <bordercolorred>0</bordercolorred>
       <bordercolorgreen>128</bordercolorgreen>
       <bordercolorblue>0</bordercolorblue>
-      <drawshadow>Y</drawshadow>
-    </notepad>
-    <notepad>
-      <note>MQTT</note>
-      <xloc>64</xloc>
-      <yloc>64</yloc>
-      <width>47</width>
-      <heigth>28</heigth>
-      <fontname>Segoe UI</fontname>
-      <fontsize>10</fontsize>
-      <fontbold>Y</fontbold>
-      <fontitalic>N</fontitalic>
-      <fontcolorred>0</fontcolorred>
-      <fontcolorgreen>0</fontcolorgreen>
-      <fontcolorblue>0</fontcolorblue>
-      <backgroundcolorred>255</backgroundcolorred>
-      <backgroundcolorgreen>255</backgroundcolorgreen>
-      <backgroundcolorblue>255</backgroundcolorblue>
-      <bordercolorred>255</bordercolorred>
-      <bordercolorgreen>255</bordercolorgreen>
-      <bordercolorblue>255</bordercolorblue>
       <drawshadow>Y</drawshadow>
     </notepad>
   </notepads>
@@ -599,20 +578,71 @@ output, simulating IoT.</note>
     </hop>
     <hop>
       <from>sv-define_metadata</from>
-      <to>cf-concat_message_field</to>
+      <to>mjsv-convert_JSON</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>cf-concat_message_field</from>
-      <to>sv-message</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>sv-message</from>
+      <from>mjsv-convert_JSON</from>
       <to>MQTT producer</to>
       <enabled>Y</enabled>
     </hop>
   </order>
+  <step>
+    <name>mjsv-convert_JSON</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>
+      <jsScript>
+        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>//Script here
+
+var messageObg={};
+
+messageObg.vehicle_id=vehicle_id;
+messageObg.timestamp=timestamp;
+messageObg.sensor_id=sensor_id;
+messageObg.sensor_type=sensor_type;
+messageObg.sensor_value=sensor_value;
+messageObg.minor_alert=minor_alert;
+messageObg.major_alert=major_alert;
+
+var message=JSON.stringify(messageObg);</jsScript_script>
+      </jsScript>
+    </jsScripts>
+    <fields>
+      <field>
+        <name>message</name>
+        <rename>message</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>896</xloc>
+      <yloc>240</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
   <step>
     <name>MQTT producer</name>
     <type>MQTTProducer</type>
@@ -723,8 +753,8 @@ output, simulating IoT.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>752</xloc>
-      <yloc>368</yloc>
+      <xloc>1008</xloc>
+      <yloc>240</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -759,153 +789,7 @@ output, simulating IoT.</note>
     </remotesteps>
     <GUI>
       <xloc>192</xloc>
-      <yloc>256</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>cf-concat_message_field</name>
-    <type>ConcatFields</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <separator>;</separator>
-    <enclosure>"</enclosure>
-    <enclosure_forced>N</enclosure_forced>
-    <enclosure_fix_disabled>N</enclosure_fix_disabled>
-    <header>N</header>
-    <footer>N</footer>
-    <format>DOS</format>
-    <compression>None</compression>
-    <encoding/>
-    <endedLine/>
-    <fileNameInField>N</fileNameInField>
-    <fileNameField/>
-    <create_parent_folder>Y</create_parent_folder>
-    <file>
-      <name/>
-      <servlet_output>N</servlet_output>
-      <do_not_open_new_file_init>N</do_not_open_new_file_init>
-      <extention>txt</extention>
-      <append>N</append>
-      <split>N</split>
-      <haspartno>N</haspartno>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <SpecifyFormat>N</SpecifyFormat>
-      <date_time_format/>
-      <add_to_result_filenames>Y</add_to_result_filenames>
-      <pad>N</pad>
-      <fast_dump>N</fast_dump>
-      <splitevery>0</splitevery>
-    </file>
-    <fields>
-      <field>
-        <name>vehicle_id</name>
-        <type>Integer</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
-        <trim_type>none</trim_type>
-        <length>-1</length>
-        <precision>0</precision>
-      </field>
-      <field>
-        <name>timestamp</name>
-        <type>Integer</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
-        <trim_type>none</trim_type>
-        <length>-1</length>
-        <precision>0</precision>
-      </field>
-      <field>
-        <name>sensor_id</name>
-        <type>Integer</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
-        <trim_type>none</trim_type>
-        <length>-1</length>
-        <precision>0</precision>
-      </field>
-      <field>
-        <name>sensor_type</name>
-        <type>Integer</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
-        <trim_type>none</trim_type>
-        <length>-1</length>
-        <precision>0</precision>
-      </field>
-      <field>
-        <name>sensor_value</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
-        <trim_type>none</trim_type>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-      <field>
-        <name>minor_alert</name>
-        <type>Integer</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
-        <trim_type>none</trim_type>
-        <length>-1</length>
-        <precision>0</precision>
-      </field>
-      <field>
-        <name>major_alert</name>
-        <type>Integer</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
-        <trim_type>none</trim_type>
-        <length>-1</length>
-        <precision>0</precision>
-      </field>
-    </fields>
-    <ConcatFields>
-      <targetFieldName>data_row</targetFieldName>
-      <targetFieldLength>0</targetFieldLength>
-      <removeSelectedFields>N</removeSelectedFields>
-    </ConcatFields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>912</xloc>
-      <yloc>256</yloc>
+      <yloc>240</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -929,8 +813,8 @@ output, simulating IoT.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>592</xloc>
-      <yloc>256</yloc>
+      <xloc>608</xloc>
+      <yloc>240</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -973,8 +857,8 @@ output, simulating IoT.</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>64</xloc>
-      <yloc>256</yloc>
+      <xloc>80</xloc>
+      <yloc>240</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1018,7 +902,7 @@ var major_alert = (sensor_value &lt; 30 ? 1 : 0);
         <rename>sensor_id</rename>
         <type>Number</type>
         <length>16</length>
-        <precision>2</precision>
+        <precision>-1</precision>
         <replace>N</replace>
       </field>
       <field>
@@ -1026,7 +910,7 @@ var major_alert = (sensor_value &lt; 30 ? 1 : 0);
         <rename>sensor_type</rename>
         <type>Number</type>
         <length>16</length>
-        <precision>2</precision>
+        <precision>-1</precision>
         <replace>N</replace>
       </field>
       <field>
@@ -1034,7 +918,7 @@ var major_alert = (sensor_value &lt; 30 ? 1 : 0);
         <rename>sensor_value</rename>
         <type>String</type>
         <length>16</length>
-        <precision>2</precision>
+        <precision>-1</precision>
         <replace>N</replace>
       </field>
       <field>
@@ -1042,7 +926,7 @@ var major_alert = (sensor_value &lt; 30 ? 1 : 0);
         <rename>minor_alert</rename>
         <type>Number</type>
         <length>16</length>
-        <precision>2</precision>
+        <precision>-1</precision>
         <replace>N</replace>
       </field>
       <field>
@@ -1050,7 +934,7 @@ var major_alert = (sensor_value &lt; 30 ? 1 : 0);
         <rename>major_alert</rename>
         <type>Number</type>
         <length>16</length>
-        <precision>2</precision>
+        <precision>-1</precision>
         <replace>N</replace>
       </field>
     </fields>
@@ -1064,7 +948,7 @@ var major_alert = (sensor_value &lt; 30 ? 1 : 0);
     </remotesteps>
     <GUI>
       <xloc>464</xloc>
-      <yloc>400</yloc>
+      <yloc>384</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1107,7 +991,7 @@ var major_alert = (sensor_value > 90 ? 1 : 0);
         <rename>sensor_id</rename>
         <type>Number</type>
         <length>16</length>
-        <precision>2</precision>
+        <precision>-1</precision>
         <replace>N</replace>
       </field>
       <field>
@@ -1115,7 +999,7 @@ var major_alert = (sensor_value > 90 ? 1 : 0);
         <rename>sensor_type</rename>
         <type>Number</type>
         <length>16</length>
-        <precision>2</precision>
+        <precision>-1</precision>
         <replace>N</replace>
       </field>
       <field>
@@ -1123,7 +1007,7 @@ var major_alert = (sensor_value > 90 ? 1 : 0);
         <rename>sensor_value</rename>
         <type>String</type>
         <length>16</length>
-        <precision>2</precision>
+        <precision>-1</precision>
         <replace>N</replace>
       </field>
       <field>
@@ -1131,7 +1015,7 @@ var major_alert = (sensor_value > 90 ? 1 : 0);
         <rename>minor_alert</rename>
         <type>Number</type>
         <length>16</length>
-        <precision>2</precision>
+        <precision>-1</precision>
         <replace>N</replace>
       </field>
       <field>
@@ -1139,7 +1023,7 @@ var major_alert = (sensor_value > 90 ? 1 : 0);
         <rename>major_alert</rename>
         <type>Number</type>
         <length>16</length>
-        <precision>2</precision>
+        <precision>-1</precision>
         <replace>N</replace>
       </field>
     </fields>
@@ -1153,7 +1037,7 @@ var major_alert = (sensor_value > 90 ? 1 : 0);
     </remotesteps>
     <GUI>
       <xloc>464</xloc>
-      <yloc>320</yloc>
+      <yloc>304</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1430,7 +1314,7 @@ var iteration = 0;
         <rename>sensor_id</rename>
         <type>Number</type>
         <length>16</length>
-        <precision>2</precision>
+        <precision>-1</precision>
         <replace>N</replace>
       </field>
       <field>
@@ -1438,7 +1322,7 @@ var iteration = 0;
         <rename>sensor_type</rename>
         <type>Number</type>
         <length>16</length>
-        <precision>2</precision>
+        <precision>-1</precision>
         <replace>N</replace>
       </field>
       <field>
@@ -1454,7 +1338,7 @@ var iteration = 0;
         <rename>minor_alert</rename>
         <type>Number</type>
         <length>16</length>
-        <precision>2</precision>
+        <precision>-1</precision>
         <replace>N</replace>
       </field>
       <field>
@@ -1462,7 +1346,7 @@ var iteration = 0;
         <rename>major_alert</rename>
         <type>Number</type>
         <length>16</length>
-        <precision>2</precision>
+        <precision>-1</precision>
         <replace>N</replace>
       </field>
     </fields>
@@ -1476,7 +1360,7 @@ var iteration = 0;
     </remotesteps>
     <GUI>
       <xloc>464</xloc>
-      <yloc>480</yloc>
+      <yloc>464</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1519,7 +1403,7 @@ var major_alert = (sensor_value > 1200 ? 1 : 0);
         <rename>sensor_id</rename>
         <type>Number</type>
         <length>16</length>
-        <precision>2</precision>
+        <precision>-1</precision>
         <replace>N</replace>
       </field>
       <field>
@@ -1527,7 +1411,7 @@ var major_alert = (sensor_value > 1200 ? 1 : 0);
         <rename>sensor_type</rename>
         <type>Number</type>
         <length>16</length>
-        <precision>2</precision>
+        <precision>-1</precision>
         <replace>N</replace>
       </field>
       <field>
@@ -1535,7 +1419,7 @@ var major_alert = (sensor_value > 1200 ? 1 : 0);
         <rename>sensor_value</rename>
         <type>String</type>
         <length>16</length>
-        <precision>2</precision>
+        <precision>-1</precision>
         <replace>N</replace>
       </field>
       <field>
@@ -1543,7 +1427,7 @@ var major_alert = (sensor_value > 1200 ? 1 : 0);
         <rename>minor_alert</rename>
         <type>Number</type>
         <length>16</length>
-        <precision>2</precision>
+        <precision>-1</precision>
         <replace>N</replace>
       </field>
       <field>
@@ -1551,7 +1435,7 @@ var major_alert = (sensor_value > 1200 ? 1 : 0);
         <rename>major_alert</rename>
         <type>Number</type>
         <length>16</length>
-        <precision>2</precision>
+        <precision>-1</precision>
         <replace>N</replace>
       </field>
     </fields>
@@ -1608,7 +1492,7 @@ var major_alert = (sensor_value &lt; 2700 ? 1 : 0);
         <rename>sensor_id</rename>
         <type>Number</type>
         <length>16</length>
-        <precision>2</precision>
+        <precision>-1</precision>
         <replace>N</replace>
       </field>
       <field>
@@ -1616,7 +1500,7 @@ var major_alert = (sensor_value &lt; 2700 ? 1 : 0);
         <rename>sensor_type</rename>
         <type>Number</type>
         <length>16</length>
-        <precision>2</precision>
+        <precision>-1</precision>
         <replace>N</replace>
       </field>
       <field>
@@ -1624,7 +1508,7 @@ var major_alert = (sensor_value &lt; 2700 ? 1 : 0);
         <rename>sensor_value</rename>
         <type>String</type>
         <length>16</length>
-        <precision>2</precision>
+        <precision>-1</precision>
         <replace>N</replace>
       </field>
       <field>
@@ -1632,7 +1516,7 @@ var major_alert = (sensor_value &lt; 2700 ? 1 : 0);
         <rename>minor_alert</rename>
         <type>Number</type>
         <length>16</length>
-        <precision>2</precision>
+        <precision>-1</precision>
         <replace>N</replace>
       </field>
       <field>
@@ -1640,7 +1524,7 @@ var major_alert = (sensor_value &lt; 2700 ? 1 : 0);
         <rename>major_alert</rename>
         <type>Number</type>
         <length>16</length>
-        <precision>2</precision>
+        <precision>-1</precision>
         <replace>N</replace>
       </field>
     </fields>
@@ -1694,7 +1578,7 @@ var major_alert = (sensor_value > 95 ? 1 : 0);
         <rename>sensor_id</rename>
         <type>Number</type>
         <length>16</length>
-        <precision>2</precision>
+        <precision>-1</precision>
         <replace>N</replace>
       </field>
       <field>
@@ -1702,7 +1586,7 @@ var major_alert = (sensor_value > 95 ? 1 : 0);
         <rename>sensor_type</rename>
         <type>Number</type>
         <length>16</length>
-        <precision>2</precision>
+        <precision>-1</precision>
         <replace>N</replace>
       </field>
       <field>
@@ -1710,7 +1594,7 @@ var major_alert = (sensor_value > 95 ? 1 : 0);
         <rename>sensor_value</rename>
         <type>String</type>
         <length>16</length>
-        <precision>2</precision>
+        <precision>-1</precision>
         <replace>N</replace>
       </field>
       <field>
@@ -1718,7 +1602,7 @@ var major_alert = (sensor_value > 95 ? 1 : 0);
         <rename>minor_alert</rename>
         <type>Number</type>
         <length>16</length>
-        <precision>2</precision>
+        <precision>-1</precision>
         <replace>N</replace>
       </field>
       <field>
@@ -1726,7 +1610,7 @@ var major_alert = (sensor_value > 95 ? 1 : 0);
         <rename>major_alert</rename>
         <type>Number</type>
         <length>16</length>
-        <precision>2</precision>
+        <precision>-1</precision>
         <replace>N</replace>
       </field>
     </fields>
@@ -1758,26 +1642,9 @@ var major_alert = (sensor_value > 95 ? 1 : 0);
     <fields>
       <select_unspecified>N</select_unspecified>
       <meta>
-        <name>timestamp</name>
-        <rename>timestamp</rename>
-        <type>Integer</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
         <name>vehicle_id</name>
         <rename>vehicle_id</rename>
-        <type>Integer</type>
+        <type>Number</type>
         <length>-2</length>
         <precision>-2</precision>
         <conversion_mask/>
@@ -1794,9 +1661,9 @@ var major_alert = (sensor_value > 95 ? 1 : 0);
       <meta>
         <name>sensor_id</name>
         <rename>sensor_id</rename>
-        <type>Integer</type>
+        <type>Number</type>
         <length>16</length>
-        <precision>2</precision>
+        <precision>-2</precision>
         <conversion_mask/>
         <date_format_lenient>false</date_format_lenient>
         <date_format_locale/>
@@ -1811,9 +1678,9 @@ var major_alert = (sensor_value > 95 ? 1 : 0);
       <meta>
         <name>sensor_type</name>
         <rename>sensor_type</rename>
-        <type>Integer</type>
+        <type>Number</type>
         <length>16</length>
-        <precision>2</precision>
+        <precision>-2</precision>
         <conversion_mask/>
         <date_format_lenient>false</date_format_lenient>
         <date_format_locale/>
@@ -1845,9 +1712,9 @@ var major_alert = (sensor_value > 95 ? 1 : 0);
       <meta>
         <name>minor_alert</name>
         <rename>minor_alert</rename>
-        <type>Integer</type>
+        <type>Number</type>
         <length>16</length>
-        <precision>2</precision>
+        <precision>-2</precision>
         <conversion_mask/>
         <date_format_lenient>false</date_format_lenient>
         <date_format_locale/>
@@ -1862,95 +1729,8 @@ var major_alert = (sensor_value > 95 ? 1 : 0);
       <meta>
         <name>major_alert</name>
         <rename>major_alert</rename>
-        <type>Integer</type>
+        <type>Number</type>
         <length>16</length>
-        <precision>2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>752</xloc>
-      <yloc>256</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>sv-message</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <name>vehicle_id</name>
-      </field>
-      <field>
-        <name>timestamp</name>
-      </field>
-      <field>
-        <name>sensor_id</name>
-      </field>
-      <field>
-        <name>sensor_type</name>
-      </field>
-      <field>
-        <name>sensor_value</name>
-      </field>
-      <field>
-        <name>minor_alert</name>
-      </field>
-      <field>
-        <name>major_alert</name>
-      </field>
-      <field>
-        <name>data_row</name>
-      </field>
-      <select_unspecified>N</select_unspecified>
-      <remove>
-        <name>timestamp</name>
-      </remove>
-      <remove>
-        <name>sensor_id</name>
-      </remove>
-      <remove>
-        <name>sensor_type</name>
-      </remove>
-      <remove>
-        <name>sensor_value</name>
-      </remove>
-      <remove>
-        <name>minor_alert</name>
-      </remove>
-      <remove>
-        <name>major_alert</name>
-      </remove>
-      <meta>
-        <name>data_row</name>
-        <rename>message</rename>
-        <type>String</type>
-        <length>-2</length>
         <precision>-2</precision>
         <conversion_mask/>
         <date_format_lenient>false</date_format_lenient>
@@ -1973,8 +1753,8 @@ var major_alert = (sensor_value > 95 ? 1 : 0);
       </output>
     </remotesteps>
     <GUI>
-      <xloc>912</xloc>
-      <yloc>368</yloc>
+      <xloc>768</xloc>
+      <yloc>240</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2008,7 +1788,7 @@ var major_alert = (sensor_value > 95 ? 1 : 0);
     </remotesteps>
     <GUI>
       <xloc>320</xloc>
-      <yloc>256</yloc>
+      <yloc>240</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2026,28 +1806,10 @@ var major_alert = (sensor_value > 95 ? 1 : 0);
       </attribute>
     </group>
     <group>
-      <name>METASTORE.pentaho</name>
-      <attribute>
-        <key>Snowflake Staging VFS Connection</key>
-        <value>{"namespace":"pentaho","id":"Snowflake Staging VFS Connection","name":"Snowflake Staging VFS Connection","description":"Defines the connection details for a Snowflake staging area VFS connection","metaStoreName":null}</value>
-      </attribute>
-    </group>
-    <group>
       <name>explorerState</name>
     </group>
     <group>
       <name>{"_":"Embedded MetaStore Elements","namespace":"NamedClusters","type":"NamedCluster"}</name>
-    </group>
-    <group>
-      <name>{"_":"Embedded MetaStore Elements","namespace":"pentaho","type":"Snowflake Staging VFS Connection"}</name>
-      <attribute>
-        <key>AWS_SnowflakeStagingArea</key>
-        <value>{"children":[{"children":[],"id":"schema","value":"PUBLIC"},{"children":[],"id":"database","value":"PENTAHO_DB"},{"children":[],"id":"password","value":"Encrypted 2be98afc86aa7f2e4bb18bd63c99dbdde"},{"children":[],"id":"port","value":"443"},{"children":[],"id":"host","value":"xxxxxx.us-east-1.snowflakecomputing.com"},{"children":[],"id":"name","value":"AWS_SnowflakeStagingArea"},{"children":[],"id":"description","value":null},{"children":[],"id":"username","value":"user"}],"id":"AWS_SnowflakeStagingArea","value":null,"name":"AWS_SnowflakeStagingArea","owner":null,"ownerPermissionsList":[]}</value>
-      </attribute>
-      <attribute>
-        <key>Azure_SnowflakeStagingArea</key>
-        <value>{"children":[{"children":[],"id":"schema","value":"PUBLIC"},{"children":[],"id":"database","value":"PENTAHO_DB"},{"children":[],"id":"password","value":"Encrypted 2be98afc86aa7f2e4bb18bd63c99dbdde"},{"children":[],"id":"port","value":"443"},{"children":[],"id":"host","value":"xxxxxx.east-us-2.azure.snowflakecomputing.com"},{"children":[],"id":"name","value":"Azure_SnowflakeStagingArea"},{"children":[],"id":"description","value":null},{"children":[],"id":"username","value":"user"}],"id":"Azure_SnowflakeStagingArea","value":null,"name":"Azure_SnowflakeStagingArea","owner":null,"ownerPermissionsList":[]}</value>
-      </attribute>
     </group>
   </attributes>
 </transformation>
