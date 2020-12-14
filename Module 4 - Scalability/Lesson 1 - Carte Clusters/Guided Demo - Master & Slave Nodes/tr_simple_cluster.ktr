@@ -548,7 +548,7 @@ copy the carte-config-11100.xml to C:\Pentaho\design-tools\data-integration</not
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <filename>C:\Pentaho-Training\DI-1500\Module 4 - Scalability\Lesson 1 - Configure Master &amp; Slave nodes\Guided Demo - Master &amp; Slave Nodes\widgets.txt</filename>
+    <filename>${Internal.Entry.Current.Directory}\data\widgets.txt</filename>
     <filename_field/>
     <rownum_field/>
     <include_filename>N</include_filename>
@@ -558,7 +558,7 @@ copy the carte-config-11100.xml to C:\Pentaho\design-tools\data-integration</not
     <buffer_size>50000</buffer_size>
     <lazy_conversion>Y</lazy_conversion>
     <add_filename_result>N</add_filename_result>
-    <parallel>Y</parallel>
+    <parallel>N</parallel>
     <newline_possible>N</newline_possible>
     <format/>
     <encoding/>
@@ -587,7 +587,7 @@ copy the carte-config-11100.xml to C:\Pentaho\design-tools\data-integration</not
       </field>
     </fields>
     <attributes/>
-    <cluster_schema>Pentaho</cluster_schema>
+    <cluster_schema/>
     <remotesteps>
       <input>
       </input>

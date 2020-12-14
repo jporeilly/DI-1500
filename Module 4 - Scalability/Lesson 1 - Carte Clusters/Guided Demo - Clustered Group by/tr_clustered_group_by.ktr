@@ -562,7 +562,7 @@ Each cluster / Slave node returns independent Groupe by sorted rows to the Maste
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <filename>C:\Pentaho-Training\DI-1500\Module 4 - Scalability\Topic 1 - Clustering\Lab 2 - Clustered Group by\data\widgets.txt</filename>
+    <filename>${Internal.Entry.Current.Directory}\data\widgets.txt</filename>
     <filename_field/>
     <rownum_field/>
     <include_filename>N</include_filename>
@@ -720,7 +720,7 @@ Each cluster / Slave node returns independent Groupe by sorted rows to the Maste
     <fileNameField/>
     <create_parent_folder>Y</create_parent_folder>
     <file>
-      <name>C:/Pentaho-Training/DI-1500/Module 4 - Scalability/Topic 1 - Clustering/Lab 2 - Clustered Group by/clustered_group_by_widgets</name>
+      <name>${Internal.Entry.Current.Directory}\Clustered_Group_by</name>
       <servlet_output>N</servlet_output>
       <do_not_open_new_file_init>N</do_not_open_new_file_init>
       <extention>txt</extention>
