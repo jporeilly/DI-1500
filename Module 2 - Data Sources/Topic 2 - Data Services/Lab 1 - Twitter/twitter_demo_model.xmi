@@ -1,0 +1,1914 @@
+<?xml version = '1.0' encoding = 'UTF-8' ?>
+<XMI xmi.version = '1.2' xmlns:CWM = 'org.omg.xmi.namespace.CWM' xmlns:CWMTFM = 'org.omg.xmi.namespace.CWMTFM'
+  xmlns:CWMRDB = 'org.omg.xmi.namespace.CWMRDB' xmlns:CWMOLAP = 'org.omg.xmi.namespace.CWMOLAP'
+  xmlns:CWMMDB = 'org.omg.xmi.namespace.CWMMDB' timestamp = 'Wed Jul 03 11:19:21 BST 2019'>
+  <XMI.header>
+    <XMI.documentation>
+      <XMI.exporter>Netbeans XMI Writer</XMI.exporter>
+      <XMI.exporterVersion>1.0</XMI.exporterVersion>
+    </XMI.documentation>
+  </XMI.header>
+  <XMI.content>
+    <CWM:Event xmi.id = 'a1' name = 'SECURITY_SERVICE'>
+      <CWM:ModelElement.taggedValue>
+        <CWM:TaggedValue xmi.id = 'a2' tag = 'SECURITY_SERVICE_URL'/>
+        <CWM:TaggedValue xmi.id = 'a3' tag = 'SECURITY_DETAILS_NAME'/>
+        <CWM:TaggedValue xmi.id = 'a4' tag = 'SECURITY_DETAIL_NAME'/>
+        <CWM:TaggedValue xmi.id = 'a5' tag = 'SECURITY_DETAIL_TYPE' value = 'All'/>
+        <CWM:TaggedValue xmi.id = 'a6' tag = 'SECURITY_USERNAME'/>
+        <CWM:TaggedValue xmi.id = 'a7' tag = 'SECURITY_PASSWORD'/>
+        <CWM:TaggedValue xmi.id = 'a8' tag = 'SECURITY_PROXY_HOST'/>
+        <CWM:TaggedValue xmi.id = 'a9' tag = 'SECURITY_PROXY_PORT'/>
+        <CWM:TaggedValue xmi.id = 'a10' tag = 'SECURITY_NON_PROXY_HOSTS'/>
+        <CWM:TaggedValue xmi.id = 'a11' tag = 'SECURITY_FILENAME'/>
+        <CWM:TaggedValue xmi.id = 'a12' tag = 'SECURITY_URL' value = 'null'/>
+      </CWM:ModelElement.taggedValue>
+    </CWM:Event>
+    <CWM:Parameter xmi.id = 'a13' name = 'en_US'>
+      <CWM:ModelElement.taggedValue>
+        <CWM:TaggedValue xmi.id = 'a14' tag = 'LOCALE_DESCRIPTION' value = 'English (US)'/>
+        <CWM:TaggedValue xmi.id = 'a15' tag = 'LOCALE_ORDER' value = '1'/>
+        <CWM:TaggedValue xmi.id = 'a16' tag = 'LOCALE_IS_DEFAULT' value = 'Y'/>
+      </CWM:ModelElement.taggedValue>
+    </CWM:Parameter>
+    <CWM:Description xmi.id = 'a17' name = 'name' body = 'Twitter demo dataset'
+      language = 'en_US' type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Table xmi.idref = 'a18'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a19' name = 'tabletype' body = 'Other' type = 'TableType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Table xmi.idref = 'a18'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a20' name = 'target_table' body = 'twitter_demo_dataset'
+      type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Table xmi.idref = 'a18'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a21' name = 'name' body = 'Num twitter' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a22'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a23' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a22'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a24' name = 'formula' body = 'num_twitter' type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a22'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a25' name = 'hidden' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a22'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a26' name = 'exact' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a22'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a27' name = 'datatype' body = 'String,-1,-1'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a22'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a28' name = 'fieldtype' body = 'Dimension' type = 'FieldType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a22'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a29' name = 'aggregation_list' body = '&lt;aggregationlist&gt;&#13;&#10;&lt;/aggregationlist&gt;&#13;&#10;'
+      type = 'AggregationList'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a22'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a30' name = 'name' body = 'Text' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a31'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a32' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a31'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a33' name = 'formula' body = 'text' type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a31'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a34' name = 'hidden' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a31'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a35' name = 'exact' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a31'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a36' name = 'datatype' body = 'String,-1,-1'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a31'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a37' name = 'fieldtype' body = 'Dimension' type = 'FieldType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a31'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a38' name = 'aggregation_list' body = '&lt;aggregationlist&gt;&#13;&#10;&lt;/aggregationlist&gt;&#13;&#10;'
+      type = 'AggregationList'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a31'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a39' name = 'name' body = 'Favorited' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a40'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a41' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a40'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a42' name = 'formula' body = 'favorited' type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a40'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a43' name = 'hidden' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a40'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a44' name = 'exact' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a40'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a45' name = 'datatype' body = 'String,-1,-1'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a40'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a46' name = 'fieldtype' body = 'Dimension' type = 'FieldType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a40'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a47' name = 'aggregation_list' body = '&lt;aggregationlist&gt;&#13;&#10;&lt;/aggregationlist&gt;&#13;&#10;'
+      type = 'AggregationList'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a40'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a48' name = 'name' body = 'FavoriteCount' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a49'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a50' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a49'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a51' name = 'formula' body = 'favoriteCount'
+      type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a49'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a52' name = 'hidden' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a49'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a53' name = 'exact' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a49'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a54' name = 'datatype' body = 'String,-1,-1'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a49'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a55' name = 'fieldtype' body = 'Dimension' type = 'FieldType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a49'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a56' name = 'aggregation_list' body = '&lt;aggregationlist&gt;&#13;&#10;&lt;/aggregationlist&gt;&#13;&#10;'
+      type = 'AggregationList'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a49'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a57' name = 'name' body = 'ReplyToSN' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a58'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a59' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a58'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a60' name = 'formula' body = 'replyToSN' type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a58'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a61' name = 'hidden' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a58'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a62' name = 'exact' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a58'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a63' name = 'datatype' body = 'String,-1,-1'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a58'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a64' name = 'fieldtype' body = 'Dimension' type = 'FieldType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a58'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a65' name = 'aggregation_list' body = '&lt;aggregationlist&gt;&#13;&#10;&lt;/aggregationlist&gt;&#13;&#10;'
+      type = 'AggregationList'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a58'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a66' name = 'name' body = 'Created' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a67'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a68' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a67'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a69' name = 'formula' body = 'created' type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a67'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a70' name = 'hidden' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a67'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a71' name = 'exact' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a67'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a72' name = 'datatype' body = 'String,-1,-1'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a67'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a73' name = 'fieldtype' body = 'Dimension' type = 'FieldType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a67'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a74' name = 'aggregation_list' body = '&lt;aggregationlist&gt;&#13;&#10;&lt;/aggregationlist&gt;&#13;&#10;'
+      type = 'AggregationList'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a67'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a75' name = 'name' body = 'Truncated' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a76'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a77' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a76'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a78' name = 'formula' body = 'truncated' type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a76'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a79' name = 'hidden' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a76'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a80' name = 'exact' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a76'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a81' name = 'datatype' body = 'String,-1,-1'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a76'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a82' name = 'fieldtype' body = 'Dimension' type = 'FieldType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a76'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a83' name = 'aggregation_list' body = '&lt;aggregationlist&gt;&#13;&#10;&lt;/aggregationlist&gt;&#13;&#10;'
+      type = 'AggregationList'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a76'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a84' name = 'name' body = 'ReplyToSID' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a85'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a86' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a85'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a87' name = 'formula' body = 'replyToSID' type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a85'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a88' name = 'hidden' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a85'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a89' name = 'exact' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a85'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a90' name = 'datatype' body = 'String,-1,-1'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a85'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a91' name = 'fieldtype' body = 'Dimension' type = 'FieldType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a85'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a92' name = 'aggregation_list' body = '&lt;aggregationlist&gt;&#13;&#10;&lt;/aggregationlist&gt;&#13;&#10;'
+      type = 'AggregationList'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a85'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a93' name = 'name' body = 'Id' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a94'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a95' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a94'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a96' name = 'formula' body = 'id' type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a94'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a97' name = 'hidden' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a94'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a98' name = 'exact' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a94'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a99' name = 'datatype' body = 'String,-1,-1'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a94'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a100' name = 'fieldtype' body = 'Dimension' type = 'FieldType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a94'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a101' name = 'aggregation_list' body = '&lt;aggregationlist&gt;&#13;&#10;&lt;/aggregationlist&gt;&#13;&#10;'
+      type = 'AggregationList'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a94'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a102' name = 'name' body = 'ReplyToUID' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a103'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a104' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a103'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a105' name = 'formula' body = 'replyToUID' type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a103'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a106' name = 'hidden' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a103'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a107' name = 'exact' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a103'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a108' name = 'datatype' body = 'String,-1,-1'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a103'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a109' name = 'fieldtype' body = 'Dimension' type = 'FieldType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a103'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a110' name = 'aggregation_list' body = '&lt;aggregationlist&gt;&#13;&#10;&lt;/aggregationlist&gt;&#13;&#10;'
+      type = 'AggregationList'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a103'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a111' name = 'name' body = 'StatusSource' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a112'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a113' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a112'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a114' name = 'formula' body = 'statusSource'
+      type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a112'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a115' name = 'hidden' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a112'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a116' name = 'exact' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a112'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a117' name = 'datatype' body = 'String,-1,-1'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a112'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a118' name = 'fieldtype' body = 'Dimension' type = 'FieldType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a112'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a119' name = 'aggregation_list' body = '&lt;aggregationlist&gt;&#13;&#10;&lt;/aggregationlist&gt;&#13;&#10;'
+      type = 'AggregationList'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a112'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a120' name = 'name' body = 'ScreenName' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a121'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a122' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a121'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a123' name = 'formula' body = 'screenName' type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a121'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a124' name = 'hidden' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a121'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a125' name = 'exact' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a121'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a126' name = 'datatype' body = 'String,-1,-1'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a121'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a127' name = 'fieldtype' body = 'Dimension' type = 'FieldType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a121'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a128' name = 'aggregation_list' body = '&lt;aggregationlist&gt;&#13;&#10;&lt;/aggregationlist&gt;&#13;&#10;'
+      type = 'AggregationList'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a121'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a129' name = 'name' body = 'RetweetCount' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a130'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a131' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a130'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a132' name = 'formula' body = 'retweetCount'
+      type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a130'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a133' name = 'hidden' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a130'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a134' name = 'exact' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a130'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a135' name = 'datatype' body = 'String,-1,-1'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a130'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a136' name = 'fieldtype' body = 'Dimension' type = 'FieldType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a130'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a137' name = 'aggregation_list' body = '&lt;aggregationlist&gt;&#13;&#10;&lt;/aggregationlist&gt;&#13;&#10;'
+      type = 'AggregationList'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a130'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a138' name = 'name' body = 'IsRetweet' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a139'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a140' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a139'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a141' name = 'formula' body = 'isRetweet' type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a139'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a142' name = 'hidden' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a139'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a143' name = 'exact' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a139'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a144' name = 'datatype' body = 'Boolean,-1,-1'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a139'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a145' name = 'fieldtype' body = 'Dimension' type = 'FieldType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a139'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a146' name = 'aggregation_list' body = '&lt;aggregationlist&gt;&#13;&#10;&lt;/aggregationlist&gt;&#13;&#10;'
+      type = 'AggregationList'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a139'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a147' name = 'name' body = 'Retweeted' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a148'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a149' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a148'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a150' name = 'formula' body = 'retweeted' type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a148'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a151' name = 'hidden' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a148'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a152' name = 'exact' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a148'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a153' name = 'datatype' body = 'String,-1,-1'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a148'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a154' name = 'fieldtype' body = 'Dimension' type = 'FieldType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a148'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a155' name = 'aggregation_list' body = '&lt;aggregationlist&gt;&#13;&#10;&lt;/aggregationlist&gt;&#13;&#10;'
+      type = 'AggregationList'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a148'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a156' name = 'name' body = 'Longitude' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a157'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a158' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a157'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a159' name = 'formula' body = 'longitude' type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a157'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a160' name = 'hidden' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a157'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a161' name = 'exact' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a157'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a162' name = 'datatype' body = 'String,-1,-1'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a157'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a163' name = 'fieldtype' body = 'Dimension' type = 'FieldType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a157'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a164' name = 'aggregation_list' body = '&lt;aggregationlist&gt;&#13;&#10;&lt;/aggregationlist&gt;&#13;&#10;'
+      type = 'AggregationList'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a157'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a165' name = 'name' body = 'Latitude' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a166'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a167' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a166'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a168' name = 'formula' body = 'latitude' type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a166'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a169' name = 'hidden' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a166'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a170' name = 'exact' body = 'N' type = 'Boolean'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a166'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a171' name = 'datatype' body = 'String,-1,-1'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a166'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a172' name = 'fieldtype' body = 'Dimension' type = 'FieldType'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a166'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a173' name = 'aggregation_list' body = '&lt;aggregationlist&gt;&#13;&#10;&lt;/aggregationlist&gt;&#13;&#10;'
+      type = 'AggregationList'>
+      <CWM:Description.modelElement>
+        <CWMRDB:Column xmi.idref = 'a166'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a174' name = 'name' body = 'Twitter OLAP' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMMDB:Schema xmi.idref = 'a175'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a176' name = 'description' body = 'twitter_demo_dataset_OLAP'
+      language = 'en_US' type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMMDB:Schema xmi.idref = 'a175'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a177' name = 'security' body = '&lt;security&gt;&#13;&#10;  &lt;owner-rights&gt;&#13;&#10;  &lt;owner&gt;&lt;type&gt;role&lt;/type&gt;&lt;name&gt;Authenticated&lt;/name&gt;&lt;/owner&gt; &lt;rights&gt;31&lt;/rights&gt;&#13;&#10;  &lt;/owner-rights&gt;&#13;&#10;&lt;/security&gt;&#13;&#10;'
+      type = 'Security'>
+      <CWM:Description.modelElement>
+        <CWMMDB:Schema xmi.idref = 'a175'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a178' name = 'row_level_security' body = '&lt;row-level-security type=&quot;none&quot;&gt;&lt;formula&gt;&lt;![CDATA[]]&gt;&lt;/formula&gt;&lt;entries&gt;&lt;/entries&gt;&lt;/row-level-security&gt;'
+      type = 'RowLevelSecurity'>
+      <CWM:Description.modelElement>
+        <CWMMDB:Schema xmi.idref = 'a175'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a179' name = 'AGILE_BI_GENERATED_SCHEMA' body = 'TRUE'
+      type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMMDB:Schema xmi.idref = 'a175'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a180' name = 'AGILE_BI_VERSION' body = '3.0'
+      type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMMDB:Schema xmi.idref = 'a175'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a181' name = 'DUAL_MODELING_SCHEMA' body = 'true'
+      type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMMDB:Schema xmi.idref = 'a175'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a182' name = 'MODELING_SCHEMA' body = 'OLAP'
+      type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMMDB:Schema xmi.idref = 'a175'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a183' name = 'olap_calculated_members' body = '&lt;cubes&gt;&lt;/cubes&gt;'
+      type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMMDB:Schema xmi.idref = 'a175'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a184' name = 'visible' body = 'false' type = 'String'>
+      <CWM:Description.modelElement>
+        <CWMMDB:Schema xmi.idref = 'a175'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a185' name = 'name' body = 'Twitter demo dataset'
+      language = 'en_US' type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMMDB:Dimension xmi.idref = 'a186'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a187' name = 'name' body = 'Num twitter_OLAP'
+      language = 'en_US' type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a188'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a189' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a188'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a190' name = 'datatype' body = 'String,-1,-1'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a188'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a191' name = 'name' body = 'Text_OLAP' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a192'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a193' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a192'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a194' name = 'datatype' body = 'String,-1,-1'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a192'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a195' name = 'name' body = 'Favorited_OLAP' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a196'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a197' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a196'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a198' name = 'datatype' body = 'String,-1,-1'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a196'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a199' name = 'name' body = 'FavoriteCount_OLAP'
+      language = 'en_US' type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a200'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a201' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a200'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a202' name = 'datatype' body = 'String,-1,-1'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a200'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a203' name = 'name' body = 'ReplyToSN_OLAP' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a204'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a205' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a204'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a206' name = 'datatype' body = 'String,-1,-1'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a204'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a207' name = 'name' body = 'Created_OLAP' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a208'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a209' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a208'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a210' name = 'datatype' body = 'String,-1,-1'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a208'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a211' name = 'name' body = 'Truncated_OLAP' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a212'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a213' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a212'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a214' name = 'datatype' body = 'String,-1,-1'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a212'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a215' name = 'name' body = 'ReplyToSID_OLAP'
+      language = 'en_US' type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a216'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a217' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a216'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a218' name = 'datatype' body = 'String,-1,-1'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a216'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a219' name = 'name' body = 'Id_OLAP' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a220'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a221' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a220'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a222' name = 'datatype' body = 'String,-1,-1'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a220'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a223' name = 'name' body = 'ReplyToUID_OLAP'
+      language = 'en_US' type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a224'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a225' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a224'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a226' name = 'datatype' body = 'String,-1,-1'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a224'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a227' name = 'name' body = 'StatusSource_OLAP'
+      language = 'en_US' type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a228'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a229' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a228'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a230' name = 'datatype' body = 'String,-1,-1'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a228'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a231' name = 'name' body = 'ScreenName_OLAP'
+      language = 'en_US' type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a232'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a233' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a232'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a234' name = 'datatype' body = 'String,-1,-1'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a232'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a235' name = 'name' body = 'RetweetCount_OLAP'
+      language = 'en_US' type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a236'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a237' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a236'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a238' name = 'datatype' body = 'String,-1,-1'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a236'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a239' name = 'name' body = 'IsRetweet_OLAP' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a240'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a241' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a240'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a242' name = 'datatype' body = 'Boolean,-1,-1'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a240'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a243' name = 'name' body = 'Retweeted_OLAP' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a244'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a245' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a244'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a246' name = 'datatype' body = 'String,-1,-1'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a244'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a247' name = 'name' body = 'Longitude_OLAP' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a248'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a249' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a248'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a250' name = 'datatype' body = 'String,-1,-1'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a248'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a251' name = 'name' body = 'Latitude_OLAP' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a252'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a253' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a252'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a254' name = 'datatype' body = 'String,-1,-1'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a252'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a255' name = 'name' body = 'RetweetCount' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a256'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a257' name = 'aggregation' body = 'count' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a256'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a258' name = 'datatype' body = 'String,-1,-1'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a256'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a259' name = 'name' body = 'FavoriteCount' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a260'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a261' name = 'aggregation' body = 'count' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a260'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a262' name = 'datatype' body = 'String,-1,-1'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a260'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a263' name = 'name' body = 'ScreenName' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a264'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a265' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a264'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a266' name = 'datatype' body = 'String,-1,-1'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a264'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a267' name = 'name' body = 'StatusSource' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a268'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a269' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a268'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a270' name = 'datatype' body = 'String,-1,-1'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a268'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a271' name = 'name' body = 'Text' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a272'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a273' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a272'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a274' name = 'datatype' body = 'String,-1,-1'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a272'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a275' name = 'name' body = 'Created' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a276'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a277' name = 'aggregation' body = 'none' type = 'Aggregation'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a276'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a278' name = 'datatype' body = 'String,-1,-1'
+      type = 'DataType'>
+      <CWM:Description.modelElement>
+        <CWMMDB:DimensionedObject xmi.idref = 'a276'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a279' name = 'name' body = 'Twitter OLAP' language = 'en_US'
+      type = 'LocString'>
+      <CWM:Description.modelElement>
+        <CWM:Extent xmi.idref = 'a280'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWM:Description xmi.id = 'a281' name = 'security' body = '&lt;security&gt;&#13;&#10;&lt;/security&gt;&#13;&#10;'
+      type = 'Security'>
+      <CWM:Description.modelElement>
+        <CWM:Extent xmi.idref = 'a280'/>
+      </CWM:Description.modelElement>
+    </CWM:Description>
+    <CWMRDB:Table xmi.id = 'a18' name = 'PT_TWITTER_DEMO_DATASET' isAbstract = 'false'
+      isTemporary = 'false' isSystem = 'false'>
+      <CWM:ModelElement.taggedValue>
+        <CWM:TaggedValue xmi.id = 'a282' tag = 'TABLE_TARGET_DATABASE_NAME' value = 'Twitter'/>
+      </CWM:ModelElement.taggedValue>
+      <CWM:Namespace.ownedElement>
+        <CWMRDB:Column xmi.id = 'a22' name = 'num_twitter'/>
+        <CWMRDB:Column xmi.id = 'a31' name = 'text'/>
+        <CWMRDB:Column xmi.id = 'a40' name = 'favorited'/>
+        <CWMRDB:Column xmi.id = 'a49' name = 'favoriteCount'/>
+        <CWMRDB:Column xmi.id = 'a58' name = 'replyToSN'/>
+        <CWMRDB:Column xmi.id = 'a67' name = 'created'/>
+        <CWMRDB:Column xmi.id = 'a76' name = 'truncated'/>
+        <CWMRDB:Column xmi.id = 'a85' name = 'replyToSID'/>
+        <CWMRDB:Column xmi.id = 'a94' name = 'id'/>
+        <CWMRDB:Column xmi.id = 'a103' name = 'replyToUID'/>
+        <CWMRDB:Column xmi.id = 'a112' name = 'statusSource'/>
+        <CWMRDB:Column xmi.id = 'a121' name = 'screenName'/>
+        <CWMRDB:Column xmi.id = 'a130' name = 'retweetCount'/>
+        <CWMRDB:Column xmi.id = 'a139' name = 'isRetweet'/>
+        <CWMRDB:Column xmi.id = 'a148' name = 'retweeted'/>
+        <CWMRDB:Column xmi.id = 'a157' name = 'longitude'/>
+        <CWMRDB:Column xmi.id = 'a166' name = 'latitude'/>
+      </CWM:Namespace.ownedElement>
+    </CWMRDB:Table>
+    <CWMRDB:Catalog xmi.id = 'a283' name = 'Twitter'>
+      <CWM:ModelElement.taggedValue>
+        <CWM:TaggedValue xmi.id = 'a284' tag = 'DATABASE_SERVER' value = 'localhost'/>
+        <CWM:TaggedValue xmi.id = 'a285' tag = 'DATABASE_TYPE' value = 'KettleThin'/>
+        <CWM:TaggedValue xmi.id = 'a286' tag = 'DATABASE_ACCESS' value = 'Native'/>
+        <CWM:TaggedValue xmi.id = 'a287' tag = 'DATABASE_DATABASE' value = 'pentaho'/>
+        <CWM:TaggedValue xmi.id = 'a288' tag = 'DATABASE_PORT' value = '8080'/>
+        <CWM:TaggedValue xmi.id = 'a289' tag = 'DATABASE_USERNAME' value = 'admin'/>
+        <CWM:TaggedValue xmi.id = 'a290' tag = 'DATABASE_PASSWORD' value = 'password'/>
+        <CWM:TaggedValue xmi.id = 'a291' tag = 'DATABASE_SERVERNAME'/>
+        <CWM:TaggedValue xmi.id = 'a292' tag = 'DATABASE_DATA_TABLESPACE'/>
+        <CWM:TaggedValue xmi.id = 'a293' tag = 'DATABASE_INDEX_TABLESPACE'/>
+        <CWM:TaggedValue xmi.id = 'a294' tag = 'DATABASE_ATTRIBUTE_PREFIX_USE_POOLING'
+          value = 'N'/>
+        <CWM:TaggedValue xmi.id = 'a295' tag = 'DATABASE_ATTRIBUTE_PREFIX_PRESERVE_RESERVED_WORD_CASE'
+          value = 'Y'/>
+        <CWM:TaggedValue xmi.id = 'a296' tag = 'DATABASE_ATTRIBUTE_PREFIX_IS_CLUSTERED'
+          value = 'N'/>
+        <CWM:TaggedValue xmi.id = 'a297' tag = 'DATABASE_ATTRIBUTE_PREFIX_SUPPORTS_TIMESTAMP_DATA_TYPE'
+          value = 'Y'/>
+        <CWM:TaggedValue xmi.id = 'a298' tag = 'DATABASE_ATTRIBUTE_PREFIX_SUPPORTS_BOOLEAN_DATA_TYPE'
+          value = 'Y'/>
+        <CWM:TaggedValue xmi.id = 'a299' tag = 'DATABASE_ATTRIBUTE_PREFIX_PORT_NUMBER'
+          value = '8080'/>
+        <CWM:TaggedValue xmi.id = 'a300' tag = 'DATABASE_ATTRIBUTE_PREFIX_FORCE_IDENTIFIERS_TO_UPPERCASE'
+          value = 'N'/>
+        <CWM:TaggedValue xmi.id = 'a301' tag = 'DATABASE_ATTRIBUTE_PREFIX_FORCE_IDENTIFIERS_TO_LOWERCASE'
+          value = 'N'/>
+        <CWM:TaggedValue xmi.id = 'a302' tag = 'DATABASE_ATTRIBUTE_PREFIX_QUOTE_ALL_FIELDS'
+          value = 'N'/>
+        <CWM:TaggedValue xmi.id = 'a303' tag = 'DATABASE_JDBC_URL' value = 'jdbc:pdi://localhost:8080/pentaho/kettle'/>
+      </CWM:ModelElement.taggedValue>
+    </CWMRDB:Catalog>
+    <CWMOLAP:Schema xmi.id = 'a304' name = 'MODEL_1_OLAP'>
+      <CWMOLAP:Schema.cube>
+        <CWMOLAP:Cube xmi.id = 'a305' name = 'twitter_demo_dataset' isAbstract = 'false'
+          isVirtual = 'false'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a306' tag = 'CUBE_BUSINESS_TABLE' value = 'BT_TWITTER_DEMO_DATASET_TWITTER_DEMO_DATASET_OLAP'/>
+          </CWM:ModelElement.taggedValue>
+          <CWM:Namespace.ownedElement>
+            <CWMOLAP:Measure xmi.id = 'a307' name = 'RetweetCount'>
+              <CWM:ModelElement.taggedValue>
+                <CWM:TaggedValue xmi.id = 'a308' tag = 'MEASURE_BUSINESS_COLUMN' value = 'LC_Twitter_demo_dataset_retweetCount_OLAP_2'/>
+              </CWM:ModelElement.taggedValue>
+            </CWMOLAP:Measure>
+            <CWMOLAP:Measure xmi.id = 'a309' name = 'FavoriteCount'>
+              <CWM:ModelElement.taggedValue>
+                <CWM:TaggedValue xmi.id = 'a310' tag = 'MEASURE_BUSINESS_COLUMN' value = 'LC_Twitter_demo_dataset_favoriteCount_OLAP_2'/>
+              </CWM:ModelElement.taggedValue>
+            </CWMOLAP:Measure>
+          </CWM:Namespace.ownedElement>
+          <CWMOLAP:Cube.cubeDimensionAssociation>
+            <CWMOLAP:CubeDimensionAssociation xmi.id = 'a311' name = 'ScreenName' isAbstract = 'false'>
+              <CWMOLAP:CubeDimensionAssociation.dimension>
+                <CWMOLAP:Dimension xmi.idref = 'a312'/>
+              </CWMOLAP:CubeDimensionAssociation.dimension>
+            </CWMOLAP:CubeDimensionAssociation>
+            <CWMOLAP:CubeDimensionAssociation xmi.id = 'a313' name = 'StatusSource'
+              isAbstract = 'false'>
+              <CWMOLAP:CubeDimensionAssociation.dimension>
+                <CWMOLAP:Dimension xmi.idref = 'a314'/>
+              </CWMOLAP:CubeDimensionAssociation.dimension>
+            </CWMOLAP:CubeDimensionAssociation>
+            <CWMOLAP:CubeDimensionAssociation xmi.id = 'a315' name = 'Text' isAbstract = 'false'>
+              <CWMOLAP:CubeDimensionAssociation.dimension>
+                <CWMOLAP:Dimension xmi.idref = 'a316'/>
+              </CWMOLAP:CubeDimensionAssociation.dimension>
+            </CWMOLAP:CubeDimensionAssociation>
+            <CWMOLAP:CubeDimensionAssociation xmi.id = 'a317' name = 'Created' isAbstract = 'false'>
+              <CWMOLAP:CubeDimensionAssociation.dimension>
+                <CWMOLAP:Dimension xmi.idref = 'a318'/>
+              </CWMOLAP:CubeDimensionAssociation.dimension>
+            </CWMOLAP:CubeDimensionAssociation>
+          </CWMOLAP:Cube.cubeDimensionAssociation>
+        </CWMOLAP:Cube>
+      </CWMOLAP:Schema.cube>
+      <CWMOLAP:Schema.dimension>
+        <CWMOLAP:Dimension xmi.id = 'a318' name = 'Created' isAbstract = 'false'
+          isTime = 'false' isMeasure = 'false'>
+          <CWMOLAP:Dimension.hierarchy>
+            <CWMOLAP:LevelBasedHierarchy xmi.id = 'a319' name = 'Created' isAbstract = 'false'>
+              <CWM:ModelElement.taggedValue>
+                <CWM:TaggedValue xmi.id = 'a320' tag = 'HIERARCHY_BUSINESS_TABLE' value = 'BT_TWITTER_DEMO_DATASET_TWITTER_DEMO_DATASET_OLAP'/>
+                <CWM:TaggedValue xmi.id = 'a321' tag = 'HIERARCHY_HAVING_ALL' value = 'Y'/>
+              </CWM:ModelElement.taggedValue>
+              <CWMOLAP:LevelBasedHierarchy.hierarchyLevelAssociation>
+                <CWMOLAP:HierarchyLevelAssociation xmi.id = 'a322' name = 'Created' isAbstract = 'false'>
+                  <CWMOLAP:HierarchyLevelAssociation.currentLevel>
+                    <CWMOLAP:Level xmi.idref = 'a323'/>
+                  </CWMOLAP:HierarchyLevelAssociation.currentLevel>
+                </CWMOLAP:HierarchyLevelAssociation>
+              </CWMOLAP:LevelBasedHierarchy.hierarchyLevelAssociation>
+            </CWMOLAP:LevelBasedHierarchy>
+          </CWMOLAP:Dimension.hierarchy>
+          <CWMOLAP:Dimension.memberSelection>
+            <CWMOLAP:Level xmi.id = 'a323' name = 'Created' isAbstract = 'false'>
+              <CWM:ModelElement.taggedValue>
+                <CWM:TaggedValue xmi.id = 'a324' tag = 'HIERARCHY_LEVEL_UNIQUE_MEMBERS'
+                  value = 'N'/>
+                <CWM:TaggedValue xmi.id = 'a325' tag = 'HIERARCHY_LEVEL_REFERENCE_COLUMN'
+                  value = 'LC_Twitter_demo_dataset_created_OLAP_2'/>
+              </CWM:ModelElement.taggedValue>
+              <CWMOLAP:Level.hierarchyLevelAssociation>
+                <CWMOLAP:HierarchyLevelAssociation xmi.idref = 'a322'/>
+              </CWMOLAP:Level.hierarchyLevelAssociation>
+            </CWMOLAP:Level>
+          </CWMOLAP:Dimension.memberSelection>
+          <CWMOLAP:Dimension.cubeDimensionAssociation>
+            <CWMOLAP:CubeDimensionAssociation xmi.idref = 'a317'/>
+          </CWMOLAP:Dimension.cubeDimensionAssociation>
+        </CWMOLAP:Dimension>
+        <CWMOLAP:Dimension xmi.id = 'a316' name = 'Text' isAbstract = 'false' isTime = 'false'
+          isMeasure = 'false'>
+          <CWMOLAP:Dimension.hierarchy>
+            <CWMOLAP:LevelBasedHierarchy xmi.id = 'a326' name = 'Text' isAbstract = 'false'>
+              <CWM:ModelElement.taggedValue>
+                <CWM:TaggedValue xmi.id = 'a327' tag = 'HIERARCHY_BUSINESS_TABLE' value = 'BT_TWITTER_DEMO_DATASET_TWITTER_DEMO_DATASET_OLAP'/>
+                <CWM:TaggedValue xmi.id = 'a328' tag = 'HIERARCHY_HAVING_ALL' value = 'Y'/>
+              </CWM:ModelElement.taggedValue>
+              <CWMOLAP:LevelBasedHierarchy.hierarchyLevelAssociation>
+                <CWMOLAP:HierarchyLevelAssociation xmi.id = 'a329' name = 'Text' isAbstract = 'false'>
+                  <CWMOLAP:HierarchyLevelAssociation.currentLevel>
+                    <CWMOLAP:Level xmi.idref = 'a330'/>
+                  </CWMOLAP:HierarchyLevelAssociation.currentLevel>
+                </CWMOLAP:HierarchyLevelAssociation>
+              </CWMOLAP:LevelBasedHierarchy.hierarchyLevelAssociation>
+            </CWMOLAP:LevelBasedHierarchy>
+          </CWMOLAP:Dimension.hierarchy>
+          <CWMOLAP:Dimension.memberSelection>
+            <CWMOLAP:Level xmi.id = 'a330' name = 'Text' isAbstract = 'false'>
+              <CWM:ModelElement.taggedValue>
+                <CWM:TaggedValue xmi.id = 'a331' tag = 'HIERARCHY_LEVEL_UNIQUE_MEMBERS'
+                  value = 'N'/>
+                <CWM:TaggedValue xmi.id = 'a332' tag = 'HIERARCHY_LEVEL_REFERENCE_COLUMN'
+                  value = 'LC_Twitter_demo_dataset_text_OLAP_2'/>
+              </CWM:ModelElement.taggedValue>
+              <CWMOLAP:Level.hierarchyLevelAssociation>
+                <CWMOLAP:HierarchyLevelAssociation xmi.idref = 'a329'/>
+              </CWMOLAP:Level.hierarchyLevelAssociation>
+            </CWMOLAP:Level>
+          </CWMOLAP:Dimension.memberSelection>
+          <CWMOLAP:Dimension.cubeDimensionAssociation>
+            <CWMOLAP:CubeDimensionAssociation xmi.idref = 'a315'/>
+          </CWMOLAP:Dimension.cubeDimensionAssociation>
+        </CWMOLAP:Dimension>
+        <CWMOLAP:Dimension xmi.id = 'a314' name = 'StatusSource' isAbstract = 'false'
+          isTime = 'false' isMeasure = 'false'>
+          <CWMOLAP:Dimension.hierarchy>
+            <CWMOLAP:LevelBasedHierarchy xmi.id = 'a333' name = 'StatusSource' isAbstract = 'false'>
+              <CWM:ModelElement.taggedValue>
+                <CWM:TaggedValue xmi.id = 'a334' tag = 'HIERARCHY_BUSINESS_TABLE' value = 'BT_TWITTER_DEMO_DATASET_TWITTER_DEMO_DATASET_OLAP'/>
+                <CWM:TaggedValue xmi.id = 'a335' tag = 'HIERARCHY_HAVING_ALL' value = 'Y'/>
+              </CWM:ModelElement.taggedValue>
+              <CWMOLAP:LevelBasedHierarchy.hierarchyLevelAssociation>
+                <CWMOLAP:HierarchyLevelAssociation xmi.id = 'a336' name = 'StatusSource'
+                  isAbstract = 'false'>
+                  <CWMOLAP:HierarchyLevelAssociation.currentLevel>
+                    <CWMOLAP:Level xmi.idref = 'a337'/>
+                  </CWMOLAP:HierarchyLevelAssociation.currentLevel>
+                </CWMOLAP:HierarchyLevelAssociation>
+              </CWMOLAP:LevelBasedHierarchy.hierarchyLevelAssociation>
+            </CWMOLAP:LevelBasedHierarchy>
+          </CWMOLAP:Dimension.hierarchy>
+          <CWMOLAP:Dimension.memberSelection>
+            <CWMOLAP:Level xmi.id = 'a337' name = 'StatusSource' isAbstract = 'false'>
+              <CWM:ModelElement.taggedValue>
+                <CWM:TaggedValue xmi.id = 'a338' tag = 'HIERARCHY_LEVEL_UNIQUE_MEMBERS'
+                  value = 'N'/>
+                <CWM:TaggedValue xmi.id = 'a339' tag = 'HIERARCHY_LEVEL_REFERENCE_COLUMN'
+                  value = 'LC_Twitter_demo_dataset_statusSource_OLAP_2'/>
+              </CWM:ModelElement.taggedValue>
+              <CWMOLAP:Level.hierarchyLevelAssociation>
+                <CWMOLAP:HierarchyLevelAssociation xmi.idref = 'a336'/>
+              </CWMOLAP:Level.hierarchyLevelAssociation>
+            </CWMOLAP:Level>
+          </CWMOLAP:Dimension.memberSelection>
+          <CWMOLAP:Dimension.cubeDimensionAssociation>
+            <CWMOLAP:CubeDimensionAssociation xmi.idref = 'a313'/>
+          </CWMOLAP:Dimension.cubeDimensionAssociation>
+        </CWMOLAP:Dimension>
+        <CWMOLAP:Dimension xmi.id = 'a312' name = 'ScreenName' isAbstract = 'false'
+          isTime = 'false' isMeasure = 'false'>
+          <CWMOLAP:Dimension.hierarchy>
+            <CWMOLAP:LevelBasedHierarchy xmi.id = 'a340' name = 'ScreenName' isAbstract = 'false'>
+              <CWM:ModelElement.taggedValue>
+                <CWM:TaggedValue xmi.id = 'a341' tag = 'HIERARCHY_BUSINESS_TABLE' value = 'BT_TWITTER_DEMO_DATASET_TWITTER_DEMO_DATASET_OLAP'/>
+                <CWM:TaggedValue xmi.id = 'a342' tag = 'HIERARCHY_HAVING_ALL' value = 'Y'/>
+              </CWM:ModelElement.taggedValue>
+              <CWMOLAP:LevelBasedHierarchy.hierarchyLevelAssociation>
+                <CWMOLAP:HierarchyLevelAssociation xmi.id = 'a343' name = 'ScreenName' isAbstract = 'false'>
+                  <CWMOLAP:HierarchyLevelAssociation.currentLevel>
+                    <CWMOLAP:Level xmi.idref = 'a344'/>
+                  </CWMOLAP:HierarchyLevelAssociation.currentLevel>
+                </CWMOLAP:HierarchyLevelAssociation>
+              </CWMOLAP:LevelBasedHierarchy.hierarchyLevelAssociation>
+            </CWMOLAP:LevelBasedHierarchy>
+          </CWMOLAP:Dimension.hierarchy>
+          <CWMOLAP:Dimension.memberSelection>
+            <CWMOLAP:Level xmi.id = 'a344' name = 'ScreenName' isAbstract = 'false'>
+              <CWM:ModelElement.taggedValue>
+                <CWM:TaggedValue xmi.id = 'a345' tag = 'HIERARCHY_LEVEL_UNIQUE_MEMBERS'
+                  value = 'N'/>
+                <CWM:TaggedValue xmi.id = 'a346' tag = 'HIERARCHY_LEVEL_REFERENCE_COLUMN'
+                  value = 'LC_Twitter_demo_dataset_screenName_OLAP_2'/>
+              </CWM:ModelElement.taggedValue>
+              <CWMOLAP:Level.hierarchyLevelAssociation>
+                <CWMOLAP:HierarchyLevelAssociation xmi.idref = 'a343'/>
+              </CWMOLAP:Level.hierarchyLevelAssociation>
+            </CWMOLAP:Level>
+          </CWMOLAP:Dimension.memberSelection>
+          <CWMOLAP:Dimension.cubeDimensionAssociation>
+            <CWMOLAP:CubeDimensionAssociation xmi.idref = 'a311'/>
+          </CWMOLAP:Dimension.cubeDimensionAssociation>
+        </CWMOLAP:Dimension>
+      </CWMOLAP:Schema.dimension>
+    </CWMOLAP:Schema>
+    <CWMMDB:Schema xmi.id = 'a175' name = 'MODEL_1_OLAP'>
+      <CWM:Namespace.ownedElement>
+        <CWM:Extent xmi.id = 'a280' name = 'BC_TWITTER_DEMO_DATASET'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a347' tag = 'BUSINESS_CATEGORY_ROOT' value = 'Y'/>
+          </CWM:ModelElement.taggedValue>
+          <CWM:Namespace.ownedElement>
+            <CWM:Attribute xmi.id = 'a348' name = 'LC_Twitter_demo_dataset_num_twitter_OLAP'>
+              <CWM:ModelElement.taggedValue>
+                <CWM:TaggedValue xmi.id = 'a349' tag = 'BUSINESS_CATEGORY_TYPE' value = 'Column'/>
+              </CWM:ModelElement.taggedValue>
+            </CWM:Attribute>
+            <CWM:Attribute xmi.id = 'a350' name = 'LC_Twitter_demo_dataset_text_OLAP'>
+              <CWM:ModelElement.taggedValue>
+                <CWM:TaggedValue xmi.id = 'a351' tag = 'BUSINESS_CATEGORY_TYPE' value = 'Column'/>
+              </CWM:ModelElement.taggedValue>
+            </CWM:Attribute>
+            <CWM:Attribute xmi.id = 'a352' name = 'LC_Twitter_demo_dataset_favorited_OLAP'>
+              <CWM:ModelElement.taggedValue>
+                <CWM:TaggedValue xmi.id = 'a353' tag = 'BUSINESS_CATEGORY_TYPE' value = 'Column'/>
+              </CWM:ModelElement.taggedValue>
+            </CWM:Attribute>
+            <CWM:Attribute xmi.id = 'a354' name = 'LC_Twitter_demo_dataset_favoriteCount_OLAP'>
+              <CWM:ModelElement.taggedValue>
+                <CWM:TaggedValue xmi.id = 'a355' tag = 'BUSINESS_CATEGORY_TYPE' value = 'Column'/>
+              </CWM:ModelElement.taggedValue>
+            </CWM:Attribute>
+            <CWM:Attribute xmi.id = 'a356' name = 'LC_Twitter_demo_dataset_replyToSN_OLAP'>
+              <CWM:ModelElement.taggedValue>
+                <CWM:TaggedValue xmi.id = 'a357' tag = 'BUSINESS_CATEGORY_TYPE' value = 'Column'/>
+              </CWM:ModelElement.taggedValue>
+            </CWM:Attribute>
+            <CWM:Attribute xmi.id = 'a358' name = 'LC_Twitter_demo_dataset_created_OLAP'>
+              <CWM:ModelElement.taggedValue>
+                <CWM:TaggedValue xmi.id = 'a359' tag = 'BUSINESS_CATEGORY_TYPE' value = 'Column'/>
+              </CWM:ModelElement.taggedValue>
+            </CWM:Attribute>
+            <CWM:Attribute xmi.id = 'a360' name = 'LC_Twitter_demo_dataset_truncated_OLAP'>
+              <CWM:ModelElement.taggedValue>
+                <CWM:TaggedValue xmi.id = 'a361' tag = 'BUSINESS_CATEGORY_TYPE' value = 'Column'/>
+              </CWM:ModelElement.taggedValue>
+            </CWM:Attribute>
+            <CWM:Attribute xmi.id = 'a362' name = 'LC_Twitter_demo_dataset_replyToSID_OLAP'>
+              <CWM:ModelElement.taggedValue>
+                <CWM:TaggedValue xmi.id = 'a363' tag = 'BUSINESS_CATEGORY_TYPE' value = 'Column'/>
+              </CWM:ModelElement.taggedValue>
+            </CWM:Attribute>
+            <CWM:Attribute xmi.id = 'a364' name = 'LC_Twitter_demo_dataset_id_OLAP'>
+              <CWM:ModelElement.taggedValue>
+                <CWM:TaggedValue xmi.id = 'a365' tag = 'BUSINESS_CATEGORY_TYPE' value = 'Column'/>
+              </CWM:ModelElement.taggedValue>
+            </CWM:Attribute>
+            <CWM:Attribute xmi.id = 'a366' name = 'LC_Twitter_demo_dataset_replyToUID_OLAP'>
+              <CWM:ModelElement.taggedValue>
+                <CWM:TaggedValue xmi.id = 'a367' tag = 'BUSINESS_CATEGORY_TYPE' value = 'Column'/>
+              </CWM:ModelElement.taggedValue>
+            </CWM:Attribute>
+            <CWM:Attribute xmi.id = 'a368' name = 'LC_Twitter_demo_dataset_statusSource_OLAP'>
+              <CWM:ModelElement.taggedValue>
+                <CWM:TaggedValue xmi.id = 'a369' tag = 'BUSINESS_CATEGORY_TYPE' value = 'Column'/>
+              </CWM:ModelElement.taggedValue>
+            </CWM:Attribute>
+            <CWM:Attribute xmi.id = 'a370' name = 'LC_Twitter_demo_dataset_screenName_OLAP'>
+              <CWM:ModelElement.taggedValue>
+                <CWM:TaggedValue xmi.id = 'a371' tag = 'BUSINESS_CATEGORY_TYPE' value = 'Column'/>
+              </CWM:ModelElement.taggedValue>
+            </CWM:Attribute>
+            <CWM:Attribute xmi.id = 'a372' name = 'LC_Twitter_demo_dataset_retweetCount_OLAP'>
+              <CWM:ModelElement.taggedValue>
+                <CWM:TaggedValue xmi.id = 'a373' tag = 'BUSINESS_CATEGORY_TYPE' value = 'Column'/>
+              </CWM:ModelElement.taggedValue>
+            </CWM:Attribute>
+            <CWM:Attribute xmi.id = 'a374' name = 'LC_Twitter_demo_dataset_isRetweet_OLAP'>
+              <CWM:ModelElement.taggedValue>
+                <CWM:TaggedValue xmi.id = 'a375' tag = 'BUSINESS_CATEGORY_TYPE' value = 'Column'/>
+              </CWM:ModelElement.taggedValue>
+            </CWM:Attribute>
+            <CWM:Attribute xmi.id = 'a376' name = 'LC_Twitter_demo_dataset_retweeted_OLAP'>
+              <CWM:ModelElement.taggedValue>
+                <CWM:TaggedValue xmi.id = 'a377' tag = 'BUSINESS_CATEGORY_TYPE' value = 'Column'/>
+              </CWM:ModelElement.taggedValue>
+            </CWM:Attribute>
+            <CWM:Attribute xmi.id = 'a378' name = 'LC_Twitter_demo_dataset_longitude_OLAP'>
+              <CWM:ModelElement.taggedValue>
+                <CWM:TaggedValue xmi.id = 'a379' tag = 'BUSINESS_CATEGORY_TYPE' value = 'Column'/>
+              </CWM:ModelElement.taggedValue>
+            </CWM:Attribute>
+            <CWM:Attribute xmi.id = 'a380' name = 'LC_Twitter_demo_dataset_latitude_OLAP'>
+              <CWM:ModelElement.taggedValue>
+                <CWM:TaggedValue xmi.id = 'a381' tag = 'BUSINESS_CATEGORY_TYPE' value = 'Column'/>
+              </CWM:ModelElement.taggedValue>
+            </CWM:Attribute>
+            <CWM:Attribute xmi.id = 'a382' name = 'LC_Twitter_demo_dataset_retweetCount_OLAP_2'>
+              <CWM:ModelElement.taggedValue>
+                <CWM:TaggedValue xmi.id = 'a383' tag = 'BUSINESS_CATEGORY_TYPE' value = 'Column'/>
+              </CWM:ModelElement.taggedValue>
+            </CWM:Attribute>
+            <CWM:Attribute xmi.id = 'a384' name = 'LC_Twitter_demo_dataset_favoriteCount_OLAP_2'>
+              <CWM:ModelElement.taggedValue>
+                <CWM:TaggedValue xmi.id = 'a385' tag = 'BUSINESS_CATEGORY_TYPE' value = 'Column'/>
+              </CWM:ModelElement.taggedValue>
+            </CWM:Attribute>
+            <CWM:Attribute xmi.id = 'a386' name = 'LC_Twitter_demo_dataset_screenName_OLAP_2'>
+              <CWM:ModelElement.taggedValue>
+                <CWM:TaggedValue xmi.id = 'a387' tag = 'BUSINESS_CATEGORY_TYPE' value = 'Column'/>
+              </CWM:ModelElement.taggedValue>
+            </CWM:Attribute>
+            <CWM:Attribute xmi.id = 'a388' name = 'LC_Twitter_demo_dataset_statusSource_OLAP_2'>
+              <CWM:ModelElement.taggedValue>
+                <CWM:TaggedValue xmi.id = 'a389' tag = 'BUSINESS_CATEGORY_TYPE' value = 'Column'/>
+              </CWM:ModelElement.taggedValue>
+            </CWM:Attribute>
+            <CWM:Attribute xmi.id = 'a390' name = 'LC_Twitter_demo_dataset_text_OLAP_2'>
+              <CWM:ModelElement.taggedValue>
+                <CWM:TaggedValue xmi.id = 'a391' tag = 'BUSINESS_CATEGORY_TYPE' value = 'Column'/>
+              </CWM:ModelElement.taggedValue>
+            </CWM:Attribute>
+            <CWM:Attribute xmi.id = 'a392' name = 'LC_Twitter_demo_dataset_created_OLAP_2'>
+              <CWM:ModelElement.taggedValue>
+                <CWM:TaggedValue xmi.id = 'a393' tag = 'BUSINESS_CATEGORY_TYPE' value = 'Column'/>
+              </CWM:ModelElement.taggedValue>
+            </CWM:Attribute>
+          </CWM:Namespace.ownedElement>
+        </CWM:Extent>
+      </CWM:Namespace.ownedElement>
+      <CWMMDB:Schema.dimensionedObject>
+        <CWMMDB:DimensionedObject xmi.id = 'a188' name = 'LC_Twitter_demo_dataset_num_twitter_OLAP'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a394' tag = 'BUSINESS_COLUMN_PHYSICAL_COLUMN_NAME'
+              value = 'num_twitter'/>
+            <CWM:TaggedValue xmi.id = 'a395' tag = 'BUSINESS_COLUMN_BUSINESS_TABLE'
+              value = 'BT_TWITTER_DEMO_DATASET_TWITTER_DEMO_DATASET_OLAP'/>
+          </CWM:ModelElement.taggedValue>
+          <CWMMDB:DimensionedObject.dimension>
+            <CWMMDB:Dimension xmi.idref = 'a186'/>
+          </CWMMDB:DimensionedObject.dimension>
+        </CWMMDB:DimensionedObject>
+        <CWMMDB:DimensionedObject xmi.id = 'a192' name = 'LC_Twitter_demo_dataset_text_OLAP'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a396' tag = 'BUSINESS_COLUMN_PHYSICAL_COLUMN_NAME'
+              value = 'text'/>
+            <CWM:TaggedValue xmi.id = 'a397' tag = 'BUSINESS_COLUMN_BUSINESS_TABLE'
+              value = 'BT_TWITTER_DEMO_DATASET_TWITTER_DEMO_DATASET_OLAP'/>
+          </CWM:ModelElement.taggedValue>
+          <CWMMDB:DimensionedObject.dimension>
+            <CWMMDB:Dimension xmi.idref = 'a186'/>
+          </CWMMDB:DimensionedObject.dimension>
+        </CWMMDB:DimensionedObject>
+        <CWMMDB:DimensionedObject xmi.id = 'a196' name = 'LC_Twitter_demo_dataset_favorited_OLAP'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a398' tag = 'BUSINESS_COLUMN_PHYSICAL_COLUMN_NAME'
+              value = 'favorited'/>
+            <CWM:TaggedValue xmi.id = 'a399' tag = 'BUSINESS_COLUMN_BUSINESS_TABLE'
+              value = 'BT_TWITTER_DEMO_DATASET_TWITTER_DEMO_DATASET_OLAP'/>
+          </CWM:ModelElement.taggedValue>
+          <CWMMDB:DimensionedObject.dimension>
+            <CWMMDB:Dimension xmi.idref = 'a186'/>
+          </CWMMDB:DimensionedObject.dimension>
+        </CWMMDB:DimensionedObject>
+        <CWMMDB:DimensionedObject xmi.id = 'a200' name = 'LC_Twitter_demo_dataset_favoriteCount_OLAP'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a400' tag = 'BUSINESS_COLUMN_PHYSICAL_COLUMN_NAME'
+              value = 'favoriteCount'/>
+            <CWM:TaggedValue xmi.id = 'a401' tag = 'BUSINESS_COLUMN_BUSINESS_TABLE'
+              value = 'BT_TWITTER_DEMO_DATASET_TWITTER_DEMO_DATASET_OLAP'/>
+          </CWM:ModelElement.taggedValue>
+          <CWMMDB:DimensionedObject.dimension>
+            <CWMMDB:Dimension xmi.idref = 'a186'/>
+          </CWMMDB:DimensionedObject.dimension>
+        </CWMMDB:DimensionedObject>
+        <CWMMDB:DimensionedObject xmi.id = 'a204' name = 'LC_Twitter_demo_dataset_replyToSN_OLAP'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a402' tag = 'BUSINESS_COLUMN_PHYSICAL_COLUMN_NAME'
+              value = 'replyToSN'/>
+            <CWM:TaggedValue xmi.id = 'a403' tag = 'BUSINESS_COLUMN_BUSINESS_TABLE'
+              value = 'BT_TWITTER_DEMO_DATASET_TWITTER_DEMO_DATASET_OLAP'/>
+          </CWM:ModelElement.taggedValue>
+          <CWMMDB:DimensionedObject.dimension>
+            <CWMMDB:Dimension xmi.idref = 'a186'/>
+          </CWMMDB:DimensionedObject.dimension>
+        </CWMMDB:DimensionedObject>
+        <CWMMDB:DimensionedObject xmi.id = 'a208' name = 'LC_Twitter_demo_dataset_created_OLAP'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a404' tag = 'BUSINESS_COLUMN_PHYSICAL_COLUMN_NAME'
+              value = 'created'/>
+            <CWM:TaggedValue xmi.id = 'a405' tag = 'BUSINESS_COLUMN_BUSINESS_TABLE'
+              value = 'BT_TWITTER_DEMO_DATASET_TWITTER_DEMO_DATASET_OLAP'/>
+          </CWM:ModelElement.taggedValue>
+          <CWMMDB:DimensionedObject.dimension>
+            <CWMMDB:Dimension xmi.idref = 'a186'/>
+          </CWMMDB:DimensionedObject.dimension>
+        </CWMMDB:DimensionedObject>
+        <CWMMDB:DimensionedObject xmi.id = 'a212' name = 'LC_Twitter_demo_dataset_truncated_OLAP'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a406' tag = 'BUSINESS_COLUMN_PHYSICAL_COLUMN_NAME'
+              value = 'truncated'/>
+            <CWM:TaggedValue xmi.id = 'a407' tag = 'BUSINESS_COLUMN_BUSINESS_TABLE'
+              value = 'BT_TWITTER_DEMO_DATASET_TWITTER_DEMO_DATASET_OLAP'/>
+          </CWM:ModelElement.taggedValue>
+          <CWMMDB:DimensionedObject.dimension>
+            <CWMMDB:Dimension xmi.idref = 'a186'/>
+          </CWMMDB:DimensionedObject.dimension>
+        </CWMMDB:DimensionedObject>
+        <CWMMDB:DimensionedObject xmi.id = 'a216' name = 'LC_Twitter_demo_dataset_replyToSID_OLAP'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a408' tag = 'BUSINESS_COLUMN_PHYSICAL_COLUMN_NAME'
+              value = 'replyToSID'/>
+            <CWM:TaggedValue xmi.id = 'a409' tag = 'BUSINESS_COLUMN_BUSINESS_TABLE'
+              value = 'BT_TWITTER_DEMO_DATASET_TWITTER_DEMO_DATASET_OLAP'/>
+          </CWM:ModelElement.taggedValue>
+          <CWMMDB:DimensionedObject.dimension>
+            <CWMMDB:Dimension xmi.idref = 'a186'/>
+          </CWMMDB:DimensionedObject.dimension>
+        </CWMMDB:DimensionedObject>
+        <CWMMDB:DimensionedObject xmi.id = 'a220' name = 'LC_Twitter_demo_dataset_id_OLAP'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a410' tag = 'BUSINESS_COLUMN_PHYSICAL_COLUMN_NAME'
+              value = 'id'/>
+            <CWM:TaggedValue xmi.id = 'a411' tag = 'BUSINESS_COLUMN_BUSINESS_TABLE'
+              value = 'BT_TWITTER_DEMO_DATASET_TWITTER_DEMO_DATASET_OLAP'/>
+          </CWM:ModelElement.taggedValue>
+          <CWMMDB:DimensionedObject.dimension>
+            <CWMMDB:Dimension xmi.idref = 'a186'/>
+          </CWMMDB:DimensionedObject.dimension>
+        </CWMMDB:DimensionedObject>
+        <CWMMDB:DimensionedObject xmi.id = 'a224' name = 'LC_Twitter_demo_dataset_replyToUID_OLAP'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a412' tag = 'BUSINESS_COLUMN_PHYSICAL_COLUMN_NAME'
+              value = 'replyToUID'/>
+            <CWM:TaggedValue xmi.id = 'a413' tag = 'BUSINESS_COLUMN_BUSINESS_TABLE'
+              value = 'BT_TWITTER_DEMO_DATASET_TWITTER_DEMO_DATASET_OLAP'/>
+          </CWM:ModelElement.taggedValue>
+          <CWMMDB:DimensionedObject.dimension>
+            <CWMMDB:Dimension xmi.idref = 'a186'/>
+          </CWMMDB:DimensionedObject.dimension>
+        </CWMMDB:DimensionedObject>
+        <CWMMDB:DimensionedObject xmi.id = 'a228' name = 'LC_Twitter_demo_dataset_statusSource_OLAP'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a414' tag = 'BUSINESS_COLUMN_PHYSICAL_COLUMN_NAME'
+              value = 'statusSource'/>
+            <CWM:TaggedValue xmi.id = 'a415' tag = 'BUSINESS_COLUMN_BUSINESS_TABLE'
+              value = 'BT_TWITTER_DEMO_DATASET_TWITTER_DEMO_DATASET_OLAP'/>
+          </CWM:ModelElement.taggedValue>
+          <CWMMDB:DimensionedObject.dimension>
+            <CWMMDB:Dimension xmi.idref = 'a186'/>
+          </CWMMDB:DimensionedObject.dimension>
+        </CWMMDB:DimensionedObject>
+        <CWMMDB:DimensionedObject xmi.id = 'a232' name = 'LC_Twitter_demo_dataset_screenName_OLAP'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a416' tag = 'BUSINESS_COLUMN_PHYSICAL_COLUMN_NAME'
+              value = 'screenName'/>
+            <CWM:TaggedValue xmi.id = 'a417' tag = 'BUSINESS_COLUMN_BUSINESS_TABLE'
+              value = 'BT_TWITTER_DEMO_DATASET_TWITTER_DEMO_DATASET_OLAP'/>
+          </CWM:ModelElement.taggedValue>
+          <CWMMDB:DimensionedObject.dimension>
+            <CWMMDB:Dimension xmi.idref = 'a186'/>
+          </CWMMDB:DimensionedObject.dimension>
+        </CWMMDB:DimensionedObject>
+        <CWMMDB:DimensionedObject xmi.id = 'a236' name = 'LC_Twitter_demo_dataset_retweetCount_OLAP'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a418' tag = 'BUSINESS_COLUMN_PHYSICAL_COLUMN_NAME'
+              value = 'retweetCount'/>
+            <CWM:TaggedValue xmi.id = 'a419' tag = 'BUSINESS_COLUMN_BUSINESS_TABLE'
+              value = 'BT_TWITTER_DEMO_DATASET_TWITTER_DEMO_DATASET_OLAP'/>
+          </CWM:ModelElement.taggedValue>
+          <CWMMDB:DimensionedObject.dimension>
+            <CWMMDB:Dimension xmi.idref = 'a186'/>
+          </CWMMDB:DimensionedObject.dimension>
+        </CWMMDB:DimensionedObject>
+        <CWMMDB:DimensionedObject xmi.id = 'a240' name = 'LC_Twitter_demo_dataset_isRetweet_OLAP'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a420' tag = 'BUSINESS_COLUMN_PHYSICAL_COLUMN_NAME'
+              value = 'isRetweet'/>
+            <CWM:TaggedValue xmi.id = 'a421' tag = 'BUSINESS_COLUMN_BUSINESS_TABLE'
+              value = 'BT_TWITTER_DEMO_DATASET_TWITTER_DEMO_DATASET_OLAP'/>
+          </CWM:ModelElement.taggedValue>
+          <CWMMDB:DimensionedObject.dimension>
+            <CWMMDB:Dimension xmi.idref = 'a186'/>
+          </CWMMDB:DimensionedObject.dimension>
+        </CWMMDB:DimensionedObject>
+        <CWMMDB:DimensionedObject xmi.id = 'a244' name = 'LC_Twitter_demo_dataset_retweeted_OLAP'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a422' tag = 'BUSINESS_COLUMN_PHYSICAL_COLUMN_NAME'
+              value = 'retweeted'/>
+            <CWM:TaggedValue xmi.id = 'a423' tag = 'BUSINESS_COLUMN_BUSINESS_TABLE'
+              value = 'BT_TWITTER_DEMO_DATASET_TWITTER_DEMO_DATASET_OLAP'/>
+          </CWM:ModelElement.taggedValue>
+          <CWMMDB:DimensionedObject.dimension>
+            <CWMMDB:Dimension xmi.idref = 'a186'/>
+          </CWMMDB:DimensionedObject.dimension>
+        </CWMMDB:DimensionedObject>
+        <CWMMDB:DimensionedObject xmi.id = 'a248' name = 'LC_Twitter_demo_dataset_longitude_OLAP'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a424' tag = 'BUSINESS_COLUMN_PHYSICAL_COLUMN_NAME'
+              value = 'longitude'/>
+            <CWM:TaggedValue xmi.id = 'a425' tag = 'BUSINESS_COLUMN_BUSINESS_TABLE'
+              value = 'BT_TWITTER_DEMO_DATASET_TWITTER_DEMO_DATASET_OLAP'/>
+          </CWM:ModelElement.taggedValue>
+          <CWMMDB:DimensionedObject.dimension>
+            <CWMMDB:Dimension xmi.idref = 'a186'/>
+          </CWMMDB:DimensionedObject.dimension>
+        </CWMMDB:DimensionedObject>
+        <CWMMDB:DimensionedObject xmi.id = 'a252' name = 'LC_Twitter_demo_dataset_latitude_OLAP'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a426' tag = 'BUSINESS_COLUMN_PHYSICAL_COLUMN_NAME'
+              value = 'latitude'/>
+            <CWM:TaggedValue xmi.id = 'a427' tag = 'BUSINESS_COLUMN_BUSINESS_TABLE'
+              value = 'BT_TWITTER_DEMO_DATASET_TWITTER_DEMO_DATASET_OLAP'/>
+          </CWM:ModelElement.taggedValue>
+          <CWMMDB:DimensionedObject.dimension>
+            <CWMMDB:Dimension xmi.idref = 'a186'/>
+          </CWMMDB:DimensionedObject.dimension>
+        </CWMMDB:DimensionedObject>
+        <CWMMDB:DimensionedObject xmi.id = 'a256' name = 'LC_Twitter_demo_dataset_retweetCount_OLAP_2'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a428' tag = 'BUSINESS_COLUMN_PHYSICAL_COLUMN_NAME'
+              value = 'retweetCount'/>
+            <CWM:TaggedValue xmi.id = 'a429' tag = 'BUSINESS_COLUMN_BUSINESS_TABLE'
+              value = 'BT_TWITTER_DEMO_DATASET_TWITTER_DEMO_DATASET_OLAP'/>
+          </CWM:ModelElement.taggedValue>
+          <CWMMDB:DimensionedObject.dimension>
+            <CWMMDB:Dimension xmi.idref = 'a186'/>
+          </CWMMDB:DimensionedObject.dimension>
+        </CWMMDB:DimensionedObject>
+        <CWMMDB:DimensionedObject xmi.id = 'a260' name = 'LC_Twitter_demo_dataset_favoriteCount_OLAP_2'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a430' tag = 'BUSINESS_COLUMN_PHYSICAL_COLUMN_NAME'
+              value = 'favoriteCount'/>
+            <CWM:TaggedValue xmi.id = 'a431' tag = 'BUSINESS_COLUMN_BUSINESS_TABLE'
+              value = 'BT_TWITTER_DEMO_DATASET_TWITTER_DEMO_DATASET_OLAP'/>
+          </CWM:ModelElement.taggedValue>
+          <CWMMDB:DimensionedObject.dimension>
+            <CWMMDB:Dimension xmi.idref = 'a186'/>
+          </CWMMDB:DimensionedObject.dimension>
+        </CWMMDB:DimensionedObject>
+        <CWMMDB:DimensionedObject xmi.id = 'a264' name = 'LC_Twitter_demo_dataset_screenName_OLAP_2'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a432' tag = 'BUSINESS_COLUMN_PHYSICAL_COLUMN_NAME'
+              value = 'screenName'/>
+            <CWM:TaggedValue xmi.id = 'a433' tag = 'BUSINESS_COLUMN_BUSINESS_TABLE'
+              value = 'BT_TWITTER_DEMO_DATASET_TWITTER_DEMO_DATASET_OLAP'/>
+          </CWM:ModelElement.taggedValue>
+          <CWMMDB:DimensionedObject.dimension>
+            <CWMMDB:Dimension xmi.idref = 'a186'/>
+          </CWMMDB:DimensionedObject.dimension>
+        </CWMMDB:DimensionedObject>
+        <CWMMDB:DimensionedObject xmi.id = 'a268' name = 'LC_Twitter_demo_dataset_statusSource_OLAP_2'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a434' tag = 'BUSINESS_COLUMN_PHYSICAL_COLUMN_NAME'
+              value = 'statusSource'/>
+            <CWM:TaggedValue xmi.id = 'a435' tag = 'BUSINESS_COLUMN_BUSINESS_TABLE'
+              value = 'BT_TWITTER_DEMO_DATASET_TWITTER_DEMO_DATASET_OLAP'/>
+          </CWM:ModelElement.taggedValue>
+          <CWMMDB:DimensionedObject.dimension>
+            <CWMMDB:Dimension xmi.idref = 'a186'/>
+          </CWMMDB:DimensionedObject.dimension>
+        </CWMMDB:DimensionedObject>
+        <CWMMDB:DimensionedObject xmi.id = 'a272' name = 'LC_Twitter_demo_dataset_text_OLAP_2'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a436' tag = 'BUSINESS_COLUMN_PHYSICAL_COLUMN_NAME'
+              value = 'text'/>
+            <CWM:TaggedValue xmi.id = 'a437' tag = 'BUSINESS_COLUMN_BUSINESS_TABLE'
+              value = 'BT_TWITTER_DEMO_DATASET_TWITTER_DEMO_DATASET_OLAP'/>
+          </CWM:ModelElement.taggedValue>
+          <CWMMDB:DimensionedObject.dimension>
+            <CWMMDB:Dimension xmi.idref = 'a186'/>
+          </CWMMDB:DimensionedObject.dimension>
+        </CWMMDB:DimensionedObject>
+        <CWMMDB:DimensionedObject xmi.id = 'a276' name = 'LC_Twitter_demo_dataset_created_OLAP_2'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a438' tag = 'BUSINESS_COLUMN_PHYSICAL_COLUMN_NAME'
+              value = 'created'/>
+            <CWM:TaggedValue xmi.id = 'a439' tag = 'BUSINESS_COLUMN_BUSINESS_TABLE'
+              value = 'BT_TWITTER_DEMO_DATASET_TWITTER_DEMO_DATASET_OLAP'/>
+          </CWM:ModelElement.taggedValue>
+          <CWMMDB:DimensionedObject.dimension>
+            <CWMMDB:Dimension xmi.idref = 'a186'/>
+          </CWMMDB:DimensionedObject.dimension>
+        </CWMMDB:DimensionedObject>
+      </CWMMDB:Schema.dimensionedObject>
+      <CWMMDB:Schema.dimension>
+        <CWMMDB:Dimension xmi.id = 'a186' name = 'BT_TWITTER_DEMO_DATASET_TWITTER_DEMO_DATASET_OLAP'
+          isAbstract = 'false'>
+          <CWM:ModelElement.taggedValue>
+            <CWM:TaggedValue xmi.id = 'a440' tag = 'BUSINESS_TABLE_PHYSICAL_TABLE_NAME'
+              value = 'PT_TWITTER_DEMO_DATASET'/>
+            <CWM:TaggedValue xmi.id = 'a441' tag = 'TAG_POSITION_X' value = '438'/>
+            <CWM:TaggedValue xmi.id = 'a442' tag = 'TAG_POSITION_Y' value = '217'/>
+            <CWM:TaggedValue xmi.id = 'a443' tag = 'TABLE_IS_DRAWN' value = 'Y'/>
+          </CWM:ModelElement.taggedValue>
+          <CWMMDB:Dimension.dimensionedObject>
+            <CWMMDB:DimensionedObject xmi.idref = 'a188'/>
+            <CWMMDB:DimensionedObject xmi.idref = 'a192'/>
+            <CWMMDB:DimensionedObject xmi.idref = 'a196'/>
+            <CWMMDB:DimensionedObject xmi.idref = 'a200'/>
+            <CWMMDB:DimensionedObject xmi.idref = 'a204'/>
+            <CWMMDB:DimensionedObject xmi.idref = 'a208'/>
+            <CWMMDB:DimensionedObject xmi.idref = 'a212'/>
+            <CWMMDB:DimensionedObject xmi.idref = 'a216'/>
+            <CWMMDB:DimensionedObject xmi.idref = 'a220'/>
+            <CWMMDB:DimensionedObject xmi.idref = 'a224'/>
+            <CWMMDB:DimensionedObject xmi.idref = 'a228'/>
+            <CWMMDB:DimensionedObject xmi.idref = 'a232'/>
+            <CWMMDB:DimensionedObject xmi.idref = 'a236'/>
+            <CWMMDB:DimensionedObject xmi.idref = 'a240'/>
+            <CWMMDB:DimensionedObject xmi.idref = 'a244'/>
+            <CWMMDB:DimensionedObject xmi.idref = 'a248'/>
+            <CWMMDB:DimensionedObject xmi.idref = 'a252'/>
+            <CWMMDB:DimensionedObject xmi.idref = 'a256'/>
+            <CWMMDB:DimensionedObject xmi.idref = 'a260'/>
+            <CWMMDB:DimensionedObject xmi.idref = 'a264'/>
+            <CWMMDB:DimensionedObject xmi.idref = 'a268'/>
+            <CWMMDB:DimensionedObject xmi.idref = 'a272'/>
+            <CWMMDB:DimensionedObject xmi.idref = 'a276'/>
+          </CWMMDB:Dimension.dimensionedObject>
+        </CWMMDB:Dimension>
+      </CWMMDB:Schema.dimension>
+    </CWMMDB:Schema>
+  </XMI.content>
+</XMI>

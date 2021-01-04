@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:ExportManifest xmlns:ns2="http://www.pentaho.com/schema/">
+    <ExportManifestInformation exportDate="06-08-2018 07:37:07 BST" exportBy="admin" rootFolder="/public/" manifestVersion="2"/>
+    <ExportManifestEntity path="MQTT - Race Cars">
+        <ExportManifestProperty>
+            <EntityMetaData name="MQTT - Race Cars" createdDate="2018-08-06T19:14:40.032+01:00" isFolder="true" path="MQTT - Race Cars" isHidden="false" isSchedulable="true" locale="en_US" title="MQTT - Race Cars"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="MQTT - Race Cars/Race Car Dashboard.cda">
+        <ExportManifestProperty>
+            <EntityMetaData name="Race Car Dashboard.cda" createdDate="2018-08-06T19:14:40.257+01:00" isFolder="false" path="MQTT - Race Cars/Race Car Dashboard.cda" isHidden="false" isSchedulable="true" locale="en_US" title="Race Car Dashboard"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="MQTT - Race Cars/Race Car Dashboard.cdfde">
+        <ExportManifestProperty>
+            <EntityMetaData name="Race Car Dashboard.cdfde" createdDate="2018-08-06T19:14:40.445+01:00" isFolder="false" path="MQTT - Race Cars/Race Car Dashboard.cdfde" isHidden="false" isSchedulable="true" locale="en_US" title="Race Car Dashboard.cdfde"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="MQTT - Race Cars/Race Car Dashboard.wcdf">
+        <ExportManifestProperty>
+            <EntityMetaData name="Race Car Dashboard.wcdf" createdDate="2018-08-06T19:14:40.201+01:00" isFolder="false" path="MQTT - Race Cars/Race Car Dashboard.wcdf" isHidden="false" isSchedulable="true" locale="en_US" title="Race Car Dashboard"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="MQTT - Race Cars/resources">
+        <ExportManifestProperty>
+            <EntityMetaData name="resources" createdDate="2018-08-06T19:14:40.493+01:00" isFolder="true" path="MQTT - Race Cars/resources" isHidden="false" isSchedulable="true" locale="en_US" title="resources"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="MQTT - Race Cars/resources/css">
+        <ExportManifestProperty>
+            <EntityMetaData name="css" createdDate="2018-08-06T19:14:40.506+01:00" isFolder="true" path="MQTT - Race Cars/resources/css" isHidden="false" isSchedulable="true" locale="en_US" title="css"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="MQTT - Race Cars/resources/css/realTime.css">
+        <ExportManifestProperty>
+            <EntityMetaData name="realTime.css" createdDate="2018-08-06T19:14:40.522+01:00" isFolder="false" path="MQTT - Race Cars/resources/css/realTime.css" isHidden="false" isSchedulable="true" locale="en_US" title="realTime.css"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="MQTT - Race Cars/resources/img">
+        <ExportManifestProperty>
+            <EntityMetaData name="img" createdDate="2018-08-06T19:14:40.569+01:00" isFolder="true" path="MQTT - Race Cars/resources/img" isHidden="false" isSchedulable="true" locale="en_US" title="img"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="MQTT - Race Cars/resources/img/MQTT_flow.png.png">
+        <ExportManifestProperty>
+            <EntityMetaData name="MQTT_flow.png.png" createdDate="2018-08-06T19:14:40.583+01:00" isFolder="false" path="MQTT - Race Cars/resources/img/MQTT_flow.png.png" isHidden="true" isSchedulable="true" locale="en_US" title="MQTT_flow.png.png"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="MQTT - Race Cars/resources/img/sort-arrows.png">
+        <ExportManifestProperty>
+            <EntityMetaData name="sort-arrows.png" createdDate="2018-08-06T19:14:40.644+01:00" isFolder="false" path="MQTT - Race Cars/resources/img/sort-arrows.png" isHidden="true" isSchedulable="true" locale="en_US" title="sort-arrows.png"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="MQTT - Race Cars/resources/img/sort-arrows.svg">
+        <ExportManifestProperty>
+            <EntityMetaData name="sort-arrows.svg" createdDate="2018-08-06T19:14:40.700+01:00" isFolder="false" path="MQTT - Race Cars/resources/img/sort-arrows.svg" isHidden="true" isSchedulable="true" locale="en_US" title="sort-arrows.svg"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="MQTT - Race Cars/resources/js">
+        <ExportManifestProperty>
+            <EntityMetaData name="js" createdDate="2018-08-06T19:14:40.751+01:00" isFolder="true" path="MQTT - Race Cars/resources/js" isHidden="false" isSchedulable="true" locale="en_US" title="js"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="MQTT - Race Cars/resources/js/categoryDetailsTooltip.default.css">
+        <ExportManifestProperty>
+            <EntityMetaData name="categoryDetailsTooltip.default.css" createdDate="2018-08-06T19:14:40.769+01:00" isFolder="false" path="MQTT - Race Cars/resources/js/categoryDetailsTooltip.default.css" isHidden="true" isSchedulable="true" locale="en_US" title="categoryDetailsTooltip.default.css"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="MQTT - Race Cars/resources/js/categoryDetailsTooltip.js">
+        <ExportManifestProperty>
+            <EntityMetaData name="categoryDetailsTooltip.js" createdDate="2018-08-06T19:14:40.820+01:00" isFolder="false" path="MQTT - Race Cars/resources/js/categoryDetailsTooltip.js" isHidden="true" isSchedulable="true" locale="en_US" title="categoryDetailsTooltip.js"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="MQTT - Race Cars/resources/js/realTimejs.js">
+        <ExportManifestProperty>
+            <EntityMetaData name="realTimejs.js" createdDate="2018-08-06T19:14:40.877+01:00" isFolder="false" path="MQTT - Race Cars/resources/js/realTimejs.js" isHidden="false" isSchedulable="true" locale="en_US" title="realTimejs.js"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="MQTT - Race Cars/transformations">
+        <ExportManifestProperty>
+            <EntityMetaData name="transformations" createdDate="2018-08-06T19:14:40.928+01:00" isFolder="true" path="MQTT - Race Cars/transformations" isHidden="false" isSchedulable="true" locale="en_US" title="transformations"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="MQTT - Race Cars/transformations/MQTT_RC_Consumer_Data_Service.ktr">
+        <ExportManifestProperty>
+            <EntityMetaData name="MQTT_RC_Consumer_Data_Service.ktr" createdDate="2018-08-06T19:14:43.308+01:00" isFolder="false" path="MQTT - Race Cars/transformations/MQTT_RC_Consumer_Data_Service.ktr" isHidden="false" isSchedulable="true" locale="en_US" title="MQTT_RC_Consumer_Data_Service"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="MQTT - Race Cars/transformations/MQTT_RC_Producer_Sensor_Data.ktr">
+        <ExportManifestProperty>
+            <EntityMetaData name="MQTT_RC_Producer_Sensor_Data.ktr" createdDate="2018-08-06T19:14:45.232+01:00" isFolder="false" path="MQTT - Race Cars/transformations/MQTT_RC_Producer_Sensor_Data.ktr" isHidden="false" isSchedulable="true" locale="en_US" title="MQTT_RC_Producer_Sensor_Data"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="MQTT - Race Cars/transformations/MQTT_RC_Stream.ktr">
+        <ExportManifestProperty>
+            <EntityMetaData name="MQTT_RC_Stream.ktr" createdDate="2018-08-06T19:14:47.209+01:00" isFolder="false" path="MQTT - Race Cars/transformations/MQTT_RC_Stream.ktr" isHidden="true" isSchedulable="true" locale="en_US" title="MQTT_RC_Stream"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+</ns2:ExportManifest>

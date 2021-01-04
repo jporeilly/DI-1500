@@ -436,10 +436,10 @@
   </info>
   <notepads>
     <notepad>
-      <note>Demonstration: Inject Metadata Properties</note>
-      <xloc>256</xloc>
+      <note>Use Case: Onboarding data</note>
+      <xloc>320</xloc>
       <yloc>80</yloc>
-      <width>274</width>
+      <width>177</width>
       <heigth>28</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>10</fontsize>
@@ -481,379 +481,33 @@ in template steps.</note>
   </notepads>
   <order>
     <hop>
-      <from>dg-fields</from>
-      <to>ETL Metadata Injection</to>
+      <from>dg-metadata _fields</from>
+      <to>emi-onboading_csv</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
       <from>dg-rename</from>
-      <to>ETL Metadata Injection</to>
+      <to>emi-onboading_csv</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>dg-remove</from>
-      <to>ETL Metadata Injection</to>
+      <from>dg_remove_name</from>
+      <to>emi-onboading_csv</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>fn-filename</from>
-      <to>sfvc-resolve_filename</to>
+      <from>gr-filename</from>
+      <to>sfvc-path_filename</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>sfvc-resolve_filename</from>
-      <to>ETL Metadata Injection</to>
+      <from>sfvc-path_filename</from>
+      <to>emi-onboading_csv</to>
       <enabled>Y</enabled>
     </hop>
   </order>
   <step>
-    <name>ETL Metadata Injection</name>
-    <type>MetaInject</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <specification_method>filename</specification_method>
-    <trans_object_id/>
-    <trans_name/>
-    <filename>${Internal.Entry.Current.Directory}/tr_metadata_inject_template.ktr</filename>
-    <directory_path/>
-    <source_step/>
-    <source_output_fields>    </source_output_fields>
-    <target_file/>
-    <no_execution>N</no_execution>
-    <stream_source_step/>
-    <stream_target_step/>
-    <mappings>
-      <mapping>
-        <target_step_name>CSV file input</target_step_name>
-        <target_attribute_key>field_length</target_attribute_key>
-        <target_detail>Y</target_detail>
-        <source_step>dg-fields</source_step>
-        <source_field>length</source_field>
-      </mapping>
-      <mapping>
-        <target_step_name>csvi-customers</target_step_name>
-        <target_attribute_key>FIELD_LENGTH</target_attribute_key>
-        <target_detail>Y</target_detail>
-        <source_step>dg-fields</source_step>
-        <source_field>length</source_field>
-      </mapping>
-      <mapping>
-        <target_step_name>CSV file input</target_step_name>
-        <target_attribute_key>format</target_attribute_key>
-        <target_detail>Y</target_detail>
-        <source_step>dg-fields</source_step>
-        <source_field>format</source_field>
-      </mapping>
-      <mapping>
-        <target_step_name>CSV file input</target_step_name>
-        <target_attribute_key>length</target_attribute_key>
-        <target_detail>Y</target_detail>
-        <source_step>dg-fields</source_step>
-        <source_field>length</source_field>
-      </mapping>
-      <mapping>
-        <target_step_name>sv-mdi</target_step_name>
-        <target_attribute_key>META_NAME</target_attribute_key>
-        <target_detail>Y</target_detail>
-        <source_step>dg-rename</source_step>
-        <source_field>name</source_field>
-      </mapping>
-      <mapping>
-        <target_step_name>csvi-customers</target_step_name>
-        <target_attribute_key>FIELD_DECIMAL</target_attribute_key>
-        <target_detail>Y</target_detail>
-        <source_step>dg-fields</source_step>
-        <source_field>decimal</source_field>
-      </mapping>
-      <mapping>
-        <target_step_name>CSV file input</target_step_name>
-        <target_attribute_key>field_precision</target_attribute_key>
-        <target_detail>Y</target_detail>
-        <source_step>dg-fields</source_step>
-        <source_field>precision</source_field>
-      </mapping>
-      <mapping>
-        <target_step_name>CSV file input</target_step_name>
-        <target_attribute_key>field_format</target_attribute_key>
-        <target_detail>Y</target_detail>
-        <source_step>dg-fields</source_step>
-        <source_field>format</source_field>
-      </mapping>
-      <mapping>
-        <target_step_name>CSV file input</target_step_name>
-        <target_attribute_key>field_name</target_attribute_key>
-        <target_detail>Y</target_detail>
-        <source_step>dg-fields</source_step>
-        <source_field>name</source_field>
-      </mapping>
-      <mapping>
-        <target_step_name>CSV file input</target_step_name>
-        <target_attribute_key>FIELD_DECIMAL</target_attribute_key>
-        <target_detail>Y</target_detail>
-        <source_step>dg-fields</source_step>
-        <source_field>decimal</source_field>
-      </mapping>
-      <mapping>
-        <target_step_name>CSV file input</target_step_name>
-        <target_attribute_key>FIELD_LENGTH</target_attribute_key>
-        <target_detail>Y</target_detail>
-        <source_step>dg-fields</source_step>
-        <source_field>length</source_field>
-      </mapping>
-      <mapping>
-        <target_step_name>CSV file input</target_step_name>
-        <target_attribute_key>FIELD_GROUP</target_attribute_key>
-        <target_detail>Y</target_detail>
-        <source_step>dg-fields</source_step>
-        <source_field>group</source_field>
-      </mapping>
-      <mapping>
-        <target_step_name>csvi-customers</target_step_name>
-        <target_attribute_key>FIELD_PRECISION</target_attribute_key>
-        <target_detail>Y</target_detail>
-        <source_step>dg-fields</source_step>
-        <source_field>precision</source_field>
-      </mapping>
-      <mapping>
-        <target_step_name>csvi-customers</target_step_name>
-        <target_attribute_key>FIELD_FORMAT</target_attribute_key>
-        <target_detail>Y</target_detail>
-        <source_step>dg-fields</source_step>
-        <source_field>format</source_field>
-      </mapping>
-      <mapping>
-        <target_step_name>Select values</target_step_name>
-        <target_attribute_key>META_NAME</target_attribute_key>
-        <target_detail>Y</target_detail>
-        <source_step>dg-rename</source_step>
-        <source_field>name</source_field>
-      </mapping>
-      <mapping>
-        <target_step_name>CSV file input</target_step_name>
-        <target_attribute_key>FIELD_PRECISION</target_attribute_key>
-        <target_detail>Y</target_detail>
-        <source_step>dg-fields</source_step>
-        <source_field>precision</source_field>
-      </mapping>
-      <mapping>
-        <target_step_name>csvi-customers</target_step_name>
-        <target_attribute_key>FIELD_GROUP</target_attribute_key>
-        <target_detail>Y</target_detail>
-        <source_step>dg-fields</source_step>
-        <source_field>group</source_field>
-      </mapping>
-      <mapping>
-        <target_step_name>CSV file input</target_step_name>
-        <target_attribute_key>FIELD_FORMAT</target_attribute_key>
-        <target_detail>Y</target_detail>
-        <source_step>dg-fields</source_step>
-        <source_field>format</source_field>
-      </mapping>
-      <mapping>
-        <target_step_name>CSV file input</target_step_name>
-        <target_attribute_key>field_currency</target_attribute_key>
-        <target_detail>Y</target_detail>
-        <source_step>dg-fields</source_step>
-        <source_field>currency</source_field>
-      </mapping>
-      <mapping>
-        <target_step_name>CSV file input</target_step_name>
-        <target_attribute_key>name</target_attribute_key>
-        <target_detail>Y</target_detail>
-        <source_step>dg-fields</source_step>
-        <source_field>name</source_field>
-      </mapping>
-      <mapping>
-        <target_step_name>CSV file input</target_step_name>
-        <target_attribute_key>decimal</target_attribute_key>
-        <target_detail>Y</target_detail>
-        <source_step>dg-fields</source_step>
-        <source_field>decimal</source_field>
-      </mapping>
-      <mapping>
-        <target_step_name>CSV file input</target_step_name>
-        <target_attribute_key>field_type</target_attribute_key>
-        <target_detail>Y</target_detail>
-        <source_step>dg-fields</source_step>
-        <source_field>type</source_field>
-      </mapping>
-      <mapping>
-        <target_step_name>CSV file input</target_step_name>
-        <target_attribute_key>field_decimal</target_attribute_key>
-        <target_detail>Y</target_detail>
-        <source_step>dg-fields</source_step>
-        <source_field>decimal</source_field>
-      </mapping>
-      <mapping>
-        <target_step_name>CSV file input</target_step_name>
-        <target_attribute_key>FIELD_TYPE</target_attribute_key>
-        <target_detail>Y</target_detail>
-        <source_step>dg-fields</source_step>
-        <source_field>type</source_field>
-      </mapping>
-      <mapping>
-        <target_step_name>csvi-customers</target_step_name>
-        <target_attribute_key>FIELD_CURRENCY</target_attribute_key>
-        <target_detail>Y</target_detail>
-        <source_step>dg-fields</source_step>
-        <source_field>currency</source_field>
-      </mapping>
-      <mapping>
-        <target_step_name>csvi-customers</target_step_name>
-        <target_attribute_key>FIELD_TYPE</target_attribute_key>
-        <target_detail>Y</target_detail>
-        <source_step>dg-fields</source_step>
-        <source_field>type</source_field>
-      </mapping>
-      <mapping>
-        <target_step_name>CSV file input</target_step_name>
-        <target_attribute_key>FIELD_CURRENCY</target_attribute_key>
-        <target_detail>Y</target_detail>
-        <source_step>dg-fields</source_step>
-        <source_field>currency</source_field>
-      </mapping>
-      <mapping>
-        <target_step_name>CSV file input</target_step_name>
-        <target_attribute_key>field_trim_type</target_attribute_key>
-        <target_detail>Y</target_detail>
-        <source_step>dg-fields</source_step>
-        <source_field>trimtype</source_field>
-      </mapping>
-      <mapping>
-        <target_step_name>CSV file input</target_step_name>
-        <target_attribute_key>type</target_attribute_key>
-        <target_detail>Y</target_detail>
-        <source_step>dg-fields</source_step>
-        <source_field>type</source_field>
-      </mapping>
-      <mapping>
-        <target_step_name>Select values</target_step_name>
-        <target_attribute_key>REMOVE_NAME</target_attribute_key>
-        <target_detail>Y</target_detail>
-        <source_step>dg-remove</source_step>
-        <source_field>remove_name</source_field>
-      </mapping>
-      <mapping>
-        <target_step_name>sv-mdi</target_step_name>
-        <target_attribute_key>META_RENAME</target_attribute_key>
-        <target_detail>Y</target_detail>
-        <source_step>dg-rename</source_step>
-        <source_field>rename</source_field>
-      </mapping>
-      <mapping>
-        <target_step_name>Select values</target_step_name>
-        <target_attribute_key>META_RENAME</target_attribute_key>
-        <target_detail>Y</target_detail>
-        <source_step>dg-rename</source_step>
-        <source_field>rename</source_field>
-      </mapping>
-      <mapping>
-        <target_step_name>sv-mdi</target_step_name>
-        <target_attribute_key>REMOVE_NAME</target_attribute_key>
-        <target_detail>Y</target_detail>
-        <source_step>dg-remove</source_step>
-        <source_field>remove_name</source_field>
-      </mapping>
-      <mapping>
-        <target_step_name>CSV file input</target_step_name>
-        <target_attribute_key>precision</target_attribute_key>
-        <target_detail>Y</target_detail>
-        <source_step>dg-fields</source_step>
-        <source_field>precision</source_field>
-      </mapping>
-      <mapping>
-        <target_step_name>CSV file input</target_step_name>
-        <target_attribute_key>currency</target_attribute_key>
-        <target_detail>Y</target_detail>
-        <source_step>dg-fields</source_step>
-        <source_field>currency</source_field>
-      </mapping>
-      <mapping>
-        <target_step_name>csvi-customers</target_step_name>
-        <target_attribute_key>FIELD_TRIM_TYPE</target_attribute_key>
-        <target_detail>Y</target_detail>
-        <source_step>dg-fields</source_step>
-        <source_field>trimtype</source_field>
-      </mapping>
-      <mapping>
-        <target_step_name>CSV file input</target_step_name>
-        <target_attribute_key>FIELD_NAME</target_attribute_key>
-        <target_detail>Y</target_detail>
-        <source_step>dg-fields</source_step>
-        <source_field>name</source_field>
-      </mapping>
-      <mapping>
-        <target_step_name>csvi-customers</target_step_name>
-        <target_attribute_key>FILENAME</target_attribute_key>
-        <target_detail>N</target_detail>
-        <source_step>sfvc-resolve_filename</source_step>
-        <source_field>filename</source_field>
-      </mapping>
-      <mapping>
-        <target_step_name>CSV file input</target_step_name>
-        <target_attribute_key>group</target_attribute_key>
-        <target_detail>Y</target_detail>
-        <source_step>dg-fields</source_step>
-        <source_field>group</source_field>
-      </mapping>
-      <mapping>
-        <target_step_name>CSV file input</target_step_name>
-        <target_attribute_key>trim_type</target_attribute_key>
-        <target_detail>Y</target_detail>
-        <source_step>dg-fields</source_step>
-        <source_field>trimtype</source_field>
-      </mapping>
-      <mapping>
-        <target_step_name>CSV file input</target_step_name>
-        <target_attribute_key>FIELD_TRIM_TYPE</target_attribute_key>
-        <target_detail>Y</target_detail>
-        <source_step>dg-fields</source_step>
-        <source_field>trimtype</source_field>
-      </mapping>
-      <mapping>
-        <target_step_name>CSV file input</target_step_name>
-        <target_attribute_key>FILENAME</target_attribute_key>
-        <target_detail>N</target_detail>
-        <source_step>sfvc-resolve_filename</source_step>
-        <source_field>filename</source_field>
-      </mapping>
-      <mapping>
-        <target_step_name>csvi-customers</target_step_name>
-        <target_attribute_key>FIELD_NAME</target_attribute_key>
-        <target_detail>Y</target_detail>
-        <source_step>dg-fields</source_step>
-        <source_field>name</source_field>
-      </mapping>
-      <mapping>
-        <target_step_name>CSV file input</target_step_name>
-        <target_attribute_key>field_group</target_attribute_key>
-        <target_detail>Y</target_detail>
-        <source_step>dg-fields</source_step>
-        <source_field>group</source_field>
-      </mapping>
-    </mappings>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>368</xloc>
-      <yloc>224</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>dg-fields</name>
+    <name>dg-metadata _fields</name>
     <type>DataGrid</type>
     <description/>
     <distribute>Y</distribute>
@@ -967,7 +621,7 @@ in template steps.</note>
     <data>
       <line>
         <item>id</item>
-        <item>Integer</item>
+        <item>String</item>
         <item/>
         <item>3</item>
         <item>0</item>
@@ -1000,7 +654,7 @@ in template steps.</note>
       </line>
       <line>
         <item>zip</item>
-        <item>Integer</item>
+        <item>String</item>
         <item/>
         <item>5</item>
         <item>0</item>
@@ -1044,7 +698,7 @@ in template steps.</note>
       </line>
       <line>
         <item>housenr</item>
-        <item>Integer</item>
+        <item>String</item>
         <item/>
         <item>3</item>
         <item>0</item>
@@ -1086,93 +740,6 @@ in template steps.</note>
     </remotesteps>
     <GUI>
       <xloc>256</xloc>
-      <yloc>224</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>fn-filename</name>
-    <type>RowGenerator</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <name>filename</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <set_empty_string>N</set_empty_string>
-      </field>
-    </fields>
-    <limit>1</limit>
-    <never_ending>N</never_ending>
-    <interval_in_ms>5000</interval_in_ms>
-    <row_time_field>now</row_time_field>
-    <last_time_field>FiveSecondsAgo</last_time_field>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>240</xloc>
-      <yloc>464</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>dg-remove</name>
-    <type>DataGrid</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <name>remove_name</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <set_empty_string>N</set_empty_string>
-      </field>
-    </fields>
-    <data>
-      <line>
-        <item>stateCode</item>
-      </line>
-    </data>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>480</xloc>
       <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1233,7 +800,223 @@ in template steps.</note>
     </GUI>
   </step>
   <step>
-    <name>sfvc-resolve_filename</name>
+    <name>dg_remove_name</name>
+    <type>DataGrid</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>remove_name</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+    </fields>
+    <data>
+      <line>
+        <item>stateCode</item>
+      </line>
+    </data>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>480</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>emi-onboading_csv</name>
+    <type>MetaInject</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <specification_method>filename</specification_method>
+    <trans_object_id/>
+    <trans_name/>
+    <filename>${Internal.Entry.Current.Directory}/tr_metadata_inject_template.ktr</filename>
+    <directory_path/>
+    <source_step/>
+    <source_output_fields>    </source_output_fields>
+    <target_file/>
+    <no_execution>N</no_execution>
+    <stream_source_step/>
+    <stream_target_step/>
+    <mappings>
+      <mapping>
+        <target_step_name>sv-mdi</target_step_name>
+        <target_attribute_key>META_NAME</target_attribute_key>
+        <target_detail>Y</target_detail>
+        <source_step>dg-rename</source_step>
+        <source_field>name</source_field>
+      </mapping>
+      <mapping>
+        <target_step_name>csvi-mdi</target_step_name>
+        <target_attribute_key>FIELD_GROUP</target_attribute_key>
+        <target_detail>Y</target_detail>
+        <source_step>dg-metadata _fields</source_step>
+        <source_field>group</source_field>
+      </mapping>
+      <mapping>
+        <target_step_name>csvi-mdi</target_step_name>
+        <target_attribute_key>FIELD_DECIMAL</target_attribute_key>
+        <target_detail>Y</target_detail>
+        <source_step>dg-metadata _fields</source_step>
+        <source_field>decimal</source_field>
+      </mapping>
+      <mapping>
+        <target_step_name>csvi-mdi</target_step_name>
+        <target_attribute_key>FIELD_LENGTH</target_attribute_key>
+        <target_detail>Y</target_detail>
+        <source_step>dg-metadata _fields</source_step>
+        <source_field>length</source_field>
+      </mapping>
+      <mapping>
+        <target_step_name>sv-mdi</target_step_name>
+        <target_attribute_key>META_RENAME</target_attribute_key>
+        <target_detail>Y</target_detail>
+        <source_step>dg-rename</source_step>
+        <source_field>rename</source_field>
+      </mapping>
+      <mapping>
+        <target_step_name>csvi-mdi</target_step_name>
+        <target_attribute_key>FIELD_TYPE</target_attribute_key>
+        <target_detail>Y</target_detail>
+        <source_step>dg-metadata _fields</source_step>
+        <source_field>type</source_field>
+      </mapping>
+      <mapping>
+        <target_step_name>csvi-mdi</target_step_name>
+        <target_attribute_key>FIELD_CURRENCY</target_attribute_key>
+        <target_detail>Y</target_detail>
+        <source_step>dg-metadata _fields</source_step>
+        <source_field>currency</source_field>
+      </mapping>
+      <mapping>
+        <target_step_name>csvi-mdi</target_step_name>
+        <target_attribute_key>FIELD_PRECISION</target_attribute_key>
+        <target_detail>Y</target_detail>
+        <source_step>dg-metadata _fields</source_step>
+        <source_field>precision</source_field>
+      </mapping>
+      <mapping>
+        <target_step_name>csvi-mdi</target_step_name>
+        <target_attribute_key>FIELD_FORMAT</target_attribute_key>
+        <target_detail>Y</target_detail>
+        <source_step>dg-metadata _fields</source_step>
+        <source_field>format</source_field>
+      </mapping>
+      <mapping>
+        <target_step_name>sv-mdi</target_step_name>
+        <target_attribute_key>REMOVE_NAME</target_attribute_key>
+        <target_detail>Y</target_detail>
+        <source_step>dg_remove_name</source_step>
+        <source_field>remove_name</source_field>
+      </mapping>
+      <mapping>
+        <target_step_name>csvi-mdi</target_step_name>
+        <target_attribute_key>FIELD_NAME</target_attribute_key>
+        <target_detail>Y</target_detail>
+        <source_step>dg-metadata _fields</source_step>
+        <source_field>name</source_field>
+      </mapping>
+      <mapping>
+        <target_step_name>csvi-mdi</target_step_name>
+        <target_attribute_key>FIELD_TRIM_TYPE</target_attribute_key>
+        <target_detail>Y</target_detail>
+        <source_step>dg-metadata _fields</source_step>
+        <source_field>type</source_field>
+      </mapping>
+      <mapping>
+        <target_step_name>csvi-mdi</target_step_name>
+        <target_attribute_key>FILENAME</target_attribute_key>
+        <target_detail>N</target_detail>
+        <source_step>sfvc-path_filename</source_step>
+        <source_field>filename</source_field>
+      </mapping>
+    </mappings>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>368</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>gr-filename</name>
+    <type>RowGenerator</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>filename</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+    </fields>
+    <limit>1</limit>
+    <never_ending>N</never_ending>
+    <interval_in_ms>5000</interval_in_ms>
+    <row_time_field>now</row_time_field>
+    <last_time_field>FiveSecondsAgo</last_time_field>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>240</xloc>
+      <yloc>464</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>sfvc-path_filename</name>
     <type>SetValueConstant</type>
     <description/>
     <distribute>Y</distribute>
@@ -1274,26 +1057,6 @@ in template steps.</note>
   <attributes>
     <group>
       <name>explorerState</name>
-      <attribute>
-        <key>sfvc-resolve_filename</key>
-        <value/>
-      </attribute>
-      <attribute>
-        <key>dg-rename</key>
-        <value/>
-      </attribute>
-      <attribute>
-        <key>dg-fields</key>
-        <value/>
-      </attribute>
-      <attribute>
-        <key>dg-remove</key>
-        <value/>
-      </attribute>
-      <attribute>
-        <key>fn-filename</key>
-        <value/>
-      </attribute>
     </group>
   </attributes>
 </transformation>

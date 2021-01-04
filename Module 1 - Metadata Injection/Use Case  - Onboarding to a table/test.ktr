@@ -461,7 +461,7 @@
     <server>localhost</server>
     <type>HYPERSONIC</type>
     <access>Native</access>
-    <database>Sampledata</database>
+    <database>sampledata</database>
     <port>9001</port>
     <username>pentaho_admin</username>
     <password>Encrypted 2be98afc86aa7f2e4bb18bd63c99dbdde</password>
@@ -509,13 +509,13 @@
   </connection>
   <order>
     <hop>
-      <from>CSV file input</from>
-      <to>Table output</to>
+      <from>csvi-customers</from>
+      <to>to-customers</to>
       <enabled>Y</enabled>
     </hop>
   </order>
   <step>
-    <name>CSV file input</name>
+    <name>csvi-customers</name>
     <type>CsvInput</type>
     <description/>
     <distribute>Y</distribute>
@@ -525,7 +525,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <filename>C:\Users\Jp\Amazon Drive\NEXT 2018\MDI\Demonstration - Intro to ETL\Demonstration - Metadata Injection\files\customers.txt</filename>
+    <filename>${Internal.Entry.Current.Directory}\files\customers.txt</filename>
     <filename_field/>
     <rownum_field/>
     <include_filename>N</include_filename>
@@ -537,6 +537,7 @@
     <add_filename_result>N</add_filename_result>
     <parallel>N</parallel>
     <newline_possible>N</newline_possible>
+    <format/>
     <encoding/>
     <fields>
       <field>
@@ -650,6 +651,7 @@
         <trim_type>none</trim_type>
       </field>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -664,7 +666,7 @@
     </GUI>
   </step>
   <step>
-    <name>Table output</name>
+    <name>to-customers</name>
     <type>TableOutput</type>
     <description/>
     <distribute>Y</distribute>
@@ -729,6 +731,7 @@
         <stream_name>state</stream_name>
       </field>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -747,4 +750,9 @@
   <slave-step-copy-partition-distribution>
   </slave-step-copy-partition-distribution>
   <slave_transformation>N</slave_transformation>
+  <attributes>
+    <group>
+      <name>explorerState</name>
+    </group>
+  </attributes>
 </transformation>

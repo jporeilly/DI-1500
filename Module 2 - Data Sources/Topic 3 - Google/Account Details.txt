@@ -1,0 +1,43 @@
+
+ BigQuerry Account details:
+   URL: https://bigquery.cloud.google.com/spry-utility-210510
+   Username: pentaho.bigdata.query@gmail.com
+   Password: BigQuery01!
+  
+
+  **Remember to switch UI. Different syntax..!
+
+ 
+ Query Sample natality table:
+ #standardSQL
+  SELECT
+   weight_pounds, state, year, gestation_weeks
+  FROM
+  `bigquery-public-data.samples.natality`
+  ORDER BY weight_pounds DESC LIMIT 10;
+ 
+ Query GBQ_Demo names_2017 table::
+ #standardSQL
+  SELECT
+   name, count
+  FROM
+   `spry-utility-210510:names.names_2017`
+  WHERE
+   gender = 'M'
+  LIMIT 10;
+
+  Pentaho - GBQ_Demo
+  #connection  
+   Connection Name: GBQ_Demo
+   Hostname: https://www.googleapis.com/bigquery/v2
+   Project ID: spry-utility-210510
+   Port: 443
+   
+  #options
+   OAuthType: 0
+   OAuthServiceAcctEmail: gbq-280@spry-utility-210510.iam.gserviceaccount.com
+   OAuthPvtKeyPath: C:\Private-key\spry-utility-210510-391ca780d5f7.json
+
+  GBQ_Demo Query
+  SELECT * 
+  FROM names.names_2017

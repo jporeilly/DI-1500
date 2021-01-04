@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDADescriptor>
+   <DataSources>
+      <Connection id="realtime_table" type="dataservices.dataservices"/>
+      <Connection id="realtime_chart" type="dataservices.dataservices"/>
+   </DataSources>
+   <DataAccess access="public" connection="realtime_table" id="realtime_table"
+               type="streaming">
+      <Name>realtime_table</Name>
+      <Columns/>
+      <ComponentRefreshPeriod>1</ComponentRefreshPeriod>
+      <DataServiceQuery>SELECT increaseDateDate, Lap, latG, longG, Kmh, Gear, Rpm, Accelerator, Brake
+FROM "MQTT_streaming"
+WHERE username = ${username}</DataServiceQuery>
+      <Parameters>
+         <Parameter default="${[session:name]}" name="username" type="String"/>
+      </Parameters>
+      <StreamingDataServiceName>MQTT_streaming</StreamingDataServiceName>
+      <WindowEvery>1</WindowEvery>
+      <WindowLimit>0</WindowLimit>
+      <WindowMode>ROW_BASED</WindowMode>
+      <WindowSize>10</WindowSize>
+   </DataAccess>
+   <DataAccess access="public" connection="realtime_chart" id="realtime_chart"
+               type="streaming">
+      <Name>realtime_chart</Name>
+      <Columns/>
+      <ComponentRefreshPeriod>1</ComponentRefreshPeriod>
+      <DataServiceQuery>SELECT increaseDateDate as Date, latG as Lat.G, longG as Long.G
+FROM "MQTT_streaming"
+WHERE username=${username}</DataServiceQuery>
+      <Parameters>
+         <Parameter default="${[session:name]}" name="username" type="String"/>
+      </Parameters>
+      <StreamingDataServiceName>MQTT_streaming</StreamingDataServiceName>
+      <WindowEvery>1</WindowEvery>
+      <WindowLimit>0</WindowLimit>
+      <WindowMode>ROW_BASED</WindowMode>
+      <WindowSize>200</WindowSize>
+   </DataAccess>
+</CDADescriptor>

@@ -698,6 +698,7 @@ for ETL Injection</note>
     <rootUriNameFieldName/>
     <extensionFieldName/>
     <sizeFieldName/>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -922,6 +923,7 @@ for ETL Injection</note>
     <rootUriNameFieldName/>
     <extensionFieldName/>
     <sizeFieldName/>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -955,6 +957,7 @@ for ETL Injection</note>
     <keys_2>
       <key>file_id</key>
     </keys_2>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1024,6 +1027,7 @@ for ETL Injection</note>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1065,6 +1069,7 @@ for ETL Injection</note>
         <presorted>N</presorted>
       </field>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1106,6 +1111,7 @@ for ETL Injection</note>
         <presorted>N</presorted>
       </field>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1160,6 +1166,7 @@ for ETL Injection</note>
     <result_files_target_step/>
     <result_files_file_name_field>FileName</result_files_file_name_field>
     <executors_output_step/>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1178,4 +1185,5 @@ for ETL Injection</note>
   <slave-step-copy-partition-distribution>
   </slave-step-copy-partition-distribution>
   <slave_transformation>N</slave_transformation>
+  <attributes/>
 </transformation>

@@ -1,0 +1,1892 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>MQTT_RC_Producer_Sensor_Data</name>
+    <description/>
+    <extended_description/>
+    <trans_version/>
+    <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
+    <directory>/</directory>
+    <parameters>
+    </parameters>
+    <log>
+      <trans-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <size_limit_lines/>
+        <interval/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STATUS</id>
+          <enabled>Y</enabled>
+          <name>STATUS</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+          <subject/>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>STARTDATE</id>
+          <enabled>Y</enabled>
+          <name>STARTDATE</name>
+        </field>
+        <field>
+          <id>ENDDATE</id>
+          <enabled>Y</enabled>
+          <name>ENDDATE</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>DEPDATE</id>
+          <enabled>Y</enabled>
+          <name>DEPDATE</name>
+        </field>
+        <field>
+          <id>REPLAYDATE</id>
+          <enabled>Y</enabled>
+          <name>REPLAYDATE</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>Y</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+        <field>
+          <id>EXECUTING_SERVER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_SERVER</name>
+        </field>
+        <field>
+          <id>EXECUTING_USER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_USER</name>
+        </field>
+        <field>
+          <id>CLIENT</id>
+          <enabled>N</enabled>
+          <name>CLIENT</name>
+        </field>
+      </trans-log-table>
+      <perf-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <interval/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>SEQ_NR</id>
+          <enabled>Y</enabled>
+          <name>SEQ_NR</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>INPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>INPUT_BUFFER_ROWS</name>
+        </field>
+        <field>
+          <id>OUTPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>OUTPUT_BUFFER_ROWS</name>
+        </field>
+      </perf-log-table>
+      <channel-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>LOGGING_OBJECT_TYPE</id>
+          <enabled>Y</enabled>
+          <name>LOGGING_OBJECT_TYPE</name>
+        </field>
+        <field>
+          <id>OBJECT_NAME</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_NAME</name>
+        </field>
+        <field>
+          <id>OBJECT_COPY</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_COPY</name>
+        </field>
+        <field>
+          <id>REPOSITORY_DIRECTORY</id>
+          <enabled>Y</enabled>
+          <name>REPOSITORY_DIRECTORY</name>
+        </field>
+        <field>
+          <id>FILENAME</id>
+          <enabled>Y</enabled>
+          <name>FILENAME</name>
+        </field>
+        <field>
+          <id>OBJECT_ID</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_ID</name>
+        </field>
+        <field>
+          <id>OBJECT_REVISION</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_REVISION</name>
+        </field>
+        <field>
+          <id>PARENT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>PARENT_CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>ROOT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>ROOT_CHANNEL_ID</name>
+        </field>
+      </channel-log-table>
+      <step-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>N</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+      </step-log-table>
+      <metrics-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_DATE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_CODE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_CODE</name>
+        </field>
+        <field>
+          <id>METRICS_DESCRIPTION</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DESCRIPTION</name>
+        </field>
+        <field>
+          <id>METRICS_SUBJECT</id>
+          <enabled>Y</enabled>
+          <name>METRICS_SUBJECT</name>
+        </field>
+        <field>
+          <id>METRICS_TYPE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_TYPE</name>
+        </field>
+        <field>
+          <id>METRICS_VALUE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_VALUE</name>
+        </field>
+      </metrics-log-table>
+    </log>
+    <maxdate>
+      <connection/>
+      <table/>
+      <field/>
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file/>
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+      <partitionschema>
+        <name>cluster</name>
+        <dynamic>N</dynamic>
+        <partitions_per_slave/>
+      </partitionschema>
+      <partitionschema>
+        <name>dynamic</name>
+        <dynamic>Y</dynamic>
+        <partitions_per_slave>1</partitions_per_slave>
+      </partitionschema>
+    </partitionschemas>
+    <slaveservers>
+      <slaveserver>
+        <name>ati-dev-ana01</name>
+        <hostname>ati-dev-ana01</hostname>
+        <port>9081</port>
+        <webAppName>pentaho-di</webAppName>
+        <username>njain</username>
+        <password>Encrypted 2be98afc86aa7f2e4bb18bd63c99dbdde</password>
+        <proxy_hostname/>
+        <proxy_port/>
+        <non_proxy_hosts/>
+        <master>Y</master>
+        <sslMode>N</sslMode>
+      </slaveserver>
+      <slaveserver>
+        <name>ATI-PRD-ANA03</name>
+        <hostname>ATI-PRD-ANA03</hostname>
+        <port>9080</port>
+        <webAppName>pentaho-di</webAppName>
+        <username>admin</username>
+        <password>Encrypted 2be98afc86aa7f2e4bb18bd63c99dbdde</password>
+        <proxy_hostname/>
+        <proxy_port/>
+        <non_proxy_hosts/>
+        <master>N</master>
+        <sslMode>N</sslMode>
+      </slaveserver>
+      <slaveserver>
+        <name>ATI-STG-ANA03</name>
+        <hostname>ATI-STG-ANA03</hostname>
+        <port>9080</port>
+        <webAppName>pentaho-di</webAppName>
+        <username>pentaho</username>
+        <password>Encrypted 2be98afc86aa7f2b4ae17ba71d69dff8b</password>
+        <proxy_hostname/>
+        <proxy_port/>
+        <non_proxy_hosts/>
+        <master>N</master>
+        <sslMode>N</sslMode>
+      </slaveserver>
+      <slaveserver>
+        <name>DI Server</name>
+        <hostname>localhost</hostname>
+        <port>9080</port>
+        <webAppName>pentaho-di</webAppName>
+        <username>joe</username>
+        <password>Encrypted 2be98afc86aa7f2e4bb18bd63c99dbdde</password>
+        <proxy_hostname/>
+        <proxy_port/>
+        <non_proxy_hosts/>
+        <master>Y</master>
+        <sslMode>N</sslMode>
+      </slaveserver>
+      <slaveserver>
+        <name>DI Server 5.0</name>
+        <hostname>localhost</hostname>
+        <port>9080</port>
+        <webAppName>pentaho-di</webAppName>
+        <username>admin</username>
+        <password>Encrypted 2be98afc86aa7f2e4bb18bd63c99dbdde</password>
+        <proxy_hostname/>
+        <proxy_port/>
+        <non_proxy_hosts/>
+        <master>Y</master>
+        <sslMode>N</sslMode>
+      </slaveserver>
+      <slaveserver>
+        <name>local</name>
+        <hostname>127.0.0.1</hostname>
+        <port>9080</port>
+        <webAppName/>
+        <username>cluster</username>
+        <password>Encrypted 2be98afc86aa7f2e4cb1aa265cd86aac8</password>
+        <proxy_hostname/>
+        <proxy_port/>
+        <non_proxy_hosts/>
+        <master>Y</master>
+        <sslMode>N</sslMode>
+      </slaveserver>
+      <slaveserver>
+        <name>Master</name>
+        <hostname>localhost</hostname>
+        <port>8081</port>
+        <webAppName/>
+        <username>cluster</username>
+        <password>Encrypted 2be98afc86aa7f2e4cb1aa265cd86aac8</password>
+        <proxy_hostname/>
+        <proxy_port/>
+        <non_proxy_hosts/>
+        <master>Y</master>
+        <sslMode>N</sslMode>
+      </slaveserver>
+      <slaveserver>
+        <name>P50-localhost</name>
+        <hostname>localhost</hostname>
+        <port>8080</port>
+        <webAppName>pentaho</webAppName>
+        <username>mark</username>
+        <password>Encrypted 2be98afc86aa7f2e4a21da74fd393bdd1</password>
+        <proxy_hostname/>
+        <proxy_port/>
+        <non_proxy_hosts/>
+        <master>Y</master>
+        <sslMode>N</sslMode>
+      </slaveserver>
+      <slaveserver>
+        <name>remote</name>
+        <hostname>192.168.1.16</hostname>
+        <port>9080</port>
+        <webAppName>pentaho-di/kettle</webAppName>
+        <username>admin</username>
+        <password>Encrypted 2be98afc86aa7f2e4bb18bd63c99dbdde</password>
+        <proxy_hostname/>
+        <proxy_port/>
+        <non_proxy_hosts/>
+        <master>Y</master>
+        <sslMode>N</sslMode>
+      </slaveserver>
+      <slaveserver>
+        <name>Slave1</name>
+        <hostname>localhost</hostname>
+        <port>8082</port>
+        <webAppName/>
+        <username>cluster</username>
+        <password>Encrypted 2be98afc86aa7f2e4cb1aa265cd86aac8</password>
+        <proxy_hostname/>
+        <proxy_port/>
+        <non_proxy_hosts/>
+        <master>N</master>
+        <sslMode>N</sslMode>
+      </slaveserver>
+      <slaveserver>
+        <name>Slave2</name>
+        <hostname>localhost</hostname>
+        <port>8083</port>
+        <webAppName/>
+        <username>cluster</username>
+        <password>Encrypted 2be98afc86aa7f2e4cb1aa265cd86aac8</password>
+        <proxy_hostname/>
+        <proxy_port/>
+        <non_proxy_hosts/>
+        <master>N</master>
+        <sslMode>N</sslMode>
+      </slaveserver>
+      <slaveserver>
+        <name>Slave3</name>
+        <hostname>localhost</hostname>
+        <port>8084</port>
+        <webAppName/>
+        <username>cluster</username>
+        <password>Encrypted 2be98afc86aa7f2e4cb1aa265cd86aac8</password>
+        <proxy_hostname/>
+        <proxy_port/>
+        <non_proxy_hosts/>
+        <master>N</master>
+        <sslMode>N</sslMode>
+      </slaveserver>
+      <slaveserver>
+        <name>Slave4</name>
+        <hostname>localhost</hostname>
+        <port>8085</port>
+        <webAppName/>
+        <username>cluster</username>
+        <password>Encrypted 2be98afc86aa7f2e4cb1aa265cd86aac8</password>
+        <proxy_hostname/>
+        <proxy_port/>
+        <non_proxy_hosts/>
+        <master>N</master>
+        <sslMode>N</sslMode>
+      </slaveserver>
+      <slaveserver>
+        <name>Slave5</name>
+        <hostname>localhost</hostname>
+        <port>8086</port>
+        <webAppName/>
+        <username>cluster</username>
+        <password>Encrypted 2be98afc86aa7f2e4cb1aa265cd86aac8</password>
+        <proxy_hostname/>
+        <proxy_port/>
+        <non_proxy_hosts/>
+        <master>N</master>
+        <sslMode>N</sslMode>
+      </slaveserver>
+    </slaveservers>
+    <clusterschemas>
+      <clusterschema>
+        <name>ClusterSchema</name>
+        <base_port>40000</base_port>
+        <sockets_buffer_size>2000</sockets_buffer_size>
+        <sockets_flush_interval>5000</sockets_flush_interval>
+        <sockets_compressed>Y</sockets_compressed>
+        <dynamic>N</dynamic>
+        <slaveservers>
+          <name>Slave3</name>
+          <name>Slave2</name>
+          <name>Slave1</name>
+          <name>Master</name>
+        </slaveservers>
+      </clusterschema>
+      <clusterschema>
+        <name>ClusterSchema_dynamic</name>
+        <base_port>40000</base_port>
+        <sockets_buffer_size>2000</sockets_buffer_size>
+        <sockets_flush_interval>5000</sockets_flush_interval>
+        <sockets_compressed>Y</sockets_compressed>
+        <dynamic>Y</dynamic>
+        <slaveservers>
+          <name>Master</name>
+        </slaveservers>
+      </clusterschema>
+      <clusterschema>
+        <name>PI1000</name>
+        <base_port>40000</base_port>
+        <sockets_buffer_size>2000</sockets_buffer_size>
+        <sockets_flush_interval>5000</sockets_flush_interval>
+        <sockets_compressed>Y</sockets_compressed>
+        <dynamic>N</dynamic>
+        <slaveservers>
+        </slaveservers>
+      </clusterschema>
+    </clusterschemas>
+    <created_user>-</created_user>
+    <created_date>2017/11/15 09:54:55.246</created_date>
+    <modified_user>admin</modified_user>
+    <modified_date>2018/08/06 19:26:26.417</modified_date>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
+    <is_key_private>N</is_key_private>
+  </info>
+  <notepads>
+    <notepad>
+      <note>Scripts generate stats for 3 different drivers:
+   Admin
+   Suzy
+   Pat
+which are published to MQTT as JSON formatted message</note>
+      <xloc>560</xloc>
+      <yloc>384</yloc>
+      <width>317</width>
+      <heigth>90</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>255</backgroundcolorgreen>
+      <backgroundcolorblue>255</backgroundcolorblue>
+      <bordercolorred>192</bordercolorred>
+      <bordercolorgreen>192</bordercolorgreen>
+      <bordercolorblue>192</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>MQTT - Racing Cars</note>
+      <xloc>335</xloc>
+      <yloc>65</yloc>
+      <width>131</width>
+      <heigth>28</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>10</fontsize>
+      <fontbold>Y</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>255</backgroundcolorgreen>
+      <backgroundcolorblue>255</backgroundcolorblue>
+      <bordercolorred>255</bordercolorred>
+      <bordercolorgreen>255</bordercolorgreen>
+      <bordercolorblue>255</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Mosquitto Broker
+Port: 1883
+Topic: dashboard-sample</note>
+      <xloc>896</xloc>
+      <yloc>224</yloc>
+      <width>145</width>
+      <heigth>58</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>255</backgroundcolorgreen>
+      <backgroundcolorblue>255</backgroundcolorblue>
+      <bordercolorred>64</bordercolorred>
+      <bordercolorgreen>128</bordercolorgreen>
+      <bordercolorblue>128</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+  </notepads>
+  <order>
+    <hop>
+      <from>gr-generate_records</from>
+      <to>as-seq_times</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>mjsv-suzy</from>
+      <to>jsono-suzy</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>as-seq_times</from>
+      <to>mjsv-admin</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>mjsv-admin</from>
+      <to>jsono-admin</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>mjsv-pat</from>
+      <to>jsono-pat</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>jsono-admin</from>
+      <to>mqtt-producer</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>as-seq_times</from>
+      <to>mjsv-suzy</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>as-seq_times</from>
+      <to>mjsv-pat</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>jsono-pat</from>
+      <to>mqtt-producer</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>jsono-suzy</from>
+      <to>mqtt-producer</to>
+      <enabled>N</enabled>
+    </hop>
+  </order>
+  <step>
+    <name>as-seq_times</name>
+    <type>Sequence</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <valuename>times</valuename>
+    <use_database>N</use_database>
+    <connection/>
+    <schema/>
+    <seqname>SEQ_</seqname>
+    <use_counter>Y</use_counter>
+    <counter_name/>
+    <start_at>1</start_at>
+    <increment_by>1</increment_by>
+    <max_value>999999999</max_value>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>432</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>gr-generate_records</name>
+    <type>RowGenerator</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>text</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>data</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+    </fields>
+    <limit>2000</limit>
+    <never_ending>Y</never_ending>
+    <interval_in_ms>100</interval_in_ms>
+    <row_time_field/>
+    <last_time_field/>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>288</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>jsono-admin</name>
+    <type>JsonOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <outputValue>outputValue</outputValue>
+    <jsonBloc>data</jsonBloc>
+    <nrRowsInBloc>1</nrRowsInBloc>
+    <operation_type>outputvalue</operation_type>
+    <compatibility_mode>N</compatibility_mode>
+    <encoding>UTF-8</encoding>
+    <addtoresult>N</addtoresult>
+    <file>
+      <name/>
+      <extention>js</extention>
+      <append>N</append>
+      <split>N</split>
+      <haspartno>N</haspartno>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <create_parent_folder>N</create_parent_folder>
+      <DoNotOpenNewFileInit>N</DoNotOpenNewFileInit>
+      <servlet_output>N</servlet_output>
+    </file>
+    <fields>
+      <field>
+        <name>latG</name>
+        <element>latG</element>
+      </field>
+      <field>
+        <name>longG</name>
+        <element>longG</element>
+      </field>
+      <field>
+        <name>Lap</name>
+        <element>Lap</element>
+      </field>
+      <field>
+        <name>Kmh</name>
+        <element>Kmh</element>
+      </field>
+      <field>
+        <name>Gear</name>
+        <element>Gear</element>
+      </field>
+      <field>
+        <name>Rpm</name>
+        <element>Rpm</element>
+      </field>
+      <field>
+        <name>Accelerator</name>
+        <element>Accelerator</element>
+      </field>
+      <field>
+        <name>Brake</name>
+        <element>Brake</element>
+      </field>
+      <field>
+        <name>increaseDateDate</name>
+        <element>increaseDateDate</element>
+      </field>
+      <field>
+        <name>username</name>
+        <element>username</element>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>688</xloc>
+      <yloc>128</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>jsono-pat</name>
+    <type>JsonOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <outputValue>outputValue</outputValue>
+    <jsonBloc>data</jsonBloc>
+    <nrRowsInBloc>1</nrRowsInBloc>
+    <operation_type>outputvalue</operation_type>
+    <compatibility_mode>N</compatibility_mode>
+    <encoding>UTF-8</encoding>
+    <addtoresult>N</addtoresult>
+    <file>
+      <name/>
+      <extention>js</extention>
+      <append>N</append>
+      <split>N</split>
+      <haspartno>N</haspartno>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <create_parent_folder>N</create_parent_folder>
+      <DoNotOpenNewFileInit>N</DoNotOpenNewFileInit>
+      <servlet_output>N</servlet_output>
+    </file>
+    <fields>
+      <field>
+        <name>latG</name>
+        <element>latG</element>
+      </field>
+      <field>
+        <name>longG</name>
+        <element>longG</element>
+      </field>
+      <field>
+        <name>Lap</name>
+        <element>Lap</element>
+      </field>
+      <field>
+        <name>Kmh</name>
+        <element>Kmh</element>
+      </field>
+      <field>
+        <name>Gear</name>
+        <element>Gear</element>
+      </field>
+      <field>
+        <name>Rpm</name>
+        <element>Rpm</element>
+      </field>
+      <field>
+        <name>Accelerator</name>
+        <element>Accelerator</element>
+      </field>
+      <field>
+        <name>Brake</name>
+        <element>Brake</element>
+      </field>
+      <field>
+        <name>increaseDateDate</name>
+        <element>increaseDateDate</element>
+      </field>
+      <field>
+        <name>username</name>
+        <element>username</element>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>688</xloc>
+      <yloc>320</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>jsono-suzy</name>
+    <type>JsonOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <outputValue>outputValue</outputValue>
+    <jsonBloc>data</jsonBloc>
+    <nrRowsInBloc>1</nrRowsInBloc>
+    <operation_type>outputvalue</operation_type>
+    <compatibility_mode>N</compatibility_mode>
+    <encoding>UTF-8</encoding>
+    <addtoresult>N</addtoresult>
+    <file>
+      <name/>
+      <extention>js</extention>
+      <append>N</append>
+      <split>N</split>
+      <haspartno>N</haspartno>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <create_parent_folder>N</create_parent_folder>
+      <DoNotOpenNewFileInit>N</DoNotOpenNewFileInit>
+      <servlet_output>N</servlet_output>
+    </file>
+    <fields>
+      <field>
+        <name>latG</name>
+        <element>latG</element>
+      </field>
+      <field>
+        <name>longG</name>
+        <element>longG</element>
+      </field>
+      <field>
+        <name>Lap</name>
+        <element>Lap</element>
+      </field>
+      <field>
+        <name>Kmh</name>
+        <element>Kmh</element>
+      </field>
+      <field>
+        <name>Gear</name>
+        <element>Gear</element>
+      </field>
+      <field>
+        <name>Rpm</name>
+        <element>Rpm</element>
+      </field>
+      <field>
+        <name>Accelerator</name>
+        <element>Accelerator</element>
+      </field>
+      <field>
+        <name>Brake</name>
+        <element>Brake</element>
+      </field>
+      <field>
+        <name>increaseDateDate</name>
+        <element>increaseDateDate</element>
+      </field>
+      <field>
+        <name>username</name>
+        <element>username</element>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>688</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>mjsv-admin</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>
+      <jsScript>
+        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>
+var round = function(val, precision) {
+	var factor = Math.pow(10, precision);
+  	return Math.round(val * factor) / factor;
+}
+
+var incrementTimeMs = 1000;
+
+var randomValue = Math.floor(Math.random() * 3);
+var smoothValue = Math.sin((times*0.1) % 1000) + 1;
+
+//unbounded - increase by incrementTimeMs every row
+var increaseDateDate = typeof(previousIncreaseDateDate)==='undefined'
+?
+new Date()
+:
+new Date(previousIncreaseDateDate.getTime() + incrementTimeMs);
+
+//unbounded - increase every 100 rows
+var Lap = typeof(previousLap) !== 'undefined' ? previousLap + ((times%100)==0?1:0) : 1;
+
+//[0;420] - will increase to 420 and decrease to 80, and loop
+var Kmh = typeof(previousKmh) !== 'undefined'
+? 
+Math.min(previousKmh + ((Math.random()*5)*(kmIncrease|1)), 420)
+:
+0; 
+Kmh = round(Kmh, 2);
+
+//[-1;1] the next curve side (left or right) is a "random" of the number of times the KmH are above 100
+var latGRight = latGRight|1;
+var latG = typeof(previouslatG) !== 'undefined'
+? 
+(previousKmh &lt; 100 ?  Math.max(Math.min(previouslatG + (Math.random()*0.4*latGRight), 1), -1) : (latGRight *= -1)*0)
+:
+0;
+latG = round(latG, 2);
+
+//[-2;4] negative when accelerating and positive when braking
+var longG = typeof(previouslongG) !== 'undefined'
+? 
+Math.max(Math.min(previouslongG + (Math.random()*0.1*(Kmh > previousKmh?2:-1.5)), 4), -2)
+:
+0;
+longG = round(longG, 2);
+
+//[1;6] inscrease with speed
+var Gear = Kmh>=60 ? (Kmh>=120 ? (Kmh>=180 ? (Kmh>=240 ? (Kmh>=300 ? (Kmh>=360 ? 7 : 6) : 5 ) : 4 ) : 3 ) : 2 ) : 1;
+
+
+//[1100;16000] increase with speed through the gears
+var Rpm = (Kmh==0 ? 1100 : 1100 + ((1/(Math.pow(Gear,1.2))) * 250 * Kmh));
+Rpm = round(Rpm, 0);
+
+//max 100
+var Accelerator = typeof(previousAccelerator) !== 'undefined'
+?
+kmIncrease>0 ? Math.min(Math.floor((previousAccelerator|1)*3), 100) : Math.max(Math.floor((previousAccelerator|1)/20), 0)
+:
+0;
+Accelerator = round(Accelerator, 2);
+
+//max 100
+var Brake = typeof(previousAccelerator) !== 'undefined'
+?
+kmIncrease&lt;0 ? Math.min(Math.floor((previousBrake|1)*5), 100) : Math.max(Math.floor((previousBrake|1)/30), 0)
+:
+0;
+Brake = round(Brake, 2);
+
+//save previous values
+var previouslatG = latG;
+var previouslongG = longG;
+var previousLap = Lap;
+var previousKmh = Kmh;
+var previousGear = Gear;
+var previousRpm = Rpm;
+var previousAccelerator = Accelerator;
+var previousBrake = Brake;
+var previousIncreaseDateDate = increaseDateDate;
+var kmIncrease = typeof(kmIncrease)==='undefined' || kmIncrease > 0 ? (Kmh >= 420 ? -1 : 1) : (Kmh &lt;= 80 ? 1 : -1);
+
+var username = "admin";
+</jsScript_script>
+      </jsScript>
+    </jsScripts>
+    <fields>
+      <field>
+        <name>latG</name>
+        <rename>latG</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>longG</name>
+        <rename>longG</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>Lap</name>
+        <rename>Lap</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>Kmh</name>
+        <rename>Kmh</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>Gear</name>
+        <rename>Gear</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>Rpm</name>
+        <rename>Rpm</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>Accelerator</name>
+        <rename>Accelerator</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>Brake</name>
+        <rename>Brake</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>increaseDateDate</name>
+        <rename>increaseDateDate</rename>
+        <type>Date</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>username</name>
+        <rename>username</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>576</xloc>
+      <yloc>128</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>mjsv-pat</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>
+      <jsScript>
+        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>
+var round = function(val, precision) {
+	var factor = Math.pow(10, precision);
+  	return Math.round(val * factor) / factor;
+}
+
+var incrementTimeMs = 1000;
+
+var randomValue = Math.floor(Math.random() * 3);
+var smoothValue = Math.sin((times*0.1) % 1000) + 1;
+
+//unbounded - increase by incrementTimeMs every row
+var increaseDateDate = typeof(previousIncreaseDateDate)==='undefined'
+?
+new Date()
+:
+new Date(previousIncreaseDateDate.getTime() + incrementTimeMs);
+
+//unbounded - increase every 100 rows
+var Lap = typeof(previousLap) !== 'undefined' ? previousLap + ((times%100)==0?1:0) : 1;
+
+//[0;280] - will increase to 280 and decrease to 100, and loop
+var Kmh = typeof(previousKmh) !== 'undefined'
+? 
+Math.min(previousKmh + ((Math.random()*3)*(kmIncrease|1)), 280)
+:
+0; 
+Kmh = round(Kmh, 2);
+
+//[-1;1] the next curve side (left or right) is a "random" of the number of times the KmH are above 140
+var latGRight = latGRight|1;
+var latG = typeof(previouslatG) !== 'undefined'
+? 
+(previousKmh &lt; 140 ?  Math.max(Math.min(previouslatG + (Math.random()*0.6*latGRight), 1), -1) : (latGRight *= -1)*0)
+:
+0;
+latG = round(latG, 2);
+
+//[-1.5;2] negative when accelerating and positive when braking
+var longG = typeof(previouslongG) !== 'undefined'
+? 
+Math.max(Math.min(previouslongG + (Math.random()*0.05*(Kmh > previousKmh?2:-1.5)), 2), -1.5)
+:
+0;
+longG = round(longG, 2);
+
+//[1;6] inscrease with speed
+var Gear = Kmh>=60 ? (Kmh>=120 ? (Kmh>=180 ? (Kmh>=240 ? (Kmh>=300 ? (Kmh>=360 ? 7 : 6) : 5 ) : 4 ) : 3 ) : 2 ) : 1;
+
+
+//[1100;16000] increase with speed through the gears
+var Rpm = (Kmh==0 ? 1100 : 1100 + ((1/(Math.pow(Gear,1.2))) * 250 * Kmh));
+Rpm = round(Rpm, 0);
+
+//max 100
+var Accelerator = typeof(previousAccelerator) !== 'undefined'
+?
+kmIncrease>0 ? Math.min(Math.floor((previousAccelerator|1)*3), 100) : Math.max(Math.floor((previousAccelerator|1)/20), 0)
+:
+0;
+Accelerator = round(Accelerator, 2);
+
+//max 100
+var Brake = typeof(previousAccelerator) !== 'undefined'
+?
+kmIncrease&lt;0 ? Math.min(Math.floor((previousBrake|1)*5), 100) : Math.max(Math.floor((previousBrake|1)/30), 0)
+:
+0;
+Brake = round(Brake, 2);
+
+//save previous values
+var previouslatG = latG;
+var previouslongG = longG;
+var previousLap = Lap;
+var previousKmh = Kmh;
+var previousGear = Gear;
+var previousRpm = Rpm;
+var previousAccelerator = Accelerator;
+var previousBrake = Brake;
+var previousIncreaseDateDate = increaseDateDate;
+var kmIncrease = typeof(kmIncrease)==='undefined' || kmIncrease > 0 ? (Kmh >= 280 ? -1 : 1) : (Kmh &lt;= 100 ? 1 : -1);
+
+var username = "pat";
+</jsScript_script>
+      </jsScript>
+    </jsScripts>
+    <fields>
+      <field>
+        <name>latG</name>
+        <rename>latG</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>longG</name>
+        <rename>longG</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>Lap</name>
+        <rename>Lap</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>Kmh</name>
+        <rename>Kmh</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>Gear</name>
+        <rename>Gear</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>Rpm</name>
+        <rename>Rpm</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>Accelerator</name>
+        <rename>Accelerator</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>Brake</name>
+        <rename>Brake</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>increaseDateDate</name>
+        <rename>increaseDateDate</rename>
+        <type>Date</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>username</name>
+        <rename>username</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>576</xloc>
+      <yloc>320</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>mjsv-suzy</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>
+      <jsScript>
+        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>
+var round = function(val, precision) {
+	var factor = Math.pow(10, precision);
+  	return Math.round(val * factor) / factor;
+}
+
+var incrementTimeMs = 1000;
+
+var randomValue = Math.floor(Math.random() * 3);
+var smoothValue = Math.sin((times*0.1) % 1000) + 1;
+
+//unbounded - increase by incrementTimeMs every row
+var increaseDateDate = typeof(previousIncreaseDateDate)==='undefined'
+?
+new Date()
+:
+new Date(previousIncreaseDateDate.getTime() + incrementTimeMs);
+
+//unbounded - increase every 100 rows
+var Lap = typeof(previousLap) !== 'undefined' ? previousLap + ((times%100)==0?1:0) : 1;
+
+//[0;120] - will increase to 120 and decrease to 20, and loop
+var Kmh = typeof(previousKmh) !== 'undefined'
+? 
+Math.min(previousKmh + ((Math.random()*5)*(kmIncrease|1)), 120)
+:
+0; 
+Kmh = round(Kmh, 2);
+
+//[-1;1] the next curve side (left or right) is a "random" of the number of times the KmH are above 80
+var latGRight = latGRight|1;
+var latG = typeof(previouslatG) !== 'undefined'
+? 
+(previousKmh &lt; 80 ?  Math.max(Math.min(previouslatG + (Math.random()*0.2*latGRight), 1), -1) : (latGRight *= -1)*0)
+:
+0;
+latG = round(latG, 2);
+
+//[-1;2] negative when accelerating and positive when braking
+var longG = typeof(previouslongG) !== 'undefined'
+? 
+Math.max(Math.min(previouslongG + (Math.random()*0.1*(Kmh > previousKmh?2:-1.5)), 2), -1)
+:
+0;
+longG = round(longG, 2);
+
+//[1;6] inscrease with speed
+var Gear = Kmh>=60 ? (Kmh>=120 ? (Kmh>=180 ? (Kmh>=240 ? (Kmh>=300 ? (Kmh>=360 ? 7 : 6) : 5 ) : 4 ) : 3 ) : 2 ) : 1;
+
+
+//[1100;16000] increase with speed through the gears
+var Rpm = (Kmh==0 ? 1100 : 1100 + ((1/(Math.pow(Gear,1.2))) * 250 * Kmh));
+Rpm = round(Rpm, 0);
+
+//max 100
+var Accelerator = typeof(previousAccelerator) !== 'undefined'
+?
+kmIncrease>0 ? Math.min(Math.floor((previousAccelerator|1)*3), 100) : Math.max(Math.floor((previousAccelerator|1)/20), 0)
+:
+0;
+Accelerator = round(Accelerator, 2);
+
+//max 100
+var Brake = typeof(previousAccelerator) !== 'undefined'
+?
+kmIncrease&lt;0 ? Math.min(Math.floor((previousBrake|1)*5), 100) : Math.max(Math.floor((previousBrake|1)/30), 0)
+:
+0;
+Brake = round(Brake, 2);
+
+//save previous values
+var previouslatG = latG;
+var previouslongG = longG;
+var previousLap = Lap;
+var previousKmh = Kmh;
+var previousGear = Gear;
+var previousRpm = Rpm;
+var previousAccelerator = Accelerator;
+var previousBrake = Brake;
+var previousIncreaseDateDate = increaseDateDate;
+var kmIncrease = typeof(kmIncrease)==='undefined' || kmIncrease > 0 ? (Kmh >= 120 ? -1 : 1) : (Kmh &lt;= 50 ? 1 : -1);
+
+var username = "suzy";
+</jsScript_script>
+      </jsScript>
+    </jsScripts>
+    <fields>
+      <field>
+        <name>latG</name>
+        <rename>latG</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>longG</name>
+        <rename>longG</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>Lap</name>
+        <rename>Lap</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>Kmh</name>
+        <rename>Kmh</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>Gear</name>
+        <rename>Gear</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>Rpm</name>
+        <rename>Rpm</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>Accelerator</name>
+        <rename>Accelerator</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>Brake</name>
+        <rename>Brake</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>increaseDateDate</name>
+        <rename>increaseDateDate</rename>
+        <type>Date</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>username</name>
+        <rename>username</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>576</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>mqtt-producer</name>
+    <type>MQTTProducer</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <step-props secure="PASSWORD SSL_VALUES">
+      <group name="">
+        <property group="" name="MQTT_SERVER">
+          <value xsi:type="xs:string">localhost:1883</value>
+        </property>
+        <property group="" name="CLIENT_ID">
+          <value xsi:type="xs:string">${user.name}</value>
+        </property>
+        <property group="" name="TOPIC">
+          <value xsi:type="xs:string">dashboard-sample</value>
+        </property>
+        <property group="" name="FIELD_TOPIC">
+          <value xsi:type="xs:string"/>
+        </property>
+        <property group="" name="TOPIC_IN_FIELD">
+          <value xsi:type="xs:boolean">false</value>
+        </property>
+        <property group="" name="QOS">
+          <value xsi:type="xs:string">0</value>
+        </property>
+        <property group="" name="MESSAGE_FIELD">
+          <value xsi:type="xs:string">outputValue</value>
+        </property>
+        <property group="" name="USERNAME">
+          <value xsi:type="xs:string"/>
+        </property>
+        <property group="" name="PASSWORD">
+          <value xsi:type="xs:string"/>
+        </property>
+        <property group="" name="KEEP_ALIVE_INTERVAL">
+          <value xsi:type="xs:string"/>
+        </property>
+        <property group="" name="MAX_INFLIGHT">
+          <value xsi:type="xs:string"/>
+        </property>
+        <property group="" name="CONNECTION_TIMEOUT">
+          <value xsi:type="xs:string"/>
+        </property>
+        <property group="" name="CLEAN_SESSION">
+          <value xsi:type="xs:string"/>
+        </property>
+        <property group="" name="STORAGE_LEVEL">
+          <value xsi:type="xs:string"/>
+        </property>
+        <property group="" name="SERVER_URIS">
+          <value xsi:type="xs:string"/>
+        </property>
+        <property group="" name="MQTT_VERSION">
+          <value xsi:type="xs:string"/>
+        </property>
+        <property group="" name="AUTOMATIC_RECONNECT">
+          <value xsi:type="xs:string"/>
+        </property>
+      </group>
+      <group name="SSL">
+        <property group="SSL" name="USE_SSL">
+          <value xsi:type="xs:boolean">false</value>
+        </property>
+        <property group="SSL" name="SSL_KEYS">
+          <value xsi:type="xs:string">ssl.contextProvider</value>
+          <value xsi:type="xs:string">ssl.enabledCipherSuites</value>
+          <value xsi:type="xs:string">ssl.keyManager</value>
+          <value xsi:type="xs:string">ssl.keyStore</value>
+          <value xsi:type="xs:string">ssl.keyStorePassword</value>
+          <value xsi:type="xs:string">ssl.keyStoreProvider</value>
+          <value xsi:type="xs:string">ssl.keyStoreType</value>
+          <value xsi:type="xs:string">ssl.protocol</value>
+          <value xsi:type="xs:string">ssl.trustManager</value>
+          <value xsi:type="xs:string">ssl.trustStore</value>
+          <value xsi:type="xs:string">ssl.trustStorePassword</value>
+          <value xsi:type="xs:string">ssl.trustStoreProvider</value>
+          <value xsi:type="xs:string">ssl.trustStoreType</value>
+        </property>
+        <property group="SSL" name="SSL_VALUES">
+          <value xsi:type="xs:string"/>
+          <value xsi:type="xs:string"/>
+          <value xsi:type="xs:string"/>
+          <value xsi:type="xs:string"/>
+          <value xsi:type="xs:string"/>
+          <value xsi:type="xs:string"/>
+          <value xsi:type="xs:string">Encrypted 2be98afc86aa7f2e4cb79ce10beb884e9</value>
+          <value xsi:type="xs:string">Encrypted 2be98afc86aa7f2e4cb79ce10bea683e9</value>
+          <value xsi:type="xs:string"/>
+          <value xsi:type="xs:string"/>
+          <value xsi:type="xs:string"/>
+          <value xsi:type="xs:string"/>
+          <value xsi:type="xs:string"/>
+        </property>
+      </group>
+    </step-props>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>816</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step_error_handling>
+  </step_error_handling>
+  <slave-step-copy-partition-distribution>
+  </slave-step-copy-partition-distribution>
+  <slave_transformation>N</slave_transformation>
+  <attributes>
+    <group>
+      <name>METASTORE.pentaho</name>
+      <attribute>
+        <key>Kettle Data Service</key>
+        <value>{"namespace":"pentaho","id":"Kettle Data Service","name":"Kettle Data Service","description":"The elements describing data services based upon transformation output","metaStoreName":null}</value>
+      </attribute>
+    </group>
+    <group>
+      <name>explorerState</name>
+      <attribute>
+        <key>mjsv-pat</key>
+        <value/>
+      </attribute>
+      <attribute>
+        <key>as-seq_times</key>
+        <value/>
+      </attribute>
+      <attribute>
+        <key>mjsv-admin</key>
+        <value/>
+      </attribute>
+      <attribute>
+        <key>mqtt-producer</key>
+        <value/>
+      </attribute>
+      <attribute>
+        <key>jsono-pat</key>
+        <value/>
+      </attribute>
+      <attribute>
+        <key>mjsv-suzy</key>
+        <value/>
+      </attribute>
+      <attribute>
+        <key>jsono-suzy</key>
+        <value/>
+      </attribute>
+      <attribute>
+        <key>jsono-admin</key>
+        <value/>
+      </attribute>
+      <attribute>
+        <key>gr-generate_records</key>
+        <value/>
+      </attribute>
+    </group>
+    <group>
+      <name>{"_":"Embedded MetaStore Elements","namespace":"pentaho","type":"Kettle Data Service"}</name>
+    </group>
+  </attributes>
+</transformation>

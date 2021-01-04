@@ -48,7 +48,7 @@
           <id>LINES_WRITTEN</id>
           <enabled>Y</enabled>
           <name>LINES_WRITTEN</name>
-          <subject>csvi-customers</subject>
+          <subject>csvi-mdi</subject>
         </field>
         <field>
           <id>LINES_UPDATED</id>
@@ -60,7 +60,7 @@
           <id>LINES_INPUT</id>
           <enabled>Y</enabled>
           <name>LINES_INPUT</name>
-          <subject>csvi-customers</subject>
+          <subject>csvi-mdi</subject>
         </field>
         <field>
           <id>LINES_OUTPUT</id>
@@ -458,7 +458,7 @@
     </notepad>
     <notepad>
       <note>And here!</note>
-      <xloc>352</xloc>
+      <xloc>320</xloc>
       <yloc>128</yloc>
       <width>62</width>
       <heigth>26</heigth>
@@ -480,9 +480,9 @@
     <notepad>
       <note>Store the data in a DB table for example.
 Can be configurable using ${variables}</note>
-      <xloc>528</xloc>
+      <xloc>480</xloc>
       <yloc>256</yloc>
-      <width>220</width>
+      <width>221</width>
       <heigth>42</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
@@ -500,10 +500,10 @@ Can be configurable using ${variables}</note>
       <drawshadow>Y</drawshadow>
     </notepad>
     <notepad>
-      <note>Demonstration: Inject Metadata Properties</note>
+      <note>Use Case: Onboarding data</note>
       <xloc>272</xloc>
       <yloc>64</yloc>
-      <width>274</width>
+      <width>177</width>
       <heigth>28</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>10</fontsize>
@@ -526,7 +526,7 @@ Can be configurable using ${variables}</note>
     <server>localhost</server>
     <type>HYPERSONIC</type>
     <access>Native</access>
-    <database>Sampledata</database>
+    <database>sampledata</database>
     <port>9001</port>
     <username>pentaho_admin</username>
     <password>Encrypted 2be98afc86aa7f2e4bb18bd63c99dbdde</password>
@@ -552,7 +552,7 @@ Can be configurable using ${variables}</note>
       </attribute>
       <attribute>
         <code>PRESERVE_RESERVED_WORD_CASE</code>
-        <attribute>N</attribute>
+        <attribute>Y</attribute>
       </attribute>
       <attribute>
         <code>QUOTE_ALL_FIELDS</code>
@@ -574,18 +574,18 @@ Can be configurable using ${variables}</note>
   </connection>
   <order>
     <hop>
-      <from>csvi-customers</from>
+      <from>csvi-mdi</from>
       <to>sv-mdi</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
       <from>sv-mdi</from>
-      <to>to-customers</to>
+      <to>to-metadata_injection_customers</to>
       <enabled>Y</enabled>
     </hop>
   </order>
   <step>
-    <name>csvi-customers</name>
+    <name>csvi-mdi</name>
     <type>CsvInput</type>
     <description/>
     <distribute>Y</distribute>
@@ -648,13 +648,13 @@ Can be configurable using ${variables}</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>352</xloc>
+      <xloc>320</xloc>
       <yloc>176</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>to-customers</name>
+    <name>to-metadata_injection_customers</name>
     <type>TableOutput</type>
     <description/>
     <distribute>Y</distribute>
@@ -728,7 +728,7 @@ Can be configurable using ${variables}</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>528</xloc>
+      <xloc>480</xloc>
       <yloc>176</yloc>
       <draw>Y</draw>
     </GUI>
@@ -741,18 +741,6 @@ Can be configurable using ${variables}</note>
   <attributes>
     <group>
       <name>explorerState</name>
-      <attribute>
-        <key>csvi-customers</key>
-        <value/>
-      </attribute>
-      <attribute>
-        <key>to-customers</key>
-        <value/>
-      </attribute>
-      <attribute>
-        <key>sv-mdi</key>
-        <value/>
-      </attribute>
     </group>
   </attributes>
 </transformation>
