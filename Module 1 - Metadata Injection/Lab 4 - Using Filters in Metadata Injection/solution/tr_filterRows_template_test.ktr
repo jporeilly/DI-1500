@@ -506,10 +506,10 @@
     </hop>
   </order>
   <step>
-    <name>sv-false</name>
-    <type>SelectValues</type>
+    <name>dg-test_data</name>
+    <type>DataGrid</type>
     <description/>
-    <distribute>N</distribute>
+    <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
     <partitioning>
@@ -519,18 +519,68 @@
     <fields>
       <field>
         <name>Name</name>
-        <rename/>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+        <field_null_if/>
       </field>
       <field>
         <name>Age</name>
-        <rename/>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+        <field_null_if/>
       </field>
       <field>
         <name>Gender</name>
-        <rename/>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+        <field_null_if/>
       </field>
-      <select_unspecified>N</select_unspecified>
     </fields>
+    <data>
+      <line>
+        <item>John</item>
+        <item>25</item>
+        <item>Male</item>
+      </line>
+      <line>
+        <item>Fred</item>
+        <item>33</item>
+        <item>Male</item>
+      </line>
+      <line>
+        <item>Maria</item>
+        <item>40</item>
+        <item>Female</item>
+      </line>
+      <line>
+        <item>Steffan</item>
+        <item>57</item>
+        <item>Male</item>
+      </line>
+      <line>
+        <item>Alex</item>
+        <item>48</item>
+        <item>Male</item>
+      </line>
+    </data>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -540,8 +590,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>448</xloc>
-      <yloc>352</yloc>
+      <xloc>160</xloc>
+      <yloc>240</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -611,10 +661,10 @@
     </GUI>
   </step>
   <step>
-    <name>dg-test_data</name>
-    <type>DataGrid</type>
+    <name>sv-false</name>
+    <type>SelectValues</type>
     <description/>
-    <distribute>N</distribute>
+    <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
     <partitioning>
@@ -624,65 +674,15 @@
     <fields>
       <field>
         <name>Name</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <set_empty_string>N</set_empty_string>
       </field>
       <field>
         <name>Age</name>
-        <type>Integer</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <set_empty_string>N</set_empty_string>
       </field>
       <field>
         <name>Gender</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <set_empty_string>N</set_empty_string>
       </field>
+      <select_unspecified>N</select_unspecified>
     </fields>
-    <data>
-      <line>
-        <item>John</item>
-        <item>25</item>
-        <item>Male</item>
-      </line>
-      <line>
-        <item>Fred</item>
-        <item>33</item>
-        <item>Male</item>
-      </line>
-      <line>
-        <item>Maria</item>
-        <item>40</item>
-        <item>Female</item>
-      </line>
-      <line>
-        <item>Steffan</item>
-        <item>57</item>
-        <item>Male</item>
-      </line>
-      <line>
-        <item>Alex</item>
-        <item>48</item>
-        <item>Male</item>
-      </line>
-    </data>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -692,8 +692,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>160</xloc>
-      <yloc>240</yloc>
+      <xloc>448</xloc>
+      <yloc>352</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -701,7 +701,7 @@
     <name>sv-true</name>
     <type>SelectValues</type>
     <description/>
-    <distribute>N</distribute>
+    <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
     <partitioning>
@@ -711,15 +711,12 @@
     <fields>
       <field>
         <name>Name</name>
-        <rename/>
       </field>
       <field>
         <name>Age</name>
-        <rename/>
       </field>
       <field>
         <name>Gender</name>
-        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -827,30 +824,6 @@
   <attributes>
     <group>
       <name>explorerState</name>
-      <attribute>
-        <key>wlog-false</key>
-        <value/>
-      </attribute>
-      <attribute>
-        <key>sv-true</key>
-        <value/>
-      </attribute>
-      <attribute>
-        <key>sv-false</key>
-        <value/>
-      </attribute>
-      <attribute>
-        <key>fr-mdi</key>
-        <value/>
-      </attribute>
-      <attribute>
-        <key>wlog-true</key>
-        <value/>
-      </attribute>
-      <attribute>
-        <key>dg-test_data</key>
-        <value/>
-      </attribute>
     </group>
   </attributes>
 </transformation>
