@@ -2,7 +2,7 @@
  BigQuerry Account details:
    URL: https://bigquery.cloud.google.com/spry-utility-210510
    Username: pentaho.bigdata.query@gmail.com
-   Password: BigQuery01!
+   Password: Pentaho2020#
   
 
   **Remember to switch UI. Different syntax..!
