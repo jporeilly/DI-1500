@@ -439,8 +439,8 @@
       <note>Transformation simulates IoT Sensor data which is published to the Topic: SensorData via MQTT Producer step.</note>
       <xloc>192</xloc>
       <yloc>528</yloc>
-      <width>588</width>
-      <heigth>26</heigth>
+      <width>522</width>
+      <heigth>24</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -461,8 +461,8 @@
 output, simulating IoT</note>
       <xloc>80</xloc>
       <yloc>144</yloc>
-      <width>173</width>
-      <heigth>42</heigth>
+      <width>153</width>
+      <heigth>38</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -482,8 +482,8 @@ output, simulating IoT</note>
       <note>Records being batched in 5 sec intervals.</note>
       <xloc>80</xloc>
       <yloc>320</yloc>
-      <width>223</width>
-      <heigth>26</heigth>
+      <width>198</width>
+      <heigth>24</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -497,6 +497,27 @@ output, simulating IoT</note>
       <bordercolorred>0</bordercolorred>
       <bordercolorgreen>128</bordercolorgreen>
       <bordercolorblue>0</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Lab: MQTT</note>
+      <xloc>80</xloc>
+      <yloc>64</yloc>
+      <width>68</width>
+      <heigth>26</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>10</fontsize>
+      <fontbold>Y</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>255</backgroundcolorgreen>
+      <backgroundcolorblue>255</backgroundcolorblue>
+      <bordercolorred>255</bordercolorred>
+      <bordercolorgreen>255</bordercolorgreen>
+      <bordercolorblue>255</bordercolorblue>
       <drawshadow>Y</drawshadow>
     </notepad>
   </notepads>
@@ -587,62 +608,6 @@ output, simulating IoT</note>
       <enabled>Y</enabled>
     </hop>
   </order>
-  <step>
-    <name>mjsv-convert_JSON</name>
-    <type>ScriptValueMod</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <compatible>N</compatible>
-    <optimizationLevel>9</optimizationLevel>
-    <jsScripts>
-      <jsScript>
-        <jsScript_type>0</jsScript_type>
-        <jsScript_name>Script 1</jsScript_name>
-        <jsScript_script>//Script here
-
-var messageObg={};
-
-messageObg.vehicle_id=vehicle_id;
-messageObg.timestamp=timestamp;
-messageObg.sensor_id=sensor_id;
-messageObg.sensor_type=sensor_type;
-messageObg.sensor_value=sensor_value;
-messageObg.minor_alert=minor_alert;
-messageObg.major_alert=major_alert;
-
-var message=JSON.stringify(messageObg);</jsScript_script>
-      </jsScript>
-    </jsScripts>
-    <fields>
-      <field>
-        <name>message</name>
-        <rename>message</rename>
-        <type>String</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <replace>N</replace>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>896</xloc>
-      <yloc>240</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
   <step>
     <name>MQTT producer</name>
     <type>MQTTProducer</type>
@@ -1038,6 +1003,62 @@ var major_alert = (sensor_value > 90 ? 1 : 0);
     <GUI>
       <xloc>464</xloc>
       <yloc>304</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>mjsv-convert_JSON</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>
+      <jsScript>
+        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>//Script here
+
+var messageObg={};
+
+messageObg.vehicle_id=vehicle_id;
+messageObg.timestamp=timestamp;
+messageObg.sensor_id=sensor_id;
+messageObg.sensor_type=sensor_type;
+messageObg.sensor_value=sensor_value;
+messageObg.minor_alert=minor_alert;
+messageObg.major_alert=major_alert;
+
+var message=JSON.stringify(messageObg);</jsScript_script>
+      </jsScript>
+    </jsScripts>
+    <fields>
+      <field>
+        <name>message</name>
+        <rename>message</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>896</xloc>
+      <yloc>240</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

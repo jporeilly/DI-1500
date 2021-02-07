@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>tr_kinesis_producer_sensor_data_gen</name>
+    <name>tr_kafka_producer_sensor_data_gen</name>
     <description/>
     <extended_description/>
     <trans_version/>
@@ -436,11 +436,11 @@
   </info>
   <notepads>
     <notepad>
-      <note>Transformation simulates IoT Sensor data which is published to the Topic: SensorData via Kinesis Producer step</note>
-      <xloc>176</xloc>
-      <yloc>720</yloc>
-      <width>601</width>
-      <heigth>26</heigth>
+      <note>Transformation simulates IoT Sensor data which is published to the Topic: SensorData via Kafka Producer step</note>
+      <xloc>288</xloc>
+      <yloc>880</yloc>
+      <width>875</width>
+      <heigth>34</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -460,9 +460,9 @@
       <note>Step will never stop generating
 output, simulating IoT</note>
       <xloc>64</xloc>
-      <yloc>208</yloc>
-      <width>177</width>
-      <heigth>42</heigth>
+      <yloc>160</yloc>
+      <width>153</width>
+      <heigth>38</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -480,10 +480,10 @@ output, simulating IoT</note>
     </notepad>
     <notepad>
       <note>Records being batched in 5 sec intervals</note>
-      <xloc>64</xloc>
-      <yloc>448</yloc>
-      <width>225</width>
-      <heigth>26</heigth>
+      <xloc>48</xloc>
+      <yloc>352</yloc>
+      <width>196</width>
+      <heigth>24</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -500,56 +500,13 @@ output, simulating IoT</note>
       <drawshadow>Y</drawshadow>
     </notepad>
     <notepad>
-      <note>Requires credentials from
-.aws folder</note>
-      <xloc>1120</xloc>
-      <yloc>496</yloc>
-      <width>146</width>
-      <heigth>42</heigth>
-      <fontname>Segoe UI</fontname>
-      <fontsize>9</fontsize>
-      <fontbold>N</fontbold>
-      <fontitalic>N</fontitalic>
-      <fontcolorred>0</fontcolorred>
-      <fontcolorgreen>0</fontcolorgreen>
-      <fontcolorblue>0</fontcolorblue>
-      <backgroundcolorred>255</backgroundcolorred>
-      <backgroundcolorgreen>255</backgroundcolorgreen>
-      <backgroundcolorblue>255</backgroundcolorblue>
-      <bordercolorred>192</bordercolorred>
-      <bordercolorgreen>192</bordercolorgreen>
-      <bordercolorblue>192</bordercolorblue>
-      <drawshadow>Y</drawshadow>
-    </notepad>
-    <notepad>
-      <note>Data streams have to be manually defined</note>
-      <xloc>1296</xloc>
-      <yloc>832</yloc>
-      <width>344</width>
-      <heigth>34</heigth>
-      <fontname>Segoe UI</fontname>
-      <fontsize>9</fontsize>
-      <fontbold>N</fontbold>
-      <fontitalic>N</fontitalic>
-      <fontcolorred>0</fontcolorred>
-      <fontcolorgreen>0</fontcolorgreen>
-      <fontcolorblue>0</fontcolorblue>
-      <backgroundcolorred>255</backgroundcolorred>
-      <backgroundcolorgreen>255</backgroundcolorgreen>
-      <backgroundcolorblue>255</backgroundcolorblue>
-      <bordercolorred>192</bordercolorred>
-      <bordercolorgreen>192</bordercolorgreen>
-      <bordercolorblue>192</bordercolorblue>
-      <drawshadow>Y</drawshadow>
-    </notepad>
-    <notepad>
-      <note>Lab 3: Amazon Kinesis</note>
+      <note>Lab: Kafka</note>
       <xloc>64</xloc>
-      <yloc>128</yloc>
-      <width>239</width>
-      <heigth>40</heigth>
+      <yloc>96</yloc>
+      <width>66</width>
+      <heigth>26</heigth>
       <fontname>Segoe UI</fontname>
-      <fontsize>11</fontsize>
+      <fontsize>10</fontsize>
       <fontbold>Y</fontbold>
       <fontitalic>N</fontitalic>
       <fontcolorred>0</fontcolorred>
@@ -652,13 +609,13 @@ output, simulating IoT</note>
     </hop>
     <hop>
       <from>sv-message</from>
-      <to>Kinesis Producer</to>
+      <to>Kafka producer</to>
       <enabled>Y</enabled>
     </hop>
   </order>
   <step>
-    <name>Kinesis Producer</name>
-    <type>KinesisProducer</type>
+    <name>Kafka producer</name>
+    <type>KafkaProducerOutput</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -667,49 +624,21 @@ output, simulating IoT</note>
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <step-props secure="">
-      <group name="">
-        <property group="" name="REGION">
-          <value xsi:type="xs:string">eu-west-2</value>
-        </property>
-        <property group="" name="WRITE_TIMEOUT">
-          <value xsi:type="xs:string">30</value>
-        </property>
-        <property group="" name="CONNECTION_TIMEOUT">
-          <value xsi:type="xs:string">2</value>
-        </property>
-        <property group="" name="CONNECTION_ACQUISITION_TIMEOUT">
-          <value xsi:type="xs:string">10</value>
-        </property>
-        <property group="" name="MAX_CONCURRENCY">
-          <value xsi:type="xs:string">50</value>
-        </property>
-        <property group="" name="MAX_PENDING_CONNECTION_ACQUIRES">
-          <value xsi:type="xs:string">10000</value>
-        </property>
-        <property group="" name="READ_TIMEOUT">
-          <value xsi:type="xs:string">30</value>
-        </property>
-        <property group="" name="MAX_HTTP_2_STREAMS">
-          <value xsi:type="xs:string">0</value>
-        </property>
-        <property group="" name="STREAM_IN_FIELD">
-          <value xsi:type="xs:boolean">false</value>
-        </property>
-        <property group="" name="STREAM_NAME">
-          <value xsi:type="xs:string">Test</value>
-        </property>
-        <property group="" name="STREAM_FIELD_NAME">
-          <value xsi:type="xs:string"/>
-        </property>
-        <property group="" name="PARTITION_KEY">
-          <value xsi:type="xs:string">key</value>
-        </property>
-        <property group="" name="FIELD_TO_SEND">
-          <value xsi:type="xs:string">message</value>
-        </property>
-      </group>
-    </step-props>
+    <connectionType>DIRECT</connectionType>
+    <directBootstrapServers>localhost:9092</directBootstrapServers>
+    <clusterName/>
+    <topic>SensorData</topic>
+    <clientId/>
+    <keyField>vehicle_id</keyField>
+    <messageField>message</messageField>
+    <advancedConfig>
+      <option property="compression.type" value="none"/>
+      <option property="ssl.key.password" value=""/>
+      <option property="ssl.keystore.location" value=""/>
+      <option property="ssl.keystore.password" value=""/>
+      <option property="ssl.truststore.location" value=""/>
+      <option property="ssl.truststore.password" value=""/>
+    </advancedConfig>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -719,8 +648,8 @@ output, simulating IoT</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1168</xloc>
-      <yloc>576</yloc>
+      <xloc>832</xloc>
+      <yloc>464</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -754,8 +683,8 @@ output, simulating IoT</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>240</xloc>
-      <yloc>336</yloc>
+      <xloc>176</xloc>
+      <yloc>272</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -784,7 +713,7 @@ output, simulating IoT</note>
     <fileNameField/>
     <create_parent_folder>Y</create_parent_folder>
     <file>
-      <name>file</name>
+      <name/>
       <servlet_output>N</servlet_output>
       <do_not_open_new_file_init>N</do_not_open_new_file_init>
       <extention>txt</extention>
@@ -900,8 +829,8 @@ output, simulating IoT</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1024</xloc>
-      <yloc>448</yloc>
+      <xloc>720</xloc>
+      <yloc>368</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -925,8 +854,8 @@ output, simulating IoT</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>800</xloc>
-      <yloc>336</yloc>
+      <xloc>576</xloc>
+      <yloc>272</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -969,8 +898,8 @@ output, simulating IoT</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>80</xloc>
-      <yloc>336</yloc>
+      <xloc>64</xloc>
+      <yloc>272</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1059,8 +988,8 @@ var major_alert = (sensor_value &lt; 30 ? 1 : 0);
       </output>
     </remotesteps>
     <GUI>
-      <xloc>592</xloc>
-      <yloc>512</yloc>
+      <xloc>432</xloc>
+      <yloc>384</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1148,8 +1077,8 @@ var major_alert = (sensor_value > 90 ? 1 : 0);
       </output>
     </remotesteps>
     <GUI>
-      <xloc>592</xloc>
-      <yloc>416</yloc>
+      <xloc>432</xloc>
+      <yloc>320</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1471,8 +1400,8 @@ var iteration = 0;
       </output>
     </remotesteps>
     <GUI>
-      <xloc>592</xloc>
-      <yloc>624</yloc>
+      <xloc>432</xloc>
+      <yloc>448</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1560,8 +1489,8 @@ var major_alert = (sensor_value > 1200 ? 1 : 0);
       </output>
     </remotesteps>
     <GUI>
-      <xloc>592</xloc>
-      <yloc>144</yloc>
+      <xloc>432</xloc>
+      <yloc>128</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1649,8 +1578,8 @@ var major_alert = (sensor_value &lt; 2700 ? 1 : 0);
       </output>
     </remotesteps>
     <GUI>
-      <xloc>592</xloc>
-      <yloc>256</yloc>
+      <xloc>432</xloc>
+      <yloc>192</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1735,8 +1664,8 @@ var major_alert = (sensor_value > 95 ? 1 : 0);
       </output>
     </remotesteps>
     <GUI>
-      <xloc>592</xloc>
-      <yloc>32</yloc>
+      <xloc>432</xloc>
+      <yloc>64</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1882,8 +1811,8 @@ var major_alert = (sensor_value > 95 ? 1 : 0);
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1024</xloc>
-      <yloc>336</yloc>
+      <xloc>720</xloc>
+      <yloc>272</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1943,23 +1872,6 @@ var major_alert = (sensor_value > 95 ? 1 : 0);
         <name>major_alert</name>
       </remove>
       <meta>
-        <name>vehicle_id</name>
-        <rename>key</rename>
-        <type>String</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
         <name>data_row</name>
         <rename>message</rename>
         <type>String</type>
@@ -1986,8 +1898,8 @@ var major_alert = (sensor_value > 95 ? 1 : 0);
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1024</xloc>
-      <yloc>576</yloc>
+      <xloc>720</xloc>
+      <yloc>464</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2020,8 +1932,8 @@ var major_alert = (sensor_value > 95 ? 1 : 0);
       </output>
     </remotesteps>
     <GUI>
-      <xloc>384</xloc>
-      <yloc>336</yloc>
+      <xloc>272</xloc>
+      <yloc>272</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

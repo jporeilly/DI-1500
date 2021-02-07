@@ -478,8 +478,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>480</xloc>
-      <yloc>416</yloc>
+      <xloc>224</xloc>
+      <yloc>320</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -543,8 +543,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>480</xloc>
-      <yloc>288</yloc>
+      <xloc>224</xloc>
+      <yloc>240</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -582,8 +582,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>240</xloc>
-      <yloc>144</yloc>
+      <xloc>96</xloc>
+      <yloc>128</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -702,8 +702,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>480</xloc>
-      <yloc>144</yloc>
+      <xloc>224</xloc>
+      <yloc>128</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -843,8 +843,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>704</xloc>
-      <yloc>144</yloc>
+      <xloc>336</xloc>
+      <yloc>128</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -875,7 +875,7 @@
       <name>{"_":"Embedded MetaStore Elements","namespace":"NamedClusters","type":"NamedCluster"}</name>
       <attribute>
         <key>CDH</key>
-        <value>{"children":[{"children":[],"id":"hdfsPassword","value":"ZGVtb3VzZXI="},{"children":[],"id":"oozieUrl","value":"http://localhost:11000/oozie"},{"children":[],"id":"mapr","value":"N"},{"children":[],"id":"useGateway","value":"N"},{"children":[],"id":"lastModifiedDate","value":"1543527020150"},{"children":[],"id":"jobTrackerHost","value":"pentahobdvm.localdomain"},{"children":[],"id":"zooKeeperHost","value":"pentahobdvm.localdomain"},{"children":[],"id":"shimIdentifier","value":null},{"children":[],"id":"gatewayUrl","value":null},{"children":[],"id":"jobTrackerPort","value":"8032"},{"children":[],"id":"zooKeeperPort","value":"2181"},{"children":[],"id":"name","value":"CDH"},{"children":[],"id":"hdfsPort","value":"8020"},{"children":[],"id":"hdfsUsername","value":"demouser"},{"children":[],"id":"gatewayPassword","value":null},{"children":[],"id":"kafkaBootstrapServers","value":"pentahobdvm.localdomain:9092"},{"children":[],"id":"storageScheme","value":"hdfs"},{"children":[],"id":"hdfsHost","value":"pentahobdvm.localdomain"},{"children":[],"id":"gatewayUsername","value":null}],"id":"CDH","value":null,"name":"CDH","owner":null,"ownerPermissionsList":[]}</value>
+        <value>{"children":[{"children":[],"id":"siteFiles","value":null},{"children":[],"id":"hdfsPassword","value":"ZGVtb3VzZXI="},{"children":[],"id":"oozieUrl","value":"http://localhost:11000/oozie"},{"children":[],"id":"mapr","value":"N"},{"children":[],"id":"useGateway","value":"N"},{"children":[],"id":"lastModifiedDate","value":"1543527020150"},{"children":[],"id":"jobTrackerHost","value":"pentahobdvm.localdomain"},{"children":[],"id":"zooKeeperHost","value":"pentahobdvm.localdomain"},{"children":[],"id":"shimIdentifier","value":null},{"children":[],"id":"gatewayUrl","value":null},{"children":[],"id":"jobTrackerPort","value":"8032"},{"children":[],"id":"zooKeeperPort","value":"2181"},{"children":[],"id":"name","value":"CDH"},{"children":[],"id":"hdfsPort","value":"8020"},{"children":[],"id":"hdfsUsername","value":"demouser"},{"children":[],"id":"gatewayPassword","value":null},{"children":[],"id":"kafkaBootstrapServers","value":"pentahobdvm.localdomain:9092"},{"children":[],"id":"storageScheme","value":"hdfs"},{"children":[],"id":"hdfsHost","value":"pentahobdvm.localdomain"},{"children":[],"id":"gatewayUsername","value":null}],"id":"CDH","value":null,"name":"CDH","owner":null,"ownerPermissionsList":[]}</value>
       </attribute>
     </group>
     <group>
