@@ -634,8 +634,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1152</xloc>
-      <yloc>512</yloc>
+      <xloc>640</xloc>
+      <yloc>384</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -673,7 +673,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>384</xloc>
+      <xloc>96</xloc>
       <yloc>176</yloc>
       <draw>Y</draw>
     </GUI>
@@ -814,156 +814,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1150</xloc>
-      <yloc>125</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>jsoni-read_message</name>
-    <type>JsonInput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <include>N</include>
-    <include_field/>
-    <rownum>N</rownum>
-    <addresultfile>N</addresultfile>
-    <readurl>N</readurl>
-    <removeSourceField>N</removeSourceField>
-    <IsIgnoreEmptyFile>N</IsIgnoreEmptyFile>
-    <doNotFailIfNoFile>Y</doNotFailIfNoFile>
-    <ignoreMissingPath>Y</ignoreMissingPath>
-    <defaultPathLeafToNull>Y</defaultPathLeafToNull>
-    <rownum_field/>
-    <file>
-      <name/>
-      <filemask/>
-      <exclude_filemask/>
-      <file_required>N</file_required>
-      <include_subfolders>N</include_subfolders>
-    </file>
-    <fields>
-      <field>
-        <name>vehicle_id</name>
-        <path>$.vehicle_id</path>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>timestamp</name>
-        <path>$.timestamp</path>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>sensor_id</name>
-        <path>$.sensor_id</path>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>sensor_type</name>
-        <path>$.sensor_type</path>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>sensor_value</name>
-        <path>$.sensor_value</path>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>minor_alert</name>
-        <path>$.minor_alert</path>
-        <type>Integer</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>major_alert</name>
-        <path>$.major_alert</path>
-        <type>Integer</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-    </fields>
-    <limit>0</limit>
-    <IsInFields>Y</IsInFields>
-    <IsAFile>N</IsAFile>
-    <valueField>message</valueField>
-    <shortFileFieldName/>
-    <pathFieldName/>
-    <hiddenFieldName/>
-    <lastModificationTimeFieldName/>
-    <uriNameFieldName/>
-    <rootUriNameFieldName/>
-    <extensionFieldName/>
-    <sizeFieldName/>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>528</xloc>
-      <yloc>176</yloc>
+      <xloc>640</xloc>
+      <yloc>64</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1103,8 +955,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1150</xloc>
-      <yloc>200</yloc>
+      <xloc>640</xloc>
+      <yloc>128</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1244,8 +1096,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1150</xloc>
-      <yloc>425</yloc>
+      <xloc>640</xloc>
+      <yloc>320</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1385,42 +1237,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1150</xloc>
-      <yloc>350</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>sv-remove_fields</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <select_unspecified>N</select_unspecified>
-      <remove>
-        <name>timestamp</name>
-      </remove>
-      <remove>
-        <name>topic</name>
-      </remove>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>768</xloc>
-      <yloc>176</yloc>
+      <xloc>640</xloc>
+      <yloc>256</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1481,8 +1299,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>925</xloc>
-      <yloc>175</yloc>
+      <xloc>480</xloc>
+      <yloc>176</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1622,8 +1440,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1150</xloc>
-      <yloc>50</yloc>
+      <xloc>640</xloc>
+      <yloc>0</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1775,66 +1593,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>925</xloc>
-      <yloc>425</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>vm-sensor_type</name>
-    <type>ValueMapper</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <field_to_use>sensor_type</field_to_use>
-    <target_field>sensor_type_name</target_field>
-    <non_match_default>Unknown</non_match_default>
-    <fields>
-      <field>
-        <source_value>1</source_value>
-        <target_value>Temperature</target_value>
-      </field>
-      <field>
-        <source_value>2</source_value>
-        <target_value>Headlight</target_value>
-      </field>
-      <field>
-        <source_value>3</source_value>
-        <target_value>Load_Weight</target_value>
-      </field>
-      <field>
-        <source_value>4</source_value>
-        <target_value>Vibration</target_value>
-      </field>
-      <field>
-        <source_value>5</source_value>
-        <target_value>Count</target_value>
-      </field>
-      <field>
-        <source_value>6</source_value>
-        <target_value>Pressure</target_value>
-      </field>
-      <field>
-        <source_value>7</source_value>
-        <target_value>Position</target_value>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>640</xloc>
-      <yloc>176</yloc>
+      <xloc>480</xloc>
+      <yloc>272</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1974,8 +1734,248 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1150</xloc>
-      <yloc>275</yloc>
+      <xloc>640</xloc>
+      <yloc>192</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>jsoni-read_message</name>
+    <type>JsonInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <include>N</include>
+    <include_field/>
+    <rownum>N</rownum>
+    <addresultfile>N</addresultfile>
+    <readurl>N</readurl>
+    <removeSourceField>N</removeSourceField>
+    <IsIgnoreEmptyFile>N</IsIgnoreEmptyFile>
+    <doNotFailIfNoFile>Y</doNotFailIfNoFile>
+    <ignoreMissingPath>Y</ignoreMissingPath>
+    <defaultPathLeafToNull>Y</defaultPathLeafToNull>
+    <rownum_field/>
+    <file>
+      <name/>
+      <filemask/>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+    </file>
+    <fields>
+      <field>
+        <name>vehicle_id</name>
+        <path>$.vehicle_id</path>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>timestamp</name>
+        <path>$.timestamp</path>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>sensor_id</name>
+        <path>$.sensor_id</path>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>sensor_type</name>
+        <path>$.sensor_type</path>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>sensor_value</name>
+        <path>$.sensor_value</path>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>minor_alert</name>
+        <path>$.minor_alert</path>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>major_alert</name>
+        <path>$.major_alert</path>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+    </fields>
+    <limit>0</limit>
+    <IsInFields>Y</IsInFields>
+    <IsAFile>N</IsAFile>
+    <valueField>message</valueField>
+    <shortFileFieldName/>
+    <pathFieldName/>
+    <hiddenFieldName/>
+    <lastModificationTimeFieldName/>
+    <uriNameFieldName/>
+    <rootUriNameFieldName/>
+    <extensionFieldName/>
+    <sizeFieldName/>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>208</xloc>
+      <yloc>176</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>sv-remove_fields</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <select_unspecified>N</select_unspecified>
+      <remove>
+        <name>timestamp</name>
+      </remove>
+      <remove>
+        <name>topic</name>
+      </remove>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>384</xloc>
+      <yloc>176</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>vm-sensor_type</name>
+    <type>ValueMapper</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <field_to_use>sensor_type</field_to_use>
+    <target_field>sensor_type_name</target_field>
+    <non_match_default>Unknown</non_match_default>
+    <fields>
+      <field>
+        <source_value>1</source_value>
+        <target_value>Temperature</target_value>
+      </field>
+      <field>
+        <source_value>2</source_value>
+        <target_value>Headlight</target_value>
+      </field>
+      <field>
+        <source_value>3</source_value>
+        <target_value>Load_Weight</target_value>
+      </field>
+      <field>
+        <source_value>4</source_value>
+        <target_value>Vibration</target_value>
+      </field>
+      <field>
+        <source_value>5</source_value>
+        <target_value>Count</target_value>
+      </field>
+      <field>
+        <source_value>6</source_value>
+        <target_value>Pressure</target_value>
+      </field>
+      <field>
+        <source_value>7</source_value>
+        <target_value>Position</target_value>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>304</xloc>
+      <yloc>176</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2001,44 +2001,32 @@
     </group>
     <group>
       <name>explorerState</name>
-      <attribute>
-        <key>vm-sensor_type</key>
-        <value/>
-      </attribute>
-      <attribute>
-        <key>sv-remove_fields</key>
-        <value/>
-      </attribute>
-      <attribute>
-        <key>jsoni-read_message</key>
-        <value/>
-      </attribute>
     </group>
     <group>
       <name>{"_":"Embedded MetaStore Elements","namespace":"NamedClusters","type":"NamedCluster"}</name>
       <attribute>
         <key>DevCDH57N1</key>
-        <value>{"children":[{"children":[],"id":"hdfsPassword","value":null},{"children":[],"id":"oozieUrl","value":"http://10.177.177.244:8080/oozie"},{"children":[],"id":"mapr","value":"N"},{"children":[],"id":"useGateway","value":"N"},{"children":[],"id":"lastModifiedDate","value":"1504725526247"},{"children":[],"id":"jobTrackerHost","value":"10.177.177.244"},{"children":[],"id":"zooKeeperHost","value":"10.177.177.244"},{"children":[],"id":"shimIdentifier","value":null},{"children":[],"id":"gatewayUrl","value":null},{"children":[],"id":"jobTrackerPort","value":"8032"},{"children":[],"id":"zooKeeperPort","value":"2181"},{"children":[],"id":"name","value":"DevCDH57N1"},{"children":[],"id":"hdfsPort","value":"8020"},{"children":[],"id":"hdfsUsername","value":null},{"children":[],"id":"gatewayPassword","value":null},{"children":[],"id":"kafkaBootstrapServers","value":null},{"children":[],"id":"storageScheme","value":"hdfs"},{"children":[],"id":"hdfsHost","value":"10.177.177.244"},{"children":[],"id":"gatewayUsername","value":null}],"id":"DevCDH57N1","value":null,"name":"DevCDH57N1","owner":null,"ownerPermissionsList":[]}</value>
+        <value>{"children":[{"children":[],"id":"siteFiles","value":null},{"children":[],"id":"hdfsPassword","value":null},{"children":[],"id":"oozieUrl","value":"http://10.177.177.244:8080/oozie"},{"children":[],"id":"mapr","value":"N"},{"children":[],"id":"useGateway","value":"N"},{"children":[],"id":"lastModifiedDate","value":"1504725526247"},{"children":[],"id":"jobTrackerHost","value":"10.177.177.244"},{"children":[],"id":"zooKeeperHost","value":"10.177.177.244"},{"children":[],"id":"shimIdentifier","value":null},{"children":[],"id":"gatewayUrl","value":null},{"children":[],"id":"jobTrackerPort","value":"8032"},{"children":[],"id":"zooKeeperPort","value":"2181"},{"children":[],"id":"name","value":"DevCDH57N1"},{"children":[],"id":"hdfsPort","value":"8020"},{"children":[],"id":"hdfsUsername","value":null},{"children":[],"id":"gatewayPassword","value":null},{"children":[],"id":"kafkaBootstrapServers","value":null},{"children":[],"id":"storageScheme","value":"hdfs"},{"children":[],"id":"hdfsHost","value":"10.177.177.244"},{"children":[],"id":"gatewayUsername","value":null}],"id":"DevCDH57N1","value":null,"name":"DevCDH57N1","owner":null,"ownerPermissionsList":[]}</value>
       </attribute>
       <attribute>
         <key>Demo</key>
-        <value>{"children":[{"children":[],"id":"hdfsPassword","value":null},{"children":[],"id":"oozieUrl","value":"http://ip-172-31-26-88.eu-west-1.compute.internal:11000/oozie"},{"children":[],"id":"mapr","value":"N"},{"children":[],"id":"useGateway","value":"N"},{"children":[],"id":"lastModifiedDate","value":"1521218510183"},{"children":[],"id":"jobTrackerHost","value":"ip-172-31-22-90.eu-west-1.compute.internal"},{"children":[],"id":"zooKeeperHost","value":"ip-172-31-22-90.eu-west-1.compute.internal"},{"children":[],"id":"shimIdentifier","value":null},{"children":[],"id":"gatewayUrl","value":null},{"children":[],"id":"jobTrackerPort","value":"8032"},{"children":[],"id":"zooKeeperPort","value":"2181"},{"children":[],"id":"name","value":"Demo"},{"children":[],"id":"hdfsPort","value":"8020"},{"children":[],"id":"hdfsUsername","value":null},{"children":[],"id":"gatewayPassword","value":null},{"children":[],"id":"kafkaBootstrapServers","value":"ip-172-31-26-88.eu-west-1.compute.internal:9092"},{"children":[],"id":"storageScheme","value":"hdfs"},{"children":[],"id":"hdfsHost","value":"ip-172-31-22-90.eu-west-1.compute.internal"},{"children":[],"id":"gatewayUsername","value":null}],"id":"Demo","value":null,"name":"Demo","owner":null,"ownerPermissionsList":[]}</value>
+        <value>{"children":[{"children":[],"id":"siteFiles","value":null},{"children":[],"id":"hdfsPassword","value":null},{"children":[],"id":"oozieUrl","value":"http://ip-172-31-26-88.eu-west-1.compute.internal:11000/oozie"},{"children":[],"id":"mapr","value":"N"},{"children":[],"id":"useGateway","value":"N"},{"children":[],"id":"lastModifiedDate","value":"1521218510183"},{"children":[],"id":"jobTrackerHost","value":"ip-172-31-22-90.eu-west-1.compute.internal"},{"children":[],"id":"zooKeeperHost","value":"ip-172-31-22-90.eu-west-1.compute.internal"},{"children":[],"id":"shimIdentifier","value":null},{"children":[],"id":"gatewayUrl","value":null},{"children":[],"id":"jobTrackerPort","value":"8032"},{"children":[],"id":"zooKeeperPort","value":"2181"},{"children":[],"id":"name","value":"Demo"},{"children":[],"id":"hdfsPort","value":"8020"},{"children":[],"id":"hdfsUsername","value":null},{"children":[],"id":"gatewayPassword","value":null},{"children":[],"id":"kafkaBootstrapServers","value":"ip-172-31-26-88.eu-west-1.compute.internal:9092"},{"children":[],"id":"storageScheme","value":"hdfs"},{"children":[],"id":"hdfsHost","value":"ip-172-31-22-90.eu-west-1.compute.internal"},{"children":[],"id":"gatewayUsername","value":null}],"id":"Demo","value":null,"name":"Demo","owner":null,"ownerPermissionsList":[]}</value>
       </attribute>
       <attribute>
         <key>CDH510</key>
-        <value>{"children":[{"children":[],"id":"hdfsPassword","value":"cGFzc3dvcmQ="},{"children":[],"id":"oozieUrl","value":"http://svqxbdcn6cdh510aeln1.pentahoqa.com:11000/oozie"},{"children":[],"id":"mapr","value":"N"},{"children":[],"id":"useGateway","value":"N"},{"children":[],"id":"lastModifiedDate","value":"1507836508404"},{"children":[],"id":"jobTrackerHost","value":"svqxbdcn6cdh510aeln1.pentahoqa.com"},{"children":[],"id":"zooKeeperHost","value":"svqxbdcn6cdh510aeln1.pentahoqa.com"},{"children":[],"id":"shimIdentifier","value":null},{"children":[],"id":"gatewayUrl","value":null},{"children":[],"id":"jobTrackerPort","value":"8032"},{"children":[],"id":"zooKeeperPort","value":"2181"},{"children":[],"id":"name","value":"CDH510"},{"children":[],"id":"hdfsPort","value":"8020"},{"children":[],"id":"hdfsUsername","value":"devuser"},{"children":[],"id":"gatewayPassword","value":null},{"children":[],"id":"kafkaBootstrapServers","value":null},{"children":[],"id":"storageScheme","value":"hdfs"},{"children":[],"id":"hdfsHost","value":"svqxbdcn6cdh510aeln1.pentahoqa.com"},{"children":[],"id":"gatewayUsername","value":null}],"id":"CDH510","value":null,"name":"CDH510","owner":null,"ownerPermissionsList":[]}</value>
+        <value>{"children":[{"children":[],"id":"siteFiles","value":null},{"children":[],"id":"hdfsPassword","value":"cGFzc3dvcmQ="},{"children":[],"id":"oozieUrl","value":"http://svqxbdcn6cdh510aeln1.pentahoqa.com:11000/oozie"},{"children":[],"id":"mapr","value":"N"},{"children":[],"id":"useGateway","value":"N"},{"children":[],"id":"lastModifiedDate","value":"1507836508404"},{"children":[],"id":"jobTrackerHost","value":"svqxbdcn6cdh510aeln1.pentahoqa.com"},{"children":[],"id":"zooKeeperHost","value":"svqxbdcn6cdh510aeln1.pentahoqa.com"},{"children":[],"id":"shimIdentifier","value":null},{"children":[],"id":"gatewayUrl","value":null},{"children":[],"id":"jobTrackerPort","value":"8032"},{"children":[],"id":"zooKeeperPort","value":"2181"},{"children":[],"id":"name","value":"CDH510"},{"children":[],"id":"hdfsPort","value":"8020"},{"children":[],"id":"hdfsUsername","value":"devuser"},{"children":[],"id":"gatewayPassword","value":null},{"children":[],"id":"kafkaBootstrapServers","value":null},{"children":[],"id":"storageScheme","value":"hdfs"},{"children":[],"id":"hdfsHost","value":"svqxbdcn6cdh510aeln1.pentahoqa.com"},{"children":[],"id":"gatewayUsername","value":null}],"id":"CDH510","value":null,"name":"CDH510","owner":null,"ownerPermissionsList":[]}</value>
       </attribute>
       <attribute>
         <key>CDH Pdi daemon</key>
-        <value>{"children":[{"children":[],"id":"hdfsPassword","value":"Y2xvdWRlcmE="},{"children":[],"id":"oozieUrl","value":"http://quickstart.cloudera:8080/oozie"},{"children":[],"id":"mapr","value":"N"},{"children":[],"id":"useGateway","value":"N"},{"children":[],"id":"lastModifiedDate","value":"1497972601549"},{"children":[],"id":"jobTrackerHost","value":"quickstart.cloudera"},{"children":[],"id":"zooKeeperHost","value":"quickstart.cloudera"},{"children":[],"id":"shimIdentifier","value":null},{"children":[],"id":"gatewayUrl","value":null},{"children":[],"id":"jobTrackerPort","value":"8032"},{"children":[],"id":"zooKeeperPort","value":"8032"},{"children":[],"id":"name","value":"CDH Pdi daemon"},{"children":[],"id":"hdfsPort","value":"8020"},{"children":[],"id":"hdfsUsername","value":"cloudera"},{"children":[],"id":"gatewayPassword","value":null},{"children":[],"id":"kafkaBootstrapServers","value":null},{"children":[],"id":"storageScheme","value":"hdfs"},{"children":[],"id":"hdfsHost","value":"quickstart.cloudera"},{"children":[],"id":"gatewayUsername","value":null}],"id":"CDH Pdi daemon","value":null,"name":"CDH Pdi daemon","owner":null,"ownerPermissionsList":[]}</value>
+        <value>{"children":[{"children":[],"id":"siteFiles","value":null},{"children":[],"id":"hdfsPassword","value":"Y2xvdWRlcmE="},{"children":[],"id":"oozieUrl","value":"http://quickstart.cloudera:8080/oozie"},{"children":[],"id":"mapr","value":"N"},{"children":[],"id":"useGateway","value":"N"},{"children":[],"id":"lastModifiedDate","value":"1497972601549"},{"children":[],"id":"jobTrackerHost","value":"quickstart.cloudera"},{"children":[],"id":"zooKeeperHost","value":"quickstart.cloudera"},{"children":[],"id":"shimIdentifier","value":null},{"children":[],"id":"gatewayUrl","value":null},{"children":[],"id":"jobTrackerPort","value":"8032"},{"children":[],"id":"zooKeeperPort","value":"8032"},{"children":[],"id":"name","value":"CDH Pdi daemon"},{"children":[],"id":"hdfsPort","value":"8020"},{"children":[],"id":"hdfsUsername","value":"cloudera"},{"children":[],"id":"gatewayPassword","value":null},{"children":[],"id":"kafkaBootstrapServers","value":null},{"children":[],"id":"storageScheme","value":"hdfs"},{"children":[],"id":"hdfsHost","value":"quickstart.cloudera"},{"children":[],"id":"gatewayUsername","value":null}],"id":"CDH Pdi daemon","value":null,"name":"CDH Pdi daemon","owner":null,"ownerPermissionsList":[]}</value>
       </attribute>
       <attribute>
         <key>Luke's</key>
-        <value>{"children":[{"children":[],"id":"hdfsPassword","value":"Y2xvdWRlcmE="},{"children":[],"id":"oozieUrl","value":"http://localhost:8080/oozie"},{"children":[],"id":"mapr","value":"N"},{"children":[],"id":"useGateway","value":"N"},{"children":[],"id":"lastModifiedDate","value":"1495134828902"},{"children":[],"id":"jobTrackerHost","value":"localhost"},{"children":[],"id":"zooKeeperHost","value":"localhost"},{"children":[],"id":"shimIdentifier","value":null},{"children":[],"id":"gatewayUrl","value":null},{"children":[],"id":"jobTrackerPort","value":"8032"},{"children":[],"id":"zooKeeperPort","value":"8032"},{"children":[],"id":"name","value":"Luke's"},{"children":[],"id":"hdfsPort","value":"8020"},{"children":[],"id":"hdfsUsername","value":"cloudera"},{"children":[],"id":"gatewayPassword","value":null},{"children":[],"id":"kafkaBootstrapServers","value":null},{"children":[],"id":"storageScheme","value":"hdfs"},{"children":[],"id":"hdfsHost","value":"localhost"},{"children":[],"id":"gatewayUsername","value":null}],"id":"Luke's","value":null,"name":"Luke's","owner":null,"ownerPermissionsList":[]}</value>
+        <value>{"children":[{"children":[],"id":"siteFiles","value":null},{"children":[],"id":"hdfsPassword","value":"Y2xvdWRlcmE="},{"children":[],"id":"oozieUrl","value":"http://localhost:8080/oozie"},{"children":[],"id":"mapr","value":"N"},{"children":[],"id":"useGateway","value":"N"},{"children":[],"id":"lastModifiedDate","value":"1495134828902"},{"children":[],"id":"jobTrackerHost","value":"localhost"},{"children":[],"id":"zooKeeperHost","value":"localhost"},{"children":[],"id":"shimIdentifier","value":null},{"children":[],"id":"gatewayUrl","value":null},{"children":[],"id":"jobTrackerPort","value":"8032"},{"children":[],"id":"zooKeeperPort","value":"8032"},{"children":[],"id":"name","value":"Luke's"},{"children":[],"id":"hdfsPort","value":"8020"},{"children":[],"id":"hdfsUsername","value":"cloudera"},{"children":[],"id":"gatewayPassword","value":null},{"children":[],"id":"kafkaBootstrapServers","value":null},{"children":[],"id":"storageScheme","value":"hdfs"},{"children":[],"id":"hdfsHost","value":"localhost"},{"children":[],"id":"gatewayUsername","value":null}],"id":"Luke's","value":null,"name":"Luke's","owner":null,"ownerPermissionsList":[]}</value>
       </attribute>
       <attribute>
         <key>CDH510 AELSecured</key>
-        <value>{"children":[{"children":[],"id":"hdfsPassword","value":"ZGV2dXNlcg=="},{"children":[],"id":"oozieUrl","value":"http://localhost:8080/oocie"},{"children":[],"id":"mapr","value":"N"},{"children":[],"id":"useGateway","value":"N"},{"children":[],"id":"lastModifiedDate","value":"1510346298825"},{"children":[],"id":"jobTrackerHost","value":"svqxbdcn6cdh510aelsecn3.pentahoqa.com"},{"children":[],"id":"zooKeeperHost","value":"svqxbdcn6cdh510aelsecn1.pentahoqa.com"},{"children":[],"id":"shimIdentifier","value":null},{"children":[],"id":"gatewayUrl","value":null},{"children":[],"id":"jobTrackerPort","value":"8032"},{"children":[],"id":"zooKeeperPort","value":"2181"},{"children":[],"id":"name","value":"CDH510 AELSecured"},{"children":[],"id":"hdfsPort","value":"8020"},{"children":[],"id":"hdfsUsername","value":"devuser"},{"children":[],"id":"gatewayPassword","value":null},{"children":[],"id":"kafkaBootstrapServers","value":"10.177.178.135:9092"},{"children":[],"id":"storageScheme","value":"hdfs"},{"children":[],"id":"hdfsHost","value":"svqxbdcn6cdh510aelsecn1.pentahoqa.com"},{"children":[],"id":"gatewayUsername","value":null}],"id":"CDH510 AELSecured","value":null,"name":"CDH510 AELSecured","owner":null,"ownerPermissionsList":[]}</value>
+        <value>{"children":[{"children":[],"id":"siteFiles","value":null},{"children":[],"id":"hdfsPassword","value":"ZGV2dXNlcg=="},{"children":[],"id":"oozieUrl","value":"http://localhost:8080/oocie"},{"children":[],"id":"mapr","value":"N"},{"children":[],"id":"useGateway","value":"N"},{"children":[],"id":"lastModifiedDate","value":"1510346298825"},{"children":[],"id":"jobTrackerHost","value":"svqxbdcn6cdh510aelsecn3.pentahoqa.com"},{"children":[],"id":"zooKeeperHost","value":"svqxbdcn6cdh510aelsecn1.pentahoqa.com"},{"children":[],"id":"shimIdentifier","value":null},{"children":[],"id":"gatewayUrl","value":null},{"children":[],"id":"jobTrackerPort","value":"8032"},{"children":[],"id":"zooKeeperPort","value":"2181"},{"children":[],"id":"name","value":"CDH510 AELSecured"},{"children":[],"id":"hdfsPort","value":"8020"},{"children":[],"id":"hdfsUsername","value":"devuser"},{"children":[],"id":"gatewayPassword","value":null},{"children":[],"id":"kafkaBootstrapServers","value":"10.177.178.135:9092"},{"children":[],"id":"storageScheme","value":"hdfs"},{"children":[],"id":"hdfsHost","value":"svqxbdcn6cdh510aelsecn1.pentahoqa.com"},{"children":[],"id":"gatewayUsername","value":null}],"id":"CDH510 AELSecured","value":null,"name":"CDH510 AELSecured","owner":null,"ownerPermissionsList":[]}</value>
       </attribute>
     </group>
     <group>
