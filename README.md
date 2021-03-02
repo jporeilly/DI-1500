@@ -9,11 +9,11 @@ It is recommended that you have at least 6 months experience of Pentaho Data Int
 On completing this course, you will be able to:
 
 #### Module 1 – Metadata Injection
-•	Introduction to Metadata Injection key concepts
-•	Metadata Injection Workflows
-•	2-Phase Injection
-o	Use Case – Onboarding to a Database Table
-o	Use Case – Retail
+•	Introduction to Metadata Injection key concepts  
+•	Metadata Injection Workflows  
+•	2-Phase Injection  
+  o	Use Case – Onboarding to a Database Table  
+  o	Use Case – Retail  
 
 #### Module 2 – Data Sources
 •	CDA – Community Data Access
