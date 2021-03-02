@@ -16,27 +16,27 @@ On completing this course, you will be able to:
   o	Use Case – Retail  
 
 #### Module 2 – Data Sources
-•	CDA – Community Data Access
-•	Data Services
-o	Regular & Streaming
-•	Google Big Data Sources
-o	Google Big Query
-•	Machine Learning
-o	Use Case – Credit Card Fraud
+•	CDA – Community Data Access  
+•	Data Services  
+o	Regular & Streaming  
+•	Google Big Data Sources  
+o	Google Big Query  
+•	Machine Learning  
+o	Use Case – Credit Card Fraud  
 
 #### Module 3 – Streaming Data
-•	MQTT Broker 
-o	Use Case - Logistics company IoT to MQTT broker - Mosquitto
-•	Kafka Broker
-o	Use Case - Logistics company IoT to Kafka broker
-•	Amazon Kinesis (optional)
-o	Use Case - Logistics company IoT to AWS Kinesis
+•	MQTT Broker   
+o	Use Case - Logistics company IoT to MQTT broker - Mosquitto  
+•	Kafka Broker  
+o	Use Case - Logistics company IoT to Kafka broker  
+•	Amazon Kinesis (optional)  
+o	Use Case - Logistics company IoT to AWS Kinesis  
 
-#### Module 4 – Enterprise Solution
-•	Scaling your Enterprise Solution
-o	Clustering
-o	Data Movement
-o	Partitioning
-o	Checkpoints
+#### Module 4 – Enterprise Solution  
+•	Scaling your Enterprise Solution  
+o	Clustering  
+o	Data Movement  
+o	Partitioning  
+o	Checkpoints  
 
  
